@@ -1,0 +1,62 @@
+﻿<Page x:Class="The_Choice_Refactor.Pages.ListBoxPages.MetalListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:The_Choice_Refactor.Pages.ListBoxPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MetalListPage">
+    <Page.Resources>
+        <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1920"/>
+        </Grid.ColumnDefinitions>
+        <ListBox
+            x:Name="Metal_LstBx" 
+            ScrollViewer.VerticalScrollBarVisibility="Hidden"
+            ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+            BorderThickness="0" 
+            Grid.Column="0" 
+            ItemsSource="{Binding metals}" 
+            SelectedItem="{Binding Selected}" 
+            Background="Transparent" 
+            SelectionChanged="Metal_LstBx_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TabPanel Height="50">
+                        <Label
+                         Width="60"/>
+                        <CheckBox 
+                            x:Name="favorite_ChBx" 
+                            Height="20"
+                            Style="{StaticResource favoriteTemplate}" 
+                            IsChecked="{Binding Path=isFavorite}" 
+                            Checked="favorite_ChBx_Checked"
+                            Unchecked="favorite_ChBx_Unchecked"/>
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="210" 
+                            FontSize="14" 
+                            Text="{Binding Path=number}"/>
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="255" 
+                            FontSize="14" 
+                            Text="{Binding Path=name, StringFormat=0.00}" />
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="200"
+                            FontSize="14" 
+                            Text="{Binding Path=price, StringFormat=0.########}" />
+                    </TabPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

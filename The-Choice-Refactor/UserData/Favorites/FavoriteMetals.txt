@@ -1,0 +1,7 @@
+NIFTY 50;
+HDFC;
+NIFTY 50;
+silver;
+platinum;
+rhodium;
+gold;

@@ -1,0 +1,86 @@
+﻿<Page x:Class="The_Choice_Refactor.Pages.ListBoxPages.ShareListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:The_Choice_Refactor.Pages.ListBoxPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ShareListPage">
+    <Page.Resources>
+        <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox
+            x:Name="Share_LstBx" 
+            ScrollViewer.VerticalScrollBarVisibility="Hidden"
+            ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+            BorderThickness="0" 
+            Grid.Column="0" 
+            ItemsSource="{Binding shares}" 
+            SelectedItem="{Binding Selected}" 
+            Background="Transparent" 
+            SelectionChanged="Share_LstBx_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TabPanel Height="50">
+                        <Label
+                         Width="60"/>
+                        <CheckBox 
+                            x:Name="favorite_ChBx" 
+                            Height="20"
+                            Style="{StaticResource favoriteTemplate}" 
+                            IsChecked="{Binding Path=isFavorite}" 
+                            Checked="favorite_ChBx_Checked"
+                            Unchecked="favorite_ChBx_Unchecked"/>
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="65" 
+                            FontSize="14" 
+                            Text="{Binding Path=number}"/>
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="170" 
+                            FontSize="14" 
+                            Text="{Binding Path=symbol, StringFormat=0.00}"/>
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="305" 
+                            FontSize="14" 
+                            Text="{Binding Path=identifier, StringFormat=0.00}" />
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="265"
+                            FontSize="14" 
+                            Text="{Binding Path=lastPrice, StringFormat=0.########}" />
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="305" 
+                            FontSize="14" 
+                            Text="{Binding Path=dayHigh, StringFormat=### ### ### ###.}" />
+                        <TextBlock 
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="300" 
+                            FontSize="14" 
+                            Text="{Binding Path=dayLow, StringFormat=0.00}" />
+                        <TextBlock
+                            Style="{StaticResource TextBlock_Style}"
+                            VerticalAlignment="Center" 
+                            MinWidth="200" 
+                            FontSize="14" 
+                            Text="{Binding Path=totalTradedVolume, StringFormat=0.00}" />
+                    </TabPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

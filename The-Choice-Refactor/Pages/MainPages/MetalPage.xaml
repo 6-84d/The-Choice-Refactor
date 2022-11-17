@@ -1,0 +1,189 @@
+﻿<Page x:Class="The_Choice_Refactor.Pages.MainPages.MetalPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:The_Choice_Refactor.Pages.MainPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MetalPage">
+    <Page.Resources>
+        <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="850"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="1362"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="115"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Border 
+            Background="White"
+            Opacity="0.1" 
+            CornerRadius="15" 
+            Grid.Column="3" 
+            Grid.Row="0" 
+            Grid.ColumnSpan="2" 
+            Height="30"
+            VerticalAlignment="Top" Margin="0,20,0,0"/>
+        <TextBox 
+            x:Name="search_TxtBlck"
+            Background="Transparent"
+            FontSize="18"
+            BorderThickness="0"
+            Grid.Column="3" 
+            Grid.Row="0" 
+            MinWidth="165" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Center"
+            TextChanged="search_TxtBlck_TextChanged" Height="21" Margin="0,29,0,0" Width="166"/>
+        <Image 
+            Source="..\..\Resources\Pictures\Icons\Search.png" 
+            Grid.Column="3" 
+            Grid.Row="0" 
+            HorizontalAlignment="Right" 
+            Margin="0,18,5,0" Width="15"/>
+        <CheckBox 
+            x:Name="favoriteMode_ChBx" 
+            Grid.Row="0"
+            Grid.Column="5"
+            Style="{StaticResource favoriteTemplate}"
+            Margin="5,15,0,0" 
+            Checked="favoriteMode_ChBx_Checked" 
+            Unchecked="favoriteMode_ChBx_Unchecked"/>
+        <Border 
+            Background="White" 
+            Opacity="0.1" 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="5" 
+            Grid.RowSpan="4" 
+            CornerRadius="80"/>
+        <Grid 
+            Grid.Column="1" 
+            Grid.Row="2" 
+            Grid.ColumnSpan="5" 
+            Grid.RowSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="1730"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="750"/>
+            </Grid.RowDefinitions>
+            <Border 
+                Background="White" 
+                Opacity="0.15" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                CornerRadius="50"/>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                </Grid.ColumnDefinitions>
+                <Label 
+                    Grid.Column="1"
+                    FontSize="14" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="21">
+                    #
+                </Label>
+                <Label 
+                    Grid.Column="2"
+                    FontSize="14"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="27">
+                    ID
+                </Label>
+                <Label
+                    Grid.Column="3"
+                    FontSize="14" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="58">
+                    Name
+                </Label>
+                <Label 
+                    Grid.Column="4" 
+                    FontSize="14" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="48">
+                    Price
+                </Label>
+                <Label 
+                    Grid.Column="5" 
+                    FontSize="14" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="104">
+                    Volume 24h
+                </Label>
+                <Label
+                    Grid.Column="6" 
+                    FontSize="14" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="96">
+                    Change 1h
+                </Label>
+                <Label
+                    Grid.Column="7"
+                    FontSize="14" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Height="34"
+                    Width="105">
+                    Change 24h
+                </Label>
+                <Label 
+                    Grid.Column="8" 
+                    FontSize="14" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Height="34"
+                    Width="95">
+                    Change 7d
+                </Label>
+            </Grid>
+            <Frame 
+                x:Name="ListBoxFrame_Frm"
+                NavigationUIVisibility="Hidden" 
+                BorderThickness="0" 
+                Grid.Column="1" 
+                Grid.Row="3"/>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,135 @@
+﻿<Page x:Class="The_Choice_Refactor.Pages.OptionsPages.AboutUsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:The_Choice_Refactor.Pages.OptionsPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="700"
+      Title="AboutUsPage">
+    <Page.Resources>
+        <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <StackPanel Background="Transparent">
+        <Grid 
+        Height="500"
+        Width="700"
+        Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="77*"/>
+                <ColumnDefinition Width="500*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="320*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="80*"/>
+            </Grid.RowDefinitions>
+            <Border 
+            Background="White"
+            Opacity="0.05" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="0"
+            Grid.RowSpan="15" 
+            CornerRadius="50"/>
+            <Label
+            FontWeight="Bold" 
+            Grid.Column="1"
+            Grid.Row="1"
+            FontSize="15" 
+            HorizontalAlignment="Left">
+                The Choice
+            </Label>
+            <Label 
+            Grid.Column="2"
+            Grid.Row="1" 
+            FontSize="15" 
+            HorizontalAlignment="Left">
+                is a market aggregator program for beginners and investment professionals.
+            </Label>
+            <Label 
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="2" 
+            FontSize="15">
+                Interface collects everything, materials, stocks and currencies, which makes the choice very
+            </Label>
+            <Label 
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="3" 
+            FontSize="15">
+                convenient. The application is clear to use. The goal is to create an application that will be
+            </Label>
+            <Label 
+            Grid.Column="1"
+            Grid.ColumnSpan="2" 
+            Grid.Row="4" 
+            FontSize="15">
+                used people in order to study the market of various assets and choose the most suitable one
+            </Label>
+            <Label 
+            Grid.Column="1"
+            Grid.ColumnSpan="2" 
+            Grid.Row="5" 
+            FontSize="15">
+                for themselves.
+            </Label>
+            <Label 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2" 
+            Grid.Row="7" 
+            FontSize="15">
+                Developers: Boiarchuk Bohdan, Vova Yurkevich, Boryslav Linchevskyi
+            </Label>
+            <Label 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2" 
+            Grid.Row="8" 
+            FontSize="15">
+                https://github.com/Trapland
+            </Label>
+            <Label 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2"
+            Grid.Row="9" 
+            FontSize="15">
+                https://github.com/YurkevichVA
+            </Label>
+            <Label 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2" 
+            Grid.Row="10" 
+            FontSize="15">
+                https://github.com/neonmag
+            </Label>
+            <Label 
+            Grid.Column="1"
+            Grid.ColumnSpan="2" 
+            Grid.Row="12" 
+            FontSize="15">
+                Designer: Chervona Anna
+            </Label>
+            <Label 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2" 
+            Grid.Row="13" 
+            FontSize="15">
+                @red.annaa
+            </Label>
+        </Grid>
+    </StackPanel>
+</Page>
