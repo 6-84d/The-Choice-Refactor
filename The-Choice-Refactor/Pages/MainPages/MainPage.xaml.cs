@@ -20,9 +20,16 @@ namespace The_Choice_Refactor.Pages.MainPages
     /// </summary>
     public partial class MainPage : Page
     {
-        public MainPage()
+        private MainWindow parent;
+        public MainPage(MainWindow parent)
         {
             InitializeComponent();
+            this.parent = parent;
+        }
+
+        private void LetsGo_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            parent.LetsGo_Btn_Click();
         }
     }
 }

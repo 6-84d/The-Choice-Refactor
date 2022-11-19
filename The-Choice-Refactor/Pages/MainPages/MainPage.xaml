@@ -52,7 +52,17 @@
                 <RowDefinition Height="130"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-            <Button x:Name="GoButton" Grid.Row="2" VerticalAlignment="Center" Content="Lets go!" Height="120" Width="250" BorderThickness="0" FontSize="20" Foreground="White">
+            <Button 
+                x:Name="LetsGo_Btn" 
+                Grid.Row="2" 
+                VerticalAlignment="Center" 
+                Content="Lets go!" 
+                Height="120" 
+                Width="250" 
+                BorderThickness="0" 
+                FontSize="20" 
+                Foreground="White"
+                Click="LetsGo_Btn_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="../../Resources/Pictures/LetsGoButtonDark.png"/>
                 </Button.Background>

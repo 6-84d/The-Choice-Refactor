@@ -28,13 +28,13 @@ namespace The_Choice_Refactor
             config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(@"..\..\..\UserData\Configuration.json"));  // load configuration from json-file
             SetConfig();
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            currentPage = new MainPage();                                                                               // create MainPage and set to current page
+            currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
         }
 
         private void MainPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new MainPage();           // create MainPage and set to current page
+            currentPage = new MainPage(this);           // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);    // navigate frame to current page
             SetConfig();
         }
@@ -88,6 +88,28 @@ namespace The_Choice_Refactor
                 Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\BackgroundLight.png", UriKind.Relative)));
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\LinesBackgroundLight.png", UriKind.Relative)));
             }
+        }
+        public void LetsGo_Btn_Click()
+        {
+            Random r = new Random();
+            switch (r.Next(0, 4))
+            {
+                case 0:
+                    currentPage = new CryptoPage();
+                    break;
+                case 1:
+                    currentPage = new CurrencyPage();
+                    break;
+                case 2:
+                    currentPage = new MetalPage();
+                    break;
+                case 3:
+                    currentPage = new SharePage();
+                    break;
+                default:
+                    return;
+            }
+            PageFrame_Frm.Navigate(currentPage);
         }
     }
 }
