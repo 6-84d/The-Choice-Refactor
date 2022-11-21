@@ -46,5 +46,11 @@ namespace The_Choice_Refactor.Pages.MainPages
             else
                 _list.DataContext = new MetalSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked);
         }
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            _list = new MetalListPage();
+            _list.DataContext = new MetalVM();
+            ListBoxFrame_Frm.Navigate(_list);
+        }
     }
 }

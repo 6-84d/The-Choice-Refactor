@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:The_Choice_Refactor.Pages.MainPages"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       Title="SharePage">
     <Page.Resources>
         <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
@@ -29,6 +30,18 @@
             <ColumnDefinition Width="115"/>
             <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
+        <Button
+            x:Name="UpdateButton"
+            Grid.Column="2"
+            HorizontalAlignment="Right"
+            Width="30"
+            Height="30"
+            VerticalAlignment="Bottom"
+            Click="UpdateButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="{svgc:SvgImage Source='../../../Resources/Pictures/Icons/Update.svg'}"/>
+            </Button.Background>
+        </Button>
         <Border 
             Background="White"
             Opacity="0.1" 

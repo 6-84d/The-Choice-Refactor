@@ -45,5 +45,11 @@ namespace The_Choice_Refactor.Pages.MainPages
             else
                 _list.DataContext = new CurrencySearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked);
         }
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            _list = new CurrencyListPage();
+            _list.DataContext = new CurrencyVM();
+            ListBoxFrame_Frm.Navigate(_list);
+        }
     }
 }
