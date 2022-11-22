@@ -11,11 +11,11 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class CryptoPage : Page
     {
         private CryptoListPage _list;
-        public CryptoPage()
+        public CryptoPage(CryptoVM cryptoVM)
         {
             InitializeComponent();
             _list = new CryptoListPage();
-            _list.DataContext = new CryptoVM();
+            _list.DataContext = cryptoVM;
             ListBoxFrame_Frm.Navigate(_list);
         }
 
@@ -50,7 +50,6 @@ namespace The_Choice_Refactor.Pages.MainPages
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            _list = new CryptoListPage();
             _list.DataContext = new CryptoVM();
             ListBoxFrame_Frm.Navigate(_list);
         }

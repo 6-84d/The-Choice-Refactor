@@ -17,11 +17,11 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class SharePage : Page
     {
         private ShareListPage _list;
-        public SharePage()
+        public SharePage(ShareVM shareVM)
         {
             InitializeComponent();
             _list = new ShareListPage();
-            _list.DataContext = new ShareVM();
+            _list.DataContext = shareVM;
             ListBoxFrame_Frm.Navigate(_list);
         }
 
@@ -55,7 +55,6 @@ namespace The_Choice_Refactor.Pages.MainPages
         }
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            _list = new ShareListPage();
             _list.DataContext = new ShareVM();
             ListBoxFrame_Frm.Navigate(_list);
         }

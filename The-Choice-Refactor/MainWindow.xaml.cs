@@ -21,16 +21,28 @@ namespace The_Choice_Refactor
     {
         private Config? config;     // application configuration (theme, language, currency)
         private Page currentPage;   // page that showed in frame at the moment
+        private CryptoVM CryptoVM;
+        private CurrencyVM CurrencyVM;
+        private MetalVM MetalVM;
+        private ShareVM ShareVM;
         public MainWindow()
         {
-            InitializeComponent();
-            ApiHelper.InitializeClient();                                                                            // init http client to work with apis
+            ApiHelper.InitializeClient();
+
+            CryptoVM = new CryptoVM();
+            CurrencyVM = new CurrencyVM();
+            MetalVM = new MetalVM();
+            ShareVM = new ShareVM();
+
+            InitializeComponent();                                                                        // init http client to work with apis
+
             config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(@"..\..\..\UserData\Configuration.json"));  // load configuration from json-file
             SetConfig();
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+
             currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
-        }
+    }
 
         private void MainPage_Btn_Click(object sender, RoutedEventArgs e)
         {
@@ -41,28 +53,28 @@ namespace The_Choice_Refactor
 
         private void CryptoPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new CryptoPage();
+            currentPage = new CryptoPage(CryptoVM);
             PageFrame_Frm.Navigate(currentPage);
             MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
         }
 
         private void CurrencyPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new CurrencyPage();
+            currentPage = new CurrencyPage(CurrencyVM);
             PageFrame_Frm.Navigate(currentPage);
             MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
         }
 
         private void MetalPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new MetalPage();
+            currentPage = new MetalPage(MetalVM);
             PageFrame_Frm.Navigate(currentPage);
             MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
         }
 
         private void SharePage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new SharePage();
+            currentPage = new SharePage(ShareVM);
             PageFrame_Frm.Navigate(currentPage);
             MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
         }
@@ -95,16 +107,16 @@ namespace The_Choice_Refactor
             switch (r.Next(0, 4))
             {
                 case 0:
-                    currentPage = new CryptoPage();
+                    currentPage = new CryptoPage(CryptoVM);
                     break;
                 case 1:
-                    currentPage = new CurrencyPage();
+                    currentPage = new CurrencyPage(CurrencyVM);
                     break;
                 case 2:
-                    currentPage = new MetalPage();
+                    currentPage = new MetalPage(MetalVM);
                     break;
                 case 3:
-                    currentPage = new SharePage();
+                    currentPage = new SharePage(ShareVM);
                     break;
                 default:
                     return;

@@ -11,11 +11,11 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class MetalPage : Page
     {
         private MetalListPage _list;
-        public MetalPage()
+        public MetalPage(MetalVM metalVM)
         {
             InitializeComponent();
             _list = new MetalListPage();
-            _list.DataContext = new MetalVM();
+            _list.DataContext = metalVM;
             ListBoxFrame_Frm.Navigate(_list);
         }
         private void favoriteMode_ChBx_Checked(object sender, RoutedEventArgs e)
@@ -48,7 +48,6 @@ namespace The_Choice_Refactor.Pages.MainPages
         }
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            _list = new MetalListPage();
             _list.DataContext = new MetalVM();
             ListBoxFrame_Frm.Navigate(_list);
         }

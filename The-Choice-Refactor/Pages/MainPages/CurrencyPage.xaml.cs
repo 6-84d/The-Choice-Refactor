@@ -11,11 +11,11 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class CurrencyPage : Page
     {
         private CurrencyListPage _list;
-        public CurrencyPage()
+        public CurrencyPage(CurrencyVM currencyVM)
         {
             InitializeComponent();
             _list = new CurrencyListPage();
-            _list.DataContext = new CurrencyVM();
+            _list.DataContext = currencyVM;
             ListBoxFrame_Frm.Navigate(_list);
         }
         private void favoriteMode_ChBx_Checked(object sender, RoutedEventArgs e)
@@ -47,7 +47,6 @@ namespace The_Choice_Refactor.Pages.MainPages
         }
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            _list = new CurrencyListPage();
             _list.DataContext = new CurrencyVM();
             ListBoxFrame_Frm.Navigate(_list);
         }
