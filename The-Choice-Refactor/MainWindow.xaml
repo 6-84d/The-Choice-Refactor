@@ -74,7 +74,7 @@
         <Image x:Name="searchImg" Source="Resources/Pictures/Icons/Search.png" Grid.Column="13" Grid.Row="0" Height="15" HorizontalAlignment="Right" Margin="15" Visibility="Hidden"/>
         <TextBox x:Name="searchTB" Foreground="White" Grid.Column="12" Grid.Row="0" Background="Transparent" FontSize="18" BorderThickness="0" MinWidth="165" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden"/>
 
-        <Button x:Name="OptionsPageButton" Grid.Column="11" Grid.Row="0" Height="35" Width="35" VerticalAlignment="Bottom" BorderThickness="0" Background="Transparent" Click="Options_Btn_Click">
+        <Button x:Name="OptionsPageButton" Grid.Column="11" Grid.Row="0" Height="35" Width="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" BorderThickness="0" Background="Transparent" Click="Options_Btn_Click">
             <Image x:Name="ButtonOptionsImage" Source="{svgc:SvgImage Source='../../../Resources/Pictures/Icons/MainOptions.svg'}"/>
         </Button>
         <Frame Name="PageFrame_Frm" Grid.Row="0" Grid.Column="0" Grid.RowSpan="12" Grid.ColumnSpan="12" NavigationUIVisibility="Hidden"></Frame>

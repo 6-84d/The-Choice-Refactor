@@ -13,8 +13,8 @@
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="15"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="5"/>
@@ -25,10 +25,10 @@
 
             <ColumnDefinition Width="70"/>
             <ColumnDefinition Width="130"/>
-            <ColumnDefinition Width="1362"/>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="1"/>
-            <ColumnDefinition Width="95"/>
+            <ColumnDefinition Width="1339"/>
+            <ColumnDefinition Width="221"/>
+            <ColumnDefinition Width="32"/>
+            <ColumnDefinition Width="66"/>
             <ColumnDefinition Width="70"/>
         </Grid.ColumnDefinitions>
         <Border 
@@ -37,9 +37,8 @@
             CornerRadius="15" 
             Grid.Column="3" 
             Grid.Row="0" 
-            Grid.ColumnSpan="2" 
-            Height="30"
-            VerticalAlignment="Bottom"/>
+            Height="36"
+            VerticalAlignment="Top" Margin="0,29,0,0"/>
         <Button
             x:Name="UpdateButton"
             Grid.Column="2"
@@ -47,7 +46,7 @@
             Width="30"
             Height="30"
             VerticalAlignment="Bottom"
-            Click="UpdateButton_Click">
+            Click="UpdateButton_Click" Margin="0,0,35,0">
             <Button.Background>
                 <ImageBrush ImageSource="{svgc:SvgImage Source='../../../Resources/Pictures/Icons/Update.svg'}"/>
             </Button.Background>
@@ -61,14 +60,14 @@
             Grid.Row="0" 
             MinWidth="165" 
             VerticalAlignment="Top" 
-            HorizontalAlignment="Center"
-            TextChanged="search_TxtBlck_TextChanged" Height="21" Margin="0,39,0,0" Width="166"/>
+            HorizontalAlignment="Left"
+            TextChanged="search_TxtBlck_TextChanged" Height="30" Margin="7,35,0,0" Width="165"/>
         <Image 
             Source="..\..\Resources\Pictures\Icons\Search.png" 
             Grid.Column="3" 
             Grid.Row="0" 
-            HorizontalAlignment="Left" 
-            Margin="183,19,0,29" Width="15" Grid.RowSpan="2"/>
+            HorizontalAlignment="Right"
+            Width="20" Margin="0,26,13,31" Grid.RowSpan="2"/>
         <CheckBox 
             x:Name="favoriteMode_ChBx" 
             Grid.Row="0"
@@ -77,7 +76,7 @@
             VerticalAlignment="Bottom"
             Height="35"
             Checked="favoriteMode_ChBx_Checked" 
-            Unchecked="favoriteMode_ChBx_Unchecked"/>
+            Unchecked="favoriteMode_ChBx_Unchecked" Margin="0,0,26,0"/>
         <Border 
             Background="White" 
             Opacity="0.1" 
