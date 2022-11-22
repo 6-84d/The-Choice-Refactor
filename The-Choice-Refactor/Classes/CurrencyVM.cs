@@ -46,6 +46,7 @@ namespace The_Choice_Refactor.Classes
 
                 currency.name = res.Key;
                 currency.price = res.Value;
+                currency.price *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
 
                 names.Add(currency.name);
 

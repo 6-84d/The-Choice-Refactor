@@ -56,7 +56,7 @@
                             IsEnabled="False"/>
                         <Button 
                             x:Name="MainOptions_Btn"
-                            Content="Main"
+                            Content="{DynamicResource Main}"
                             Grid.Row="1"
                             Grid.Column="2"
                             FontSize="15"
@@ -64,7 +64,7 @@
                             Click="MainOptions_Btn_Click"/>
                         <Button
                             x:Name="Tutorial_Btn"
-                            Content="Tutorial"
+                            Content="{DynamicResource Tutorial}"
                             Grid.Row="2"
                             Grid.Column="2"
                             FontSize="15"
@@ -72,7 +72,7 @@
                             Click="Tutorial_Btn_Click"/>
                         <Button
                             x:Name="AboutUs_Btn"
-                            Content="About Us"
+                            Content="{DynamicResource AboutUs}"
                             Grid.Row="3"
                             Grid.Column="2"
                             FontSize="15"

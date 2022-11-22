@@ -41,7 +41,7 @@ namespace The_Choice_Refactor.Classes
 
                 if (result[i].name == "")
                     result[i].name = result[i].asset_id;
-
+                result[i].price *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
                 names.Add(result[i].name);
 
                 if (result[i].change_1h > 0)

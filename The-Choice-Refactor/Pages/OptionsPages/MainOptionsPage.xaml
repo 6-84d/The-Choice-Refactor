@@ -40,21 +40,21 @@
                     Grid.RowSpan="8"
                     Grid.ColumnSpan="5"/>
                 <Label 
-                    Content="Language" 
+                    Content="{DynamicResource Language}" 
                     Grid.Row="1" 
                     Grid.Column="1" 
                     FontSize="15" 
                     FontWeight="Light" 
                     VerticalAlignment="Center"/>
                 <Label
-                    Content="Currency" 
+                    Content="{DynamicResource Currency}" 
                     Grid.Row="2" 
                     Grid.Column="1" 
                     FontSize="15" 
                     FontWeight="Light" 
                     VerticalAlignment="Center"/>
                 <Label
-                    Content="Theme" 
+                    Content="{DynamicResource Theme}" 
                     Grid.Row="3" 
                     Grid.Column="1" 
                     FontSize="15" 
@@ -67,9 +67,11 @@
                     Width="100" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Left">
-                    <ComboBox
+                    <Menu DockPanel.Dock="Top"
                         Background="White" 
-                        Opacity="0.1"/>
+                        Opacity="0.1">
+                        <MenuItem x:Name="menuLanguage" Foreground="Black" Height="29" Width="100" />
+                    </Menu>
                 </Border>
                 <Border 
                     Grid.Row="2"
@@ -79,8 +81,12 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Left">
                     <ComboBox 
+                        Name="CurrCombo"
                         Background="White" 
-                        Opacity="0.1"/>
+                        Opacity="0.1" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem>USD</ComboBoxItem>
+                        <ComboBoxItem>UAH</ComboBoxItem>
+                    </ComboBox>
                 </Border>
                 <Border 
                     CornerRadius="180"
@@ -132,10 +138,10 @@
                             Background="White" 
                             Opacity="0.1"
                             SelectionChanged="FromAssetType_CmbBx_SelectionChanged">
-                            <ComboBoxItem>Crypto</ComboBoxItem>
-                            <ComboBoxItem>Currency</ComboBoxItem>
-                            <ComboBoxItem>Metal</ComboBoxItem>
-                            <ComboBoxItem>Share</ComboBoxItem>
+                            <ComboBoxItem Content="{DynamicResource Crypto}"></ComboBoxItem>
+                            <ComboBoxItem Content="{DynamicResource Currency}"></ComboBoxItem>
+                            <ComboBoxItem Content="{DynamicResource Materials}"></ComboBoxItem>
+                            <ComboBoxItem Content="{DynamicResource Shares}"></ComboBoxItem>
                         </ComboBox>
                     </Border>
                     <Border 
@@ -174,10 +180,10 @@
                             Background="White" 
                             Opacity="0.1"
                             SelectionChanged="ToAssetType_CmbBx_SelectionChanged">
-                            <ComboBoxItem>Crypto</ComboBoxItem>
-                            <ComboBoxItem>Currency</ComboBoxItem>
-                            <ComboBoxItem>Metal</ComboBoxItem>
-                            <ComboBoxItem>Share</ComboBoxItem>
+                            <ComboBoxItem Content="{DynamicResource Crypto}"></ComboBoxItem>
+                            <ComboBoxItem Content="{DynamicResource Currency}"></ComboBoxItem>
+                            <ComboBoxItem Content="{DynamicResource Materials}"></ComboBoxItem>
+                            <ComboBoxItem Content="{DynamicResource Shares}"></ComboBoxItem>
                         </ComboBox>
                     </Border>
                     <Border 

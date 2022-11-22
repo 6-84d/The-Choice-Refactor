@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Main window -->
+    <v:String x:Key="Relinfo">Достовірна інформація</v:String>
+    <v:String x:Key="inoneplace">в одному місці</v:String>
+    <v:String x:Key="AnAgr">Агрегатор, де можна вивчати інформацію про різні</v:String>
+    <v:String x:Key="cryptocurren">криптовалюти, цінні матеріали, акції та</v:String>
+    <v:String x:Key="curren">валюти, переглянути місця для купівлі та обміну валюти в</v:String>
+    <v:String x:Key="comfort">зручному, сучасному і швидкому інтерфейсі</v:String>
+    <v:String x:Key="LetsGo">Почнемо!</v:String>
+    <v:String x:Key="Crypto">Крипто</v:String>
+    <v:String x:Key="Materials">Матеріали</v:String>
+    <v:String x:Key="Shares">Акції</v:String>
+    <!-- Main window -->
+
+    <!-- Options -->
+    <v:String x:Key="Main">Головна</v:String>
+    <v:String x:Key="Tutorial">Навчання</v:String>
+    <v:String x:Key="AboutUs">Про нас</v:String>
+    <v:String x:Key="Language">Мова</v:String>
+    <v:String x:Key="Currency">Валюта</v:String>
+    <v:String x:Key="Theme">Тема</v:String>
+    <!-- Options -->
+
+    <!-- CryptoPage -->
+    <v:String x:Key="Name">Ім'я</v:String>
+    <v:String x:Key="Price">Ціна</v:String>
+    <v:String x:Key="Volume24h">Обсяг 24г</v:String>
+    <v:String x:Key="Change1h">Зміна 1г</v:String>
+    <v:String x:Key="Change24h">Зміна 24г</v:String>
+    <v:String x:Key="Change7d">Зміна 7д</v:String>
+    <!-- CryptoPage -->
+
+    <!-- SharePage -->
+    <v:String x:Key="DayHigh">Денний максимум</v:String>
+    <v:String x:Key="DayLow">Денний мінімум</v:String>
+    <v:String x:Key="Totaltradedvol">Загальний обсяг торгів</v:String>
+    <!-- SharePage -->
+
+    <!-- AboutUs -->
+    <v:String x:Key="isamark">це програма-агрегатор ринку для початківців і професіоналів у сфері інвестицій.</v:String>
+    <v:String x:Key="Interf">Інтерфейс збирає все, матеріали, акції та валюти, що робить вибір дуже</v:String>
+    <v:String x:Key="conven">зручним. Додаток зрозумілий у використанні. Мета — створити додаток, який буде</v:String>
+    <v:String x:Key="usedpe">використовуватися людьми для вивчення ринку різних активів і вибору найбільш підходящого</v:String>
+    <v:String x:Key="forthem">для себе.</v:String>
+    <v:String x:Key="Dev">Розробники: Боярчук Богдан, Вова Юркевич, Борислав Лінчевський</v:String>
+    <v:String x:Key="Des">Дизайнер: Червона Анна</v:String>
+    <!-- AboutUs -->
+
+</ResourceDictionary>

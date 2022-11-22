@@ -142,8 +142,8 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
-                    Width="58">
-                    Name
+                    Width="58"
+                    Content="{DynamicResource Name}">
                 </Label>
                 <Label 
                     Grid.Column="4" 
@@ -151,8 +151,8 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
-                    Width="48">
-                    Price
+                    Width="48"
+                    Content="{DynamicResource Price}">
                 </Label>
                 <Label 
                     Grid.Column="5" 
@@ -160,8 +160,8 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
-                    Width="104">
-                    Day High
+                    Width="104"
+                    Content="{DynamicResource DayHigh}">
                 </Label>
                 <Label
                     Grid.Column="6" 
@@ -169,8 +169,8 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
-                    Width="96">
-                    Day Low
+                    Width="96"
+                    Content="{DynamicResource DayLow}">
                 </Label>
                 <Label
                     Grid.Column="7"
@@ -178,8 +178,8 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34"
-                    Width="105">
-                    Total traded vol
+                    Width="105"
+                    Content="{DynamicResource Totaltradedvol}">
                 </Label>
             </Grid>
             <Frame 

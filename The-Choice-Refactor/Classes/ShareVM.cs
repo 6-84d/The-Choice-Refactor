@@ -49,6 +49,7 @@ namespace The_Choice_Refactor.Classes
             foreach (var share in result)
             {
                 share.number = i + 1;
+                share.lastPrice *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
                 share.isFavorite = favoritesIDs.Contains(share.symbol);
                 names.Add(share.identifier);
                 assets.Add(share);

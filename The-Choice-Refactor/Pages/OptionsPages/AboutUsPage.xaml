@@ -57,43 +57,43 @@
             Grid.Column="2"
             Grid.Row="1" 
             FontSize="15" 
-            HorizontalAlignment="Left">
-                is a market aggregator program for beginners and investment professionals.
+            HorizontalAlignment="Left"
+                Content="{DynamicResource isamark}">
             </Label>
             <Label 
             Grid.Column="1"
             Grid.ColumnSpan="2"
             Grid.Row="2" 
-            FontSize="15">
-                Interface collects everything, materials, stocks and currencies, which makes the choice very
+            FontSize="15"
+                Content="{DynamicResource Interf}">
             </Label>
             <Label 
             Grid.Column="1"
             Grid.ColumnSpan="2"
             Grid.Row="3" 
-            FontSize="15">
-                convenient. The application is clear to use. The goal is to create an application that will be
+            FontSize="15"
+                Content="{DynamicResource conven}">
             </Label>
             <Label 
             Grid.Column="1"
             Grid.ColumnSpan="2" 
             Grid.Row="4" 
-            FontSize="15">
-                used people in order to study the market of various assets and choose the most suitable one
+            FontSize="15"
+                Content="{DynamicResource usedpe}">
             </Label>
             <Label 
             Grid.Column="1"
             Grid.ColumnSpan="2" 
             Grid.Row="5" 
-            FontSize="15">
-                for themselves.
+            FontSize="15"
+                Content="{DynamicResource forthem}">
             </Label>
             <Label 
             Grid.Column="1" 
             Grid.ColumnSpan="2" 
             Grid.Row="7" 
-            FontSize="15">
-                Developers: Boiarchuk Bohdan, Vova Yurkevich, Boryslav Linchevskyi
+            FontSize="15"
+                Content="{DynamicResource Dev}">
             </Label>
             <Label 
             Grid.Column="1" 
@@ -120,8 +120,8 @@
             Grid.Column="1"
             Grid.ColumnSpan="2" 
             Grid.Row="12" 
-            FontSize="15">
-                Designer: Chervona Anna
+            FontSize="15"
+                Content="{DynamicResource Des}">
             </Label>
             <Label 
             Grid.Column="1" 

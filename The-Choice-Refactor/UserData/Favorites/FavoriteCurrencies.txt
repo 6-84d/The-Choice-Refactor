@@ -1,7 +1,2 @@
-ALL;
-AMD;
-ANG;
 AFN;
-AED;
-AOA;
-ARS;
+ALL;

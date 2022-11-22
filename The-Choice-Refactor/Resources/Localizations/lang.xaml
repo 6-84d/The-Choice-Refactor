@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Main window -->
+    <v:String x:Key="Relinfo">Reliable information</v:String>
+    <v:String x:Key="inoneplace">in one place</v:String>
+    <v:String x:Key="AnAgr">An aggregator where you can study information about different</v:String>
+    <v:String x:Key="cryptocurren">cryptocurrencies, valuable materials, promotions and</v:String>
+    <v:String x:Key="curren">currencies, view places to buy and exchange currencies in a</v:String>
+    <v:String x:Key="comfort">comfortable, modern and fast interface</v:String>
+    <v:String x:Key="LetsGo">Lets Go!</v:String>
+    <v:String x:Key="Crypto">Crypto</v:String>
+    <v:String x:Key="Materials">Materials</v:String>
+    <v:String x:Key="Shares">Shares</v:String>
+    <!-- Main window -->
+
+    <!-- Options -->
+    <v:String x:Key="Main">Main</v:String>
+    <v:String x:Key="Tutorial">Tutorial</v:String>
+    <v:String x:Key="AboutUs">About Us</v:String>
+    <v:String x:Key="Language">Language</v:String>
+    <v:String x:Key="Currency">Currency</v:String>
+    <v:String x:Key="Theme">Theme</v:String>
+    <!-- Options -->
+
+    <!-- CryptoPage -->
+    <v:String x:Key="Name">Name</v:String>
+    <v:String x:Key="Price">Price</v:String>
+    <v:String x:Key="Volume24h">Volume 24h</v:String>
+    <v:String x:Key="Change1h">Change 1h</v:String>
+    <v:String x:Key="Change24h">Change 24h</v:String>
+    <v:String x:Key="Change7d">Change 7d</v:String>
+    <!-- CryptoPage -->
+
+    <!-- SharePage -->
+    <v:String x:Key="DayHigh">Day High</v:String>
+    <v:String x:Key="DayLow">Day Low</v:String>
+    <v:String x:Key="Totaltradedvol">Total Traded Volume</v:String>
+    <!-- SharePage -->
+    
+    <!-- AboutUs -->
+    <v:String x:Key="isamark">is a market aggregator program for beginners and investment professionals.</v:String>
+    <v:String x:Key="Interf">Interface collects everything, materials, stocks and currencies, which makes the choice very</v:String>
+    <v:String x:Key="conven">convenient. The application is clear to use. The goal is to create an application that will be</v:String>
+    <v:String x:Key="usedpe">used people in order to study the market of various assets and choose the most suitable one</v:String>
+    <v:String x:Key="forthem">for themselves.</v:String>
+    <v:String x:Key="Dev">Developers: Boiarchuk Bohdan, Vova Yurkevich, Boryslav Linchevskyi</v:String>
+    <v:String x:Key="Des">Designer: Chervona Anna</v:String>
+    <!-- AboutUs -->
+
+</ResourceDictionary>

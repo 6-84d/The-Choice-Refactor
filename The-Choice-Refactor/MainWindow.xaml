@@ -62,12 +62,12 @@
             Grid.Row="0" 
             Opacity="1" 
             VerticalAlignment="Bottom">
-            <Button x:Name="CryptoPageButton" Content="Crypto" Foreground="LightGray" FontWeight="Light" FontSize="18" Click="CryptoPage_Btn_Click">
+            <Button x:Name="CryptoPageButton" Content="{DynamicResource Crypto}" Foreground="LightGray" FontWeight="Light" FontSize="18" Click="CryptoPage_Btn_Click">
             </Button>
         </Border>
-        <Button x:Name="CurrenciesPageButton" Content="Currencies" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" Foreground="LightGray" FontSize="18" FontWeight="Light" Click="CurrencyPage_Btn_Click"/>
-        <Button x:Name="MaterialsPageButton" Content="Materials" Grid.Column="6" Grid.Row="0" VerticalAlignment="Bottom" Foreground="LightGray" Background="Transparent" FontSize="18" FontWeight="Light" Click="MetalPage_Btn_Click"/>
-        <Button x:Name="SharesPageButton" Content="Shares" Grid.Column="8" Grid.Row="0" VerticalAlignment="Bottom" Foreground="LightGray" Background="Transparent" FontSize="18" FontWeight="Light" Click="SharePage_Btn_Click"/>
+        <Button x:Name="CurrenciesPageButton" Content="{DynamicResource Currency}" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" Foreground="LightGray" FontSize="18" FontWeight="Light" Click="CurrencyPage_Btn_Click"/>
+        <Button x:Name="MaterialsPageButton" Content="{DynamicResource Materials}" Grid.Column="6" Grid.Row="0" VerticalAlignment="Bottom" Foreground="LightGray" Background="Transparent" FontSize="18" FontWeight="Light" Click="MetalPage_Btn_Click"/>
+        <Button x:Name="SharesPageButton" Content="{DynamicResource Shares}" Grid.Column="8" Grid.Row="0" VerticalAlignment="Bottom" Foreground="LightGray" Background="Transparent" FontSize="18" FontWeight="Light" Click="SharePage_Btn_Click"/>
 
         <Border x:Name="searchFieldBorder" Grid.Column="12" Grid.Row="0" Background="White" Grid.ColumnSpan="2" Opacity="0.3" CornerRadius="15" Height="30" Visibility="Hidden">
         </Border>

@@ -43,6 +43,7 @@ namespace The_Choice_Refactor.Classes
                 metal.number = i + 1;
                 metal.name = res.Key;
                 metal.price = res.Value;
+                metal.price *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
                 metal.isFavorite = favoritesIDs.Contains(res.Key);
                 i++;
                 names.Add(metal.name);

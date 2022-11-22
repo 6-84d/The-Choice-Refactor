@@ -6,6 +6,7 @@
     <RootNamespace>The_Choice_Refactor</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -66,6 +67,21 @@
 
   <ItemGroup>
     <SplashScreen Include="Resources\Pictures\LoadingScreenBackground.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties userdata_4configuration_1json__JsonSchema="https://beaujs.com/schema.json" /></VisualStudio></ProjectExtensions>
