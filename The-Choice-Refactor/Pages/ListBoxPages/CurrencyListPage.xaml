@@ -20,7 +20,7 @@
             ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
             BorderThickness="0" 
             Grid.Column="0" 
-            ItemsSource="{Binding currencies}" 
+            ItemsSource="{Binding assets}" 
             SelectedItem="{Binding Selected}" 
             Background="Transparent" 
             SelectionChanged="Currency_LstBx_SelectionChanged">

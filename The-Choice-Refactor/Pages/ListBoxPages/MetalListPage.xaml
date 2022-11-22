@@ -20,7 +20,7 @@
             ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
             BorderThickness="0" 
             Grid.Column="0" 
-            ItemsSource="{Binding metals}" 
+            ItemsSource="{Binding assets}" 
             SelectedItem="{Binding Selected}" 
             Background="Transparent" 
             SelectionChanged="Metal_LstBx_SelectionChanged">

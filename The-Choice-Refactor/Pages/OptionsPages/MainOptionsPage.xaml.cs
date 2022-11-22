@@ -32,5 +32,47 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             File.WriteAllText(@"..\..\..\UserData\Configuration.json", JsonConvert.SerializeObject(DataContext as Config));
             parent.SetConfig();
         }
+
+        private void FromAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch(FromAssetType_CmbBx.SelectedIndex)
+            {
+                case 0:
+                    FromAsset_CmbBx.DataContext = new CryptoVM();
+                    break;
+                case 1:
+                    FromAsset_CmbBx.DataContext = new CurrencyVM();
+                    break;
+                case 2:
+                    FromAsset_CmbBx.DataContext = new MetalVM();
+                    break;
+                case 3:
+                    FromAsset_CmbBx.DataContext = new ShareVM();
+                    break;
+                default:
+                    return;
+            }
+    }
+
+        private void ToAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (FromAssetType_CmbBx.SelectedIndex)
+            {
+                case 0:
+                    ToAsset_CmbBx.DataContext = new CryptoVM();
+                    break;
+                case 1:
+                    ToAsset_CmbBx.DataContext = new CurrencyVM();
+                    break;
+                case 2:
+                    ToAsset_CmbBx.DataContext = new MetalVM();
+                    break;
+                case 3:
+                    ToAsset_CmbBx.DataContext = new ShareVM();
+                    break;
+                default:
+                    return;
+            }
+        }
     }
 }

@@ -10,7 +10,8 @@ namespace The_Choice_Refactor.Classes
 {
     public class ShareVM: INotifyPropertyChanged
     {
-        public ObservableCollection<ShareModel> shares { get; set; }    // all shares collection
+        public ObservableCollection<ShareModel> assets { get; set; }    // all shares collection
+        public ObservableCollection<string> names { get; set; }
         private ShareModel? selected;                                   // selected share
         public ShareModel? Selected
         {
@@ -23,7 +24,8 @@ namespace The_Choice_Refactor.Classes
         }
         public ShareVM()
         {
-            shares = new ObservableCollection<ShareModel>();
+            assets = new ObservableCollection<ShareModel>();
+            names = new ObservableCollection<string>();
             Load();
         }
         public async void Load()
@@ -48,7 +50,8 @@ namespace The_Choice_Refactor.Classes
             {
                 share.number = i + 1;
                 share.isFavorite = favoritesIDs.Contains(share.symbol);
-                shares.Add(share);
+                names.Add(share.identifier);
+                assets.Add(share);
                 i++;
             }
         }

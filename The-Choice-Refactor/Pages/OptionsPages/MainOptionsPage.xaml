@@ -121,14 +121,37 @@
                         Grid.RowSpan="5" 
                         Grid.ColumnSpan="5"/>
                     <Border 
-                        Background="White" 
-                        Opacity="0.05" 
-                        CornerRadius="50" 
-                        Grid.Row="1" 
-                        Grid.Column="1" 
-                        Height="50" 
-                        Width="300">
-                        <TextBox/>
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Height="30"
+                        Width="140" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left">
+                        <ComboBox 
+                            x:Name="FromAssetType_CmbBx"
+                            Background="White" 
+                            Opacity="0.1"
+                            SelectionChanged="FromAssetType_CmbBx_SelectionChanged">
+                            <ComboBoxItem>Crypto</ComboBoxItem>
+                            <ComboBoxItem>Currency</ComboBoxItem>
+                            <ComboBoxItem>Metal</ComboBoxItem>
+                            <ComboBoxItem>Share</ComboBoxItem>
+                        </ComboBox>
+                    </Border>
+                    <Border 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Height="30"
+                        Width="140" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Right">
+                        <ComboBox 
+                            x:Name="FromAsset_CmbBx"
+                            Background="White" 
+                            Opacity="0.1"
+                            ItemsSource="{Binding names}"
+                            SelectedItem="{Binding Selected}">
+                        </ComboBox>
                     </Border>
                     <Border Background="White" 
                             Opacity="0.05" 
@@ -140,14 +163,36 @@
                         <TextBox/>
                     </Border>
                     <Border 
-                        Background="White" 
-                        Opacity="0.05"
-                        CornerRadius="50" 
-                        Grid.Row="1" 
-                        Grid.Column="3" 
-                        Height="50" 
-                        Width="300">
-                        <TextBox/>
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Height="30"
+                        Width="140" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left">
+                        <ComboBox 
+                            x:Name="ToAssetType_CmbBx"
+                            Background="White" 
+                            Opacity="0.1"
+                            SelectionChanged="ToAssetType_CmbBx_SelectionChanged">
+                            <ComboBoxItem>Crypto</ComboBoxItem>
+                            <ComboBoxItem>Currency</ComboBoxItem>
+                            <ComboBoxItem>Metal</ComboBoxItem>
+                            <ComboBoxItem>Share</ComboBoxItem>
+                        </ComboBox>
+                    </Border>
+                    <Border 
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Height="30"
+                        Width="140" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Right">
+                        <ComboBox 
+                            x:Name="ToAsset_CmbBx"
+                            Background="White" 
+                            Opacity="0.1"
+                            ItemsSource="{Binding names}">
+                        </ComboBox>
                     </Border>
                     <Border 
                         Background="White" 
