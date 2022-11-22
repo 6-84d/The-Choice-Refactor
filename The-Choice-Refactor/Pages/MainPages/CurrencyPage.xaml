@@ -13,8 +13,8 @@
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="15"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="5"/>
@@ -22,13 +22,13 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="130"/>
             <ColumnDefinition Width="1362"/>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="1"/>
-            <ColumnDefinition Width="115"/>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="95"/>
+            <ColumnDefinition Width="70"/>
         </Grid.ColumnDefinitions>
         <Button
             x:Name="UpdateButton"
@@ -50,7 +50,7 @@
             Grid.Row="0" 
             Grid.ColumnSpan="2" 
             Height="30"
-            VerticalAlignment="Top" Margin="0,20,0,0"/>
+            VerticalAlignment="Top" Margin="1,30,0,0"/>
         <TextBox 
             x:Name="search_TxtBlck"
             Background="Transparent"
@@ -61,21 +61,21 @@
             MinWidth="165" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Center"
-            TextChanged="search_TxtBlck_TextChanged" Height="21" Margin="0,29,0,0" Width="166"/>
+            TextChanged="search_TxtBlck_TextChanged" Height="21" Margin="0,39,0,0" Width="166"/>
         <Image 
             Source="..\..\Resources\Pictures\Icons\Search.png" 
             Grid.Column="3" 
             Grid.Row="0" 
             HorizontalAlignment="Right" 
-            Margin="0,18,5,0" Width="15"/>
+            Margin="0,24,0,34" Width="15" Grid.RowSpan="2"/>
         <CheckBox 
             x:Name="favoriteMode_ChBx" 
             Grid.Row="0"
             Grid.Column="5"
             Style="{StaticResource favoriteTemplate}"
-            Margin="5,15,0,0" 
+            Height="35"
             Checked="favoriteMode_ChBx_Checked" 
-            Unchecked="favoriteMode_ChBx_Unchecked"/>
+            Unchecked="favoriteMode_ChBx_Unchecked" Grid.ColumnSpan="2" Margin="1,25,49,0"/>
         <Border 
             Background="White" 
             Opacity="0.1" 
@@ -105,7 +105,8 @@
                 Opacity="0.15" 
                 Grid.Row="1" 
                 Grid.Column="1" 
-                CornerRadius="50"/>
+                CornerRadius="50"
+                Margin="0,0,55,0"/>
             <Grid Grid.Row="1" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50"/>

@@ -19,7 +19,8 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="300"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="220"/>
             <RowDefinition Height="300"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -71,46 +72,35 @@
 
         <Grid Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="13" Background="Transparent">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="295"/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="295"/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="295"/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="295"/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="295"/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="295"/>
+                <ColumnDefinition Width="385"/>
+                <ColumnDefinition Width="127"/>
+                <ColumnDefinition Width="385"/>
+                <ColumnDefinition Width="127"/>
+                <ColumnDefinition Width="385"/>
+                <ColumnDefinition Width="127"/>
+                <ColumnDefinition Width="385"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100*"/>
-                <RowDefinition Height="50*"/>
+                <RowDefinition Height="260"/>
             </Grid.RowDefinitions>
 
             <Border Grid.Row="0" Grid.Column="0" Opacity="0.1" CornerRadius="50" Background="White">
                 <Button Opacity="0"/>
             </Border>
-            <Border Opacity="0.1" Grid.Row="0" CornerRadius="50" Grid.Column="2" Background="White">
+            <Border Grid.Row="0" Grid.Column="2" Opacity="0.1" CornerRadius="50" Background="White">
                 <Button Opacity="0"/>
             </Border>
-            <Border  Opacity="0.1" Grid.Row="0" CornerRadius="50" Grid.Column="4" Background="White">
+            <Border Grid.Row="0" Grid.Column="4" Opacity="0.1" CornerRadius="50" Background="White">
                 <Button Opacity="0"/>
             </Border>
-            <Border Opacity="0.1" Grid.Row="0" Grid.Column="6" CornerRadius="50"  Background="White">
+            <Border Grid.Row="0" Grid.Column="6" Opacity="0.1" CornerRadius="50" Background="White">
                 <Button Opacity="0"/>
             </Border>
-            <Border Opacity="0.1" Grid.Row="0" Grid.Column="8" CornerRadius="50"  Background="White">
-                <Button Opacity="0"/>
-            </Border>
-            <Border Opacity="0.1" Grid.Row="0" Grid.Column="10" CornerRadius="50"  Background="White">
-                <Button Opacity="0"/>
-            </Border>
-            <Button x:Name="LeftArrow_Btn" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="20" Height="30" BorderThickness="0" Background="Transparent">
-                <Image x:Name="LeftArrow_Img" Source="..\..\Resources\Pictures\LeftArrowWhite.png"/>
-            </Button>
-            <Button x:Name="RightArrow_Btn" BorderBrush="Transparent" BorderThickness="0" Grid.Row="0" Grid.Column="10" HorizontalAlignment="Right" VerticalAlignment="Center" Width="20" Height="30" Background="Transparent">
+            <Button x:Name="RightArrow_Btn" BorderBrush="Transparent" BorderThickness="0" Grid.Column="6" HorizontalAlignment="Right" VerticalAlignment="Center" Width="20" Height="30" Background="Transparent">
                 <Image x:Name="RightArrow_Img" Source="..\..\Resources\Pictures\RightArrowWhite.png"/>
+            </Button>
+            <Button x:Name="LefttArrow_Btn" BorderBrush="Transparent" BorderThickness="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="20" Height="30" Background="Transparent" >
+                <Image x:Name="LeftArrow_Img" Source="..\..\Resources\Pictures\LeftArrowWhite.png"/>
             </Button>
         </Grid>
     </Grid>

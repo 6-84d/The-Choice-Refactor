@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using The_Choice_Refactor.Classes;
+using The_Choice_Refactor.Pages.MainPages;
 using The_Choice_Refactor.Pages.OptionsPages;
 
 namespace The_Choice_Refactor
@@ -34,7 +35,6 @@ namespace The_Choice_Refactor
             currentPage = new MainOptionsPage(this.config, this);        // create MainOptionsPage and set to current page
             OptionsFrame_Frm.Navigate(currentPage);     // navigate frame to current page
         }
-
         private void MainOptions_Btn_Click(object sender, RoutedEventArgs e)
         {
             currentPage = new MainOptionsPage(config, this);        // create MainOptionsPage and set to current page

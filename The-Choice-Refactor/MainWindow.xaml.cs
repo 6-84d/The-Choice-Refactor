@@ -37,12 +37,12 @@ namespace The_Choice_Refactor
             InitializeComponent();                                                                        // init http client to work with apis
 
             config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(@"..\..\..\UserData\Configuration.json"));  // load configuration from json-file
-            SetConfig();
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
             currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
-    }
+            SetConfig();
+        }
 
         private void MainPage_Btn_Click(object sender, RoutedEventArgs e)
         {
@@ -83,7 +83,6 @@ namespace The_Choice_Refactor
         {
             OptionsWindow options = new OptionsWindow(config, this);
             options.ShowDialog();
-            MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
         }
         public void SetConfig()
         {
@@ -92,12 +91,18 @@ namespace The_Choice_Refactor
                 this.Cursor = new System.Windows.Input.Cursor(@"..\..\..\Resources\Pictures\Icons\WhiteCursor.cur");
                 Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\BackgroundDark.jpg", UriKind.Relative))){
                 };
-                MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\LinesBackgroundDark.png", UriKind.Relative)));
             }
             else
             {
                 this.Cursor = new System.Windows.Input.Cursor(@"..\..\..\Resources\Pictures\Icons\DarkCursor.cur");
                 Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\BackgroundLight.png", UriKind.Relative)));
+            }
+            if (currentPage.Title != "MainPage")
+            {
+                MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            }
+            else
+            {
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\LinesBackgroundLight.png", UriKind.Relative)));
             }
         }

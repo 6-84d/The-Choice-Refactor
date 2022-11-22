@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:The_Choice_Refactor.Pages.OptionsPages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="700"
+      d:DesignHeight="520" d:DesignWidth="700"
       Title="AboutUsPage">
     <Page.Resources>
         <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
@@ -16,26 +16,26 @@
         Width="700"
         Background="Transparent">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30*"/>
-                <ColumnDefinition Width="77*"/>
-                <ColumnDefinition Width="500*"/>
+                <ColumnDefinition Width="35"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="570"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="80*"/>
-                <RowDefinition Height="66*"/>
-                <RowDefinition Height="66*"/>
-                <RowDefinition Height="66*"/>
-                <RowDefinition Height="66*"/>
-                <RowDefinition Height="66*"/>
-                <RowDefinition Height="320*"/>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="80*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
             </Grid.RowDefinitions>
             <Border 
             Background="White"

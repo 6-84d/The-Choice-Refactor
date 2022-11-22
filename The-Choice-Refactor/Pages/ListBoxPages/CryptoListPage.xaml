@@ -28,10 +28,11 @@
                 <DataTemplate>
                     <TabPanel Height="50">
                         <Label
-                            Width="60"/>
+                            Width="30"/>
                         <CheckBox 
                             x:Name="favorite_ChBx" 
                             Height="20"
+                            Width="45"
                             Style="{StaticResource favoriteTemplate}" 
                             IsChecked="{Binding Path=isFavorite}" 
                             Checked="favorite_ChBx_Checked"
