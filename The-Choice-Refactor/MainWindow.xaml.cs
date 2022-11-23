@@ -18,8 +18,7 @@ namespace The_Choice_Refactor
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-        private Config? config;     // application configuration (theme, language, currency)
+    {    // application configuration (theme, language, currency)
         private Page currentPage;   // page that showed in frame at the moment
         private CryptoVM CryptoVM;
         private CurrencyVM CurrencyVM;
@@ -29,14 +28,8 @@ namespace The_Choice_Refactor
         {
             ApiHelper.InitializeClient();
 
-            CryptoVM = new CryptoVM();
-            CurrencyVM = new CurrencyVM();
-            MetalVM = new MetalVM();
-            ShareVM = new ShareVM();
-
             InitializeComponent();                                                                        // init http client to work with apis
 
-            config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(@"..\..\..\UserData\Configuration.json"));  // load configuration from json-file
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
             currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
@@ -93,18 +86,17 @@ namespace The_Choice_Refactor
 
         private void Options_Btn_Click(object sender, RoutedEventArgs e)
         {
-            OptionsWindow options = new OptionsWindow(config, this);
+            OptionsWindow options = new OptionsWindow(this);
             options.ShowDialog();
         }
         public void SetConfig()
         {
-            if(config.DarkTheme)
+            if (The_Choice_Refactor.Properties.Settings.Default.Dark == true)
             {
                 this.Cursor = new System.Windows.Input.Cursor(@"..\..\..\Resources\Pictures\Icons\WhiteCursor.cur");
-                Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\BackgroundDark.jpg", UriKind.Relative))){
-                };
+                Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\BackgroundDark.jpg", UriKind.Relative)));
             }
-            else
+            else if (The_Choice_Refactor.Properties.Settings.Default.Dark == false)
             {
                 this.Cursor = new System.Windows.Input.Cursor(@"..\..\..\Resources\Pictures\Icons\DarkCursor.cur");
                 Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\Resources\Pictures\BackgroundLight.png", UriKind.Relative)));

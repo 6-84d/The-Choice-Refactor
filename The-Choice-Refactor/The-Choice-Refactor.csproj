@@ -15,6 +15,7 @@
     <None Remove="Resources\Pictures\DarkOff.png" />
     <None Remove="Resources\Pictures\DarkOn.png" />
     <None Remove="Resources\Pictures\Icons\AboutUsIcon.png" />
+    <None Remove="Resources\Pictures\Icons\DarkCursor.cur" />
     <None Remove="Resources\Pictures\Icons\DarkCursor.svg" />
     <None Remove="Resources\Pictures\Icons\Favourite.png" />
     <None Remove="Resources\Pictures\Icons\Logo.svg" />
@@ -23,6 +24,7 @@
     <None Remove="Resources\Pictures\Icons\Search.png" />
     <None Remove="Resources\Pictures\Icons\TutorIcon.png" />
     <None Remove="Resources\Pictures\Icons\Unfavorite.png" />
+    <None Remove="Resources\Pictures\Icons\WhiteCursor.cur" />
     <None Remove="Resources\Pictures\LeftArrow.png" />
     <None Remove="Resources\Pictures\LeftArrowWhite.png" />
     <None Remove="Resources\Pictures\LetsGoButtonDark.png" />
@@ -46,10 +48,12 @@
     <Resource Include="Resources\Pictures\BackgroundLight.png" />
     <Resource Include="Resources\Pictures\DarkOff.png" />
     <Resource Include="Resources\Pictures\DarkOn.png" />
+    <Resource Include="Resources\Pictures\Icons\DarkCursor.cur" />
     <Resource Include="Resources\Pictures\Icons\Favourite.png" />
     <Resource Include="Resources\Pictures\Icons\Logo.svg" />
     <Resource Include="Resources\Pictures\Icons\Search.png" />
     <Resource Include="Resources\Pictures\Icons\Unfavorite.png" />
+    <Resource Include="Resources\Pictures\Icons\WhiteCursor.cur" />
     <Resource Include="Resources\Pictures\LeftArrow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

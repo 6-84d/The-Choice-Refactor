@@ -15,10 +15,9 @@ namespace The_Choice_Refactor.Pages.OptionsPages
     public partial class MainOptionsPage : Page
     {
         OptionsWindow parent;
-        public MainOptionsPage(Config config, OptionsWindow parent)
+        public MainOptionsPage(OptionsWindow parent)
         {
             InitializeComponent();
-            DataContext = config;
             this.parent = parent;
             App.LanguageChanged += LanguageChanged;
 
@@ -39,14 +38,15 @@ namespace The_Choice_Refactor.Pages.OptionsPages
 
         private void themeSwitch_ChBx_Checked(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(@"..\..\..\UserData\Configuration.json", JsonConvert.SerializeObject(DataContext as Config));
+            The_Choice_Refactor.Properties.Settings.Default.Dark = true;
             parent.SetConfig();
         }
 
         private void themeSwitch_ChBx_Unchecked(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(@"..\..\..\UserData\Configuration.json", JsonConvert.SerializeObject(DataContext as Config));
+            The_Choice_Refactor.Properties.Settings.Default.Dark = false;
             parent.SetConfig();
+
         }
 
         private void FromAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)

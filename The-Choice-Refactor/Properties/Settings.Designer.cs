@@ -46,5 +46,17 @@ namespace The_Choice_Refactor.Properties {
                 this["CurrView"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Dark {
+            get {
+                return ((bool)(this["Dark"]));
+            }
+            set {
+                this["Dark"] = value;
+            }
+        }
     }
 }
