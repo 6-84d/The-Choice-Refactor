@@ -13,7 +13,7 @@ namespace The_Choice_Refactor.Classes
 {
     public class ShareSearchVM: INotifyPropertyChanged
     {
-        public ObservableCollection<ShareModel> shares { get; set; }    // found shares collection
+        public ObservableCollection<ShareModel> assets { get; set; }    // found shares collection
         private ShareModel? selected;                                   // selected share
         public ShareModel? Selected
         {
@@ -26,7 +26,7 @@ namespace The_Choice_Refactor.Classes
         }
         public ShareSearchVM(string searchRequest, bool? inFavorites)
         {
-            shares = new ObservableCollection<ShareModel>();
+            assets = new ObservableCollection<ShareModel>();
             Load(searchRequest, inFavorites);
         }
         public async void Load(string searchRequest, bool? inFavorites)
@@ -56,7 +56,7 @@ namespace The_Choice_Refactor.Classes
                 share.isFavorite = favoritesIDs.Contains(share.symbol);
                 i++;
                 if (inFavorites == true && !share.isFavorite) continue;
-                shares.Add(share);
+                assets.Add(share);
             }
         }
         public event PropertyChangedEventHandler? PropertyChanged;

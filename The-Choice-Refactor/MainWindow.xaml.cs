@@ -53,30 +53,42 @@ namespace The_Choice_Refactor
 
         private void CryptoPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new CryptoPage(CryptoVM);
-            PageFrame_Frm.Navigate(currentPage);
-            MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            if (!(currentPage is CryptoPage))
+            {
+                currentPage = new CryptoPage(CryptoVM);
+                PageFrame_Frm.Navigate(currentPage);
+                MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            }
         }
 
         private void CurrencyPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new CurrencyPage(CurrencyVM);
-            PageFrame_Frm.Navigate(currentPage);
-            MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            if (!(currentPage is CurrencyPage))
+            {
+                currentPage = new CurrencyPage(CurrencyVM);
+                PageFrame_Frm.Navigate(currentPage);
+                MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            }
         }
 
         private void MetalPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new MetalPage(MetalVM);
-            PageFrame_Frm.Navigate(currentPage);
-            MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            if (!(currentPage is MetalPage))
+            {
+                currentPage = new MetalPage(MetalVM);
+                PageFrame_Frm.Navigate(currentPage);
+                MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            }
         }
 
         private void SharePage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new SharePage(ShareVM);
-            PageFrame_Frm.Navigate(currentPage);
-            MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            if (!(currentPage is SharePage))
+            {
+                currentPage = new SharePage(ShareVM);
+                PageFrame_Frm.Navigate(currentPage);
+                MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
+            }
         }
 
         private void Options_Btn_Click(object sender, RoutedEventArgs e)

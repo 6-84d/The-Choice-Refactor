@@ -10,7 +10,7 @@ namespace The_Choice_Refactor.Classes
 {
     internal class ShareFavoriteVM
     {
-        public ObservableCollection<ShareModel> shares { get; set; }    // favorite shares collection
+        public ObservableCollection<ShareModel> assets { get; set; }    // favorite shares collection
         private ShareModel? selected;                                   // selected share
         public ShareModel? Selected
         {
@@ -23,7 +23,7 @@ namespace The_Choice_Refactor.Classes
         }
         public ShareFavoriteVM()
         {
-            shares = new ObservableCollection<ShareModel>();
+            assets = new ObservableCollection<ShareModel>();
             Load();
         }
         public async void Load()
@@ -49,7 +49,7 @@ namespace The_Choice_Refactor.Classes
                 share.number = i + 1;
                 if (!favoritesIDs.Contains(share.symbol)) continue;
                 share.isFavorite = favoritesIDs.Contains(share.symbol);
-                shares.Add(share);
+                assets.Add(share);
                 i++;
             }
         }

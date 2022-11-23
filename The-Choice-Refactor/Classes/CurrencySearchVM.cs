@@ -10,7 +10,7 @@ namespace The_Choice_Refactor.Classes
 {
     public class CurrencySearchVM : INotifyPropertyChanged
     {
-        public ObservableCollection<CurrencyModel> currencies { get; set; }   // found currencies collection
+        public ObservableCollection<CurrencyModel> assets { get; set; }   // found currencies collection
         private CurrencyModel? selected;                                      // selected currency
         public CurrencyModel? Selected
         {
@@ -23,7 +23,7 @@ namespace The_Choice_Refactor.Classes
         }
         public CurrencySearchVM(string searchRequest, bool? inFavorites)
         {
-            currencies = new ObservableCollection<CurrencyModel>();
+            assets = new ObservableCollection<CurrencyModel>();
             Load(searchRequest, inFavorites);
         }
         public async void Load(string searchRequest, bool? inFavorites)
@@ -53,7 +53,7 @@ namespace The_Choice_Refactor.Classes
                 currency.name = res.Key;
                 currency.price = res.Value;
 
-                currencies.Add(currency);
+                assets.Add(currency);
             }
         }
         public event PropertyChangedEventHandler? PropertyChanged;

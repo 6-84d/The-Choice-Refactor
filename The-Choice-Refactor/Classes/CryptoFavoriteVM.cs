@@ -10,7 +10,7 @@ namespace The_Choice_Refactor.Classes
 {
     public class CryptoFavoriteVM: INotifyPropertyChanged
     {
-        public ObservableCollection<CryptoModel> cryptoes { get; set; } // favorite cryptoes collection
+        public ObservableCollection<CryptoModel> assets { get; set; } // favorite cryptoes collection
         private CryptoModel? selected;                                   // selected crypto
         public CryptoModel? SelectedCrypto
         {
@@ -23,7 +23,7 @@ namespace The_Choice_Refactor.Classes
         }
         public CryptoFavoriteVM()
         {
-            cryptoes = new ObservableCollection<CryptoModel>();
+            assets = new ObservableCollection<CryptoModel>();
             Load();
         }
         public async void Load()
@@ -59,7 +59,7 @@ namespace The_Choice_Refactor.Classes
                 else
                     result[i].color_change_7d = "red";
 
-                cryptoes.Add(result[i]);
+                assets.Add(result[i]);
             }
         }
         public event PropertyChangedEventHandler? PropertyChanged;

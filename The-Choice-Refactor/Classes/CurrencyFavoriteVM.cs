@@ -12,7 +12,7 @@ namespace The_Choice_Refactor.Classes
 {
     public class CurrencyFavoriteVM
     {
-        public ObservableCollection<CurrencyModel> currencies { get; set; }   // favorite currencies collection
+        public ObservableCollection<CurrencyModel> assets { get; set; }   // favorite currencies collection
         private CurrencyModel? selected;                                      // selected currency
         public CurrencyModel? Selected
         {
@@ -25,7 +25,7 @@ namespace The_Choice_Refactor.Classes
         }
         public CurrencyFavoriteVM()
         {
-            currencies = new ObservableCollection<CurrencyModel>();
+            assets = new ObservableCollection<CurrencyModel>();
             Load();
         }
         public async void Load()
@@ -48,7 +48,7 @@ namespace The_Choice_Refactor.Classes
                 currency.name = res.Key;
                 currency.price = res.Value;
 
-                currencies.Add(currency);
+                assets.Add(currency);
 
                 i++;
             }

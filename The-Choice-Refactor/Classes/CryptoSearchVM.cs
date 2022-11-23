@@ -12,7 +12,7 @@ namespace The_Choice_Refactor.Classes
 {
     public class CryptoSearchVM: INotifyPropertyChanged
     {
-        public ObservableCollection<CryptoModel> cryptoes { get; set; }
+        public ObservableCollection<CryptoModel> assets { get; set; }
         private CryptoModel? selected;
         public CryptoModel? Selected
         {
@@ -25,7 +25,7 @@ namespace The_Choice_Refactor.Classes
         }
         public CryptoSearchVM(string searchRequest, bool? inFavorites)
         {
-            cryptoes = new ObservableCollection<CryptoModel>();
+            assets = new ObservableCollection<CryptoModel>();
             Load(searchRequest, inFavorites);
         }
         public async void Load(string searchRequest, bool? inFavorites)
@@ -66,14 +66,14 @@ namespace The_Choice_Refactor.Classes
                     {
                         if (result[i].asset_id.ToLower().Contains(searchRequest.ToLower()) ||
                             result[i].name.ToLower().Contains(searchRequest.ToLower()))
-                            cryptoes.Add(result[i]);
+                            assets.Add(result[i]);
                     }
                 }
                 else
                 {
                     if (result[i].asset_id.ToLower().Contains(searchRequest.ToLower()) ||
                             result[i].name.ToLower().Contains(searchRequest.ToLower()))
-                        cryptoes.Add(result[i]);
+                        assets.Add(result[i]);
                 }
             }
         }

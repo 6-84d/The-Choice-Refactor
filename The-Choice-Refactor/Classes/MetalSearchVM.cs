@@ -10,7 +10,7 @@ namespace The_Choice_Refactor.Classes
 {
     public class MetalSearchVM: INotifyPropertyChanged
     {
-        public ObservableCollection<MetalModel> metals { get; set; }    // found metals collection
+        public ObservableCollection<MetalModel> assets { get; set; }    // found metals collection
         private MetalModel? selected;                                  // selected metal
         public MetalModel? Selected
         {
@@ -23,7 +23,7 @@ namespace The_Choice_Refactor.Classes
         }
         public MetalSearchVM(string searchRequest, bool? inFavorites)
         {
-            metals = new ObservableCollection<MetalModel>();
+            assets = new ObservableCollection<MetalModel>();
             Load(searchRequest, inFavorites);
         }
         public async void Load(string searchRequest, bool? inFavorites)
@@ -45,7 +45,7 @@ namespace The_Choice_Refactor.Classes
                 metal.isFavorite = favoritesIDs.Contains(res.Key);
                 i++;
                 if (inFavorites == true && !metal.isFavorite) continue;
-                metals.Add(metal);
+                assets.Add(metal);
             }
 
             result = await MetalGet.LoadCommodities();
@@ -60,7 +60,7 @@ namespace The_Choice_Refactor.Classes
                 metal.isFavorite = favoritesIDs.Contains(res.Key);
                 i++;
                 if (inFavorites == true && !metal.isFavorite) continue;
-                metals.Add(metal);
+                assets.Add(metal);
             }
         }
         public event PropertyChangedEventHandler? PropertyChanged;
