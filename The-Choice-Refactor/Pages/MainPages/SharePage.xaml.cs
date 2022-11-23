@@ -21,7 +21,7 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             InitializeComponent();
             _list = new ShareListPage();
-            _list.DataContext = shareVM;
+            _list.DataContext = new ShareVM();
             ListBoxFrame_Frm.Navigate(_list);
         }
 

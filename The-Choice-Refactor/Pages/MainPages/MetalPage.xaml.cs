@@ -15,7 +15,7 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             InitializeComponent();
             _list = new MetalListPage();
-            _list.DataContext = metalVM;
+            _list.DataContext = new MetalVM();
             ListBoxFrame_Frm.Navigate(_list);
         }
         private void favoriteMode_ChBx_Checked(object sender, RoutedEventArgs e)

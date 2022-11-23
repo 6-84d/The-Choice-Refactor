@@ -15,7 +15,7 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             InitializeComponent();
             _list = new CryptoListPage();
-            _list.DataContext = cryptoVM;
+            _list.DataContext = new CryptoVM();
             ListBoxFrame_Frm.Navigate(_list);
         }
 

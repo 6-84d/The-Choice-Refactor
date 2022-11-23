@@ -15,7 +15,7 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             InitializeComponent();
             _list = new CurrencyListPage();
-            _list.DataContext = currencyVM;
+            _list.DataContext = new CurrencyVM();
             ListBoxFrame_Frm.Navigate(_list);
         }
         private void favoriteMode_ChBx_Checked(object sender, RoutedEventArgs e)
