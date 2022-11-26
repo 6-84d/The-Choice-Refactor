@@ -31,7 +31,7 @@ namespace The_Choice_Refactor.Classes
             Dictionary<string, double> result = new Dictionary<string, double>();
             result = await MetalGet.LoadSpot();                                                                            // get info from api
 
-            string[] favoritesIDs = File.ReadAllText(@"..\..\..\UserData\Favorites\FavoriteMetals.txt").Split(";\r\n");   // load favorites list
+            string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteMetals.txt").Split(";\r\n");   // load favorites list
 
             int i = 0;
 

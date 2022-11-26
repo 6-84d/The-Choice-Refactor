@@ -1,6 +1,0 @@
-USDT;
-BTC;
-BUSD;
-ETH;
-MATIC;
-DOGE;

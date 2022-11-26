@@ -17,7 +17,7 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class SharePage : Page
     {
         private ShareListPage _list;
-        public SharePage(ShareVM shareVM)
+        public SharePage()
         {
             InitializeComponent();
             _list = new ShareListPage();

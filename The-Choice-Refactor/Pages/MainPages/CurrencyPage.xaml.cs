@@ -11,7 +11,7 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class CurrencyPage : Page
     {
         private CurrencyListPage _list;
-        public CurrencyPage(CurrencyVM currencyVM)
+        public CurrencyPage()
         {
             InitializeComponent();
             _list = new CurrencyListPage();

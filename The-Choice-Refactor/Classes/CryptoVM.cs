@@ -33,7 +33,7 @@ namespace The_Choice_Refactor.Classes
             List<CryptoModel> result = new List<CryptoModel>();
             result = await CryptoGet.Load();                                                                            // get info from api
 
-            string[] favoritesIDs = File.ReadAllText(@"..\..\..\UserData\Favorites\FavoriteCryptoes.txt").Split(";\r\n");   // load favorites list
+            string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteCryptoes.txt").Split(";\r\n");   // load favorites list
 
             for(int i = 0; i < result.Count; i++)
             {

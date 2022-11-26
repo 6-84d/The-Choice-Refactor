@@ -25,7 +25,7 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
             CryptoModel? newFavorite = ((CheckBox)sender).DataContext as CryptoModel;
             if (newFavorite != null)
             {
-                StreamWriter writer = new StreamWriter(@"..\..\..\UserData\Favorites\FavoriteCryptoes.txt", true);
+                StreamWriter writer = new StreamWriter(@"UserData\Favorites\FavoriteCryptoes.txt", true);
                 writer.WriteLine(newFavorite.asset_id + ";");
                 writer.Close();
             }
@@ -36,8 +36,8 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
             CryptoModel? removedFavorite = ((CheckBox)sender).DataContext as CryptoModel;
             if (removedFavorite != null)
             {
-                string temp = File.ReadAllText(@"..\..\..\UserData\Favorites\FavoriteCryptoes.txt");
-                StreamWriter writer = new StreamWriter(@"..\..\..\UserData\Favorites\FavoriteCryptoes.txt");
+                string temp = File.ReadAllText(@"UserData\Favorites\FavoriteCryptoes.txt");
+                StreamWriter writer = new StreamWriter(@"UserData\Favorites\FavoriteCryptoes.txt");
                 writer.Write(temp.Replace(removedFavorite.asset_id + ";\r\n", ""));
                 writer.Close();
             }

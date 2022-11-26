@@ -25,7 +25,7 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
             ShareModel? newFavorite = ((CheckBox)sender).DataContext as ShareModel;
             if (newFavorite != null)
             {
-                StreamWriter writer = new StreamWriter(@"..\..\..\UserData\Favorites\FavoriteShares.txt", true);
+                StreamWriter writer = new StreamWriter(@"UserData\Favorites\FavoriteShares.txt", true);
                 writer.WriteLine(newFavorite.symbol + ";");
                 writer.Close();
             }
@@ -36,8 +36,8 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
             ShareModel? removedFavorite = ((CheckBox)sender).DataContext as ShareModel;
             if (removedFavorite != null)
             {
-                string temp = File.ReadAllText(@"..\..\..\UserData\Favorites\FavoriteShares.txt");
-                StreamWriter writer = new StreamWriter(@"..\..\..\UserData\Favorites\FavoriteShares.txt");
+                string temp = File.ReadAllText(@"UserData\Favorites\FavoriteShares.txt");
+                StreamWriter writer = new StreamWriter(@"UserData\Favorites\FavoriteShares.txt");
                 writer.Write(temp.Replace(removedFavorite.symbol + ";\r\n", ""));
                 writer.Close();
             }

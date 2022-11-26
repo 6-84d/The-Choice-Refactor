@@ -24,7 +24,7 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
             MetalModel? newFavorite = ((CheckBox)sender).DataContext as MetalModel;
             if (newFavorite != null)
             {
-                StreamWriter writer = new StreamWriter(@"..\..\..\UserData\Favorites\FavoriteMetals.txt", true);
+                StreamWriter writer = new StreamWriter(@"UserData\Favorites\FavoriteMetals.txt", true);
                 writer.WriteLine(newFavorite.name + ";");
                 writer.Close();
             }
@@ -35,8 +35,8 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
             MetalModel? removedFavorite = ((CheckBox)sender).DataContext as MetalModel;
             if (removedFavorite != null)
             {
-                string temp = File.ReadAllText(@"..\..\..\UserData\Favorites\FavoriteMetals.txt");
-                StreamWriter writer = new StreamWriter(@"..\..\..\UserData\Favorites\FavoriteMetals.txt");
+                string temp = File.ReadAllText(@"UserData\Favorites\FavoriteMetals.txt");
+                StreamWriter writer = new StreamWriter(@"UserData\Favorites\FavoriteMetals.txt");
                 writer.Write(temp.Replace(removedFavorite.name + ";\r\n", ""));
                 writer.Close();
             }

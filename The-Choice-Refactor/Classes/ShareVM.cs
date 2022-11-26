@@ -42,7 +42,7 @@ namespace The_Choice_Refactor.Classes
             };
             ShareModel[] result = await ShareGet.Load(request);                                                         // get info from api
 
-            string[] favoritesIDs = File.ReadAllText(@"..\..\..\UserData\Favorites\FavoriteShares.txt").Split(";\r\n"); // load favorites list
+            string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteShares.txt").Split(";\r\n"); // load favorites list
 
             int i = 0;
 

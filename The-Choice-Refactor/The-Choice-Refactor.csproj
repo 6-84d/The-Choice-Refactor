@@ -14,25 +14,61 @@
     <None Remove="Resources\Pictures\BackgroundLight.png" />
     <None Remove="Resources\Pictures\DarkOff.png" />
     <None Remove="Resources\Pictures\DarkOn.png" />
+    <None Remove="Resources\Pictures\Icons\AboutUs.svg" />
     <None Remove="Resources\Pictures\Icons\AboutUsIcon.png" />
     <None Remove="Resources\Pictures\Icons\DarkCursor.cur" />
     <None Remove="Resources\Pictures\Icons\DarkCursor.svg" />
     <None Remove="Resources\Pictures\Icons\Favourite.png" />
+    <None Remove="Resources\Pictures\Icons\Hearth.svg" />
+    <None Remove="Resources\Pictures\Icons\HearthThree.svg" />
+    <None Remove="Resources\Pictures\Icons\Lamp.svg" />
     <None Remove="Resources\Pictures\Icons\Logo.svg" />
     <None Remove="Resources\Pictures\Icons\MainIcon.png" />
+    <None Remove="Resources\Pictures\Icons\MainOptions.svg" />
     <None Remove="Resources\Pictures\Icons\Options.png" />
     <None Remove="Resources\Pictures\Icons\Search.png" />
+    <None Remove="Resources\Pictures\Icons\SubOptions.svg" />
+    <None Remove="Resources\Pictures\Icons\ThreeLines.svg" />
     <None Remove="Resources\Pictures\Icons\TutorIcon.png" />
     <None Remove="Resources\Pictures\Icons\Unfavorite.png" />
+    <None Remove="Resources\Pictures\Icons\Update.svg" />
     <None Remove="Resources\Pictures\Icons\WhiteCursor.cur" />
     <None Remove="Resources\Pictures\LeftArrow.png" />
     <None Remove="Resources\Pictures\LeftArrowWhite.png" />
     <None Remove="Resources\Pictures\LetsGoButtonDark.png" />
     <None Remove="Resources\Pictures\LinesBackgroundDark.png" />
+    <None Remove="Resources\Pictures\LinesBackgroundLight.png" />
+    <None Remove="Resources\Pictures\LoadingScreen.png" />
     <None Remove="Resources\Pictures\LoadingScreenBackground.png" />
+    <None Remove="Resources\Pictures\LoadingScreenLogo.png" />
     <None Remove="Resources\Pictures\Logo.png" />
     <None Remove="Resources\Pictures\RightArrow.png" />
     <None Remove="Resources\Pictures\RightArrowWhite.png" />
+    <None Remove="UserData\Favorites\FavoriteCryptoes.txt" />
+    <None Remove="UserData\Favorites\FavoriteCurrencies.txt" />
+    <None Remove="UserData\Favorites\FavoriteMetals.txt" />
+    <None Remove="UserData\Favorites\FavoriteShares.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="UserData\Favorites\FavoriteCryptoes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UserData\Favorites\FavoriteCurrencies.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UserData\Favorites\FavoriteMetals.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UserData\Favorites\FavoriteShares.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Pictures\Icons\SubOptions.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -45,32 +81,90 @@
     <Resource Include="Resources\Pictures\BackgroundDark.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Pictures\BackgroundLight.png" />
-    <Resource Include="Resources\Pictures\DarkOff.png" />
-    <Resource Include="Resources\Pictures\DarkOn.png" />
-    <Resource Include="Resources\Pictures\Icons\DarkCursor.cur" />
-    <Resource Include="Resources\Pictures\Icons\Favourite.png" />
-    <Resource Include="Resources\Pictures\Icons\Logo.svg" />
-    <Resource Include="Resources\Pictures\Icons\Search.png" />
-    <Resource Include="Resources\Pictures\Icons\Unfavorite.png" />
-    <Resource Include="Resources\Pictures\Icons\WhiteCursor.cur" />
+    <Resource Include="Resources\Pictures\BackgroundLight.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\DarkOff.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\DarkOn.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\AboutUs.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\DarkCursor.cur">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\Favourite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\Hearth.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\HearthThree.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\Lamp.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\Logo.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\MainOptions.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\Search.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\ThreeLines.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\Unfavorite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\Update.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\Icons\WhiteCursor.cur">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Pictures\LeftArrow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Pictures\LeftArrowWhite.png" />
+    <Resource Include="Resources\Pictures\LeftArrowWhite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Pictures\LetsGoButtonDark.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Pictures\LinesBackgroundDark.png" />
+    <Resource Include="Resources\Pictures\LinesBackgroundDark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\LinesBackgroundLight.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\LoadingScreen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\LoadingScreenLogo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Pictures\Logo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Pictures\RightArrowWhite.png" />
-    <Resource Include="Resources\Pictures\RightArrow.png" />
+    <Resource Include="Resources\Pictures\RightArrowWhite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pictures\RightArrow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
-    <SplashScreen Include="Resources\Pictures\LoadingScreenBackground.png" />
+    <SplashScreen Include="Resources\Pictures\LoadingScreenBackground.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </SplashScreen>
   </ItemGroup>
 
   <ItemGroup>
@@ -85,6 +179,7 @@
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

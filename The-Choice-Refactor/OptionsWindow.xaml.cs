@@ -55,12 +55,12 @@ namespace The_Choice_Refactor
         {
             if (The_Choice_Refactor.Properties.Settings.Default.Dark == true)
             {
-                this.Cursor = new System.Windows.Input.Cursor(@"..\..\..\Resources\Pictures\Icons\WhiteCursor.cur");
+                this.Cursor = new System.Windows.Input.Cursor(App.GetResourceStream(new Uri(@"pack://application:,,,/Resources/Pictures/Icons/WhiteCursor.cur")).Stream);
                 Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(14), Convert.ToByte(17), Convert.ToByte(34)));
             }
             else if (The_Choice_Refactor.Properties.Settings.Default.Dark == false)
             {
-                this.Cursor = new System.Windows.Input.Cursor(@"..\..\..\Resources\Pictures\Icons\DarkCursor.cur");
+                this.Cursor = new System.Windows.Input.Cursor(App.GetResourceStream(new Uri(@"pack://application:,,,/Resources/Pictures/Icons/DarkCursor.cur")).Stream);
                 Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(101), Convert.ToByte(84), Convert.ToByte(133)));
             }
             parent.SetConfig();

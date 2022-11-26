@@ -11,7 +11,7 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class MetalPage : Page
     {
         private MetalListPage _list;
-        public MetalPage(MetalVM metalVM)
+        public MetalPage()
         {
             InitializeComponent();
             _list = new MetalListPage();

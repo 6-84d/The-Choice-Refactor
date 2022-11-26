@@ -1,4 +1,0 @@
-silver;
-platinum;
-rhodium;
-gold;

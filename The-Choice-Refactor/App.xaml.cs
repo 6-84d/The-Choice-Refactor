@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,14 +27,15 @@ namespace The_Choice_Refactor
 
         public App()
         {
-            InitializeComponent();
-            App.LanguageChanged += App_LanguageChanged;
+                InitializeComponent();
 
-            m_Languages.Clear();
-            m_Languages.Add(new CultureInfo("en-US")); //Нейтральная культура для этого проекта
-            m_Languages.Add(new CultureInfo("uk-UA"));
+                App.LanguageChanged += App_LanguageChanged;
 
-            Language = The_Choice_Refactor.Properties.Settings.Default.DefaultLanguage;
+                m_Languages.Clear();
+                m_Languages.Add(new CultureInfo("en-US")); //Нейтральная культура для этого проекта
+                m_Languages.Add(new CultureInfo("uk-UA"));
+
+                Language = The_Choice_Refactor.Properties.Settings.Default.DefaultLanguage;
         }
 
         //Евент для оповещения всех окон приложения

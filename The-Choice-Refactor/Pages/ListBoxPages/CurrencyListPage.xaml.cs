@@ -37,7 +37,7 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
             CurrencyModel? newFavorite = ((CheckBox)sender).DataContext as CurrencyModel;
             if (newFavorite != null)
             {
-                StreamWriter writer = new StreamWriter(@"..\..\..\UserData\Favorites\FavoriteCurrencies.txt", true);
+                StreamWriter writer = new StreamWriter(@"UserData\Favorites\FavoriteCurrencies.txt", true);
                 writer.WriteLine(newFavorite.name + ";");
                 writer.Close();
             }
@@ -48,8 +48,8 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
             CurrencyModel? removedFavorite = ((CheckBox)sender).DataContext as CurrencyModel;
             if (removedFavorite != null)
             {
-                string temp = File.ReadAllText(@"..\..\..\UserData\Favorites\FavoriteCurrencies.txt");
-                StreamWriter writer = new StreamWriter(@"..\..\..\UserData\Favorites\FavoriteCurrencies.txt");
+                string temp = File.ReadAllText(@"UserData\Favorites\FavoriteCurrencies.txt");
+                StreamWriter writer = new StreamWriter(@"UserData\Favorites\FavoriteCurrencies.txt");
                 writer.Write(temp.Replace(removedFavorite.name + ";\r\n", ""));
                 writer.Close();
             }

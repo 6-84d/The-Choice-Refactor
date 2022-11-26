@@ -11,7 +11,7 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class CryptoPage : Page
     {
         private CryptoListPage _list;
-        public CryptoPage(CryptoVM cryptoVM)
+        public CryptoPage()
         {
             InitializeComponent();
             _list = new CryptoListPage();
