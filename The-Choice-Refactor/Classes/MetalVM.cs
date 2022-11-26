@@ -8,10 +8,9 @@ using System.IO;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class MetalVM: INotifyPropertyChanged
+    public class MetalVM : INotifyPropertyChanged
     {
         public ObservableCollection<MetalModel> assets { get; set; }    // all metals collection
-        public ObservableCollection<string> names { get; set; }
         private MetalModel? selected;                                  // selected metal
         public MetalModel? Selected
         {
@@ -25,7 +24,6 @@ namespace The_Choice_Refactor.Classes
         public MetalVM()
         {
             assets = new ObservableCollection<MetalModel>();
-            names = new ObservableCollection<string>();
             Load();
         }
         public async void Load()
@@ -37,7 +35,7 @@ namespace The_Choice_Refactor.Classes
 
             int i = 0;
 
-            foreach(var res in result)
+            foreach (var res in result)
             {
                 MetalModel metal = new MetalModel();
                 metal.number = i + 1;
@@ -46,7 +44,6 @@ namespace The_Choice_Refactor.Classes
                 metal.price *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
                 metal.isFavorite = favoritesIDs.Contains(res.Key);
                 i++;
-                names.Add(metal.name);
                 assets.Add(metal);
             }
 

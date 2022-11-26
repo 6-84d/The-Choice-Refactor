@@ -11,7 +11,6 @@ namespace The_Choice_Refactor.Classes
     public class CurrencyVM : INotifyPropertyChanged
     {
         public ObservableCollection<CurrencyModel> assets { get; set; }   // all currencies collection
-        public ObservableCollection<string> names { get; set; }
         private CurrencyModel? selected;                                      // selected currency
         public CurrencyModel? Selected
         {
@@ -25,7 +24,6 @@ namespace The_Choice_Refactor.Classes
         public CurrencyVM()
         {
             assets = new ObservableCollection<CurrencyModel>();
-            names = new ObservableCollection<string>();
             Load();
         }
         public async void Load()
@@ -47,8 +45,6 @@ namespace The_Choice_Refactor.Classes
                 currency.name = res.Key;
                 currency.price = res.Value;
                 currency.price *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
-
-                names.Add(currency.name);
 
                 assets.Add(currency);
 

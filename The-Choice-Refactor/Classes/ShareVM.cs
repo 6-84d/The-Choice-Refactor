@@ -8,10 +8,9 @@ using System.Net.Http;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class ShareVM: INotifyPropertyChanged
+    public class ShareVM : INotifyPropertyChanged
     {
         public ObservableCollection<ShareModel> assets { get; set; }    // all shares collection
-        public ObservableCollection<string> names { get; set; }
         private ShareModel? selected;                                   // selected share
         public ShareModel? Selected
         {
@@ -25,7 +24,6 @@ namespace The_Choice_Refactor.Classes
         public ShareVM()
         {
             assets = new ObservableCollection<ShareModel>();
-            names = new ObservableCollection<string>();
             Load();
         }
         public async void Load()
@@ -51,7 +49,7 @@ namespace The_Choice_Refactor.Classes
                 share.number = i + 1;
                 share.lastPrice *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
                 share.isFavorite = favoritesIDs.Contains(share.symbol);
-                names.Add(share.identifier);
+                share.name = share.symbol;
                 assets.Add(share);
                 i++;
             }

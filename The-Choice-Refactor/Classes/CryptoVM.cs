@@ -8,10 +8,9 @@ using System.IO;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class CryptoVM: INotifyPropertyChanged
+    public class CryptoVM : INotifyPropertyChanged
     {
         public ObservableCollection<CryptoModel> assets { get; set; } // all cryptoes collection
-        public ObservableCollection<string> names { get; set; }
         private CryptoModel? selected;                                   // selected crypto
         public CryptoModel? Selected
         {
@@ -25,7 +24,6 @@ namespace The_Choice_Refactor.Classes
         public CryptoVM()
         {
             assets = new ObservableCollection<CryptoModel>();
-            names = new ObservableCollection<string>();
             Load();
         }
         public async void Load()
@@ -35,14 +33,13 @@ namespace The_Choice_Refactor.Classes
 
             string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteCryptoes.txt").Split(";\r\n");   // load favorites list
 
-            for(int i = 0; i < result.Count; i++)
+            for (int i = 0; i < result.Count; i++)
             {
                 result[i].number = i + 1;
 
                 if (result[i].name == "")
                     result[i].name = result[i].asset_id;
                 result[i].price *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
-                names.Add(result[i].name);
 
                 if (result[i].change_1h > 0)
                     result[i].color_change_1h = "green";

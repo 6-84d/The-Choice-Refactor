@@ -155,18 +155,29 @@
                             x:Name="FromAsset_CmbBx"
                             Background="White" 
                             Opacity="0.1"
-                            ItemsSource="{Binding names}"
+                            SelectionChanged="FromAsset_CmbBx_SelectionChanged"
+                            ItemsSource="{Binding assets}"
                             SelectedItem="{Binding Selected}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=name}" Foreground="Black"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
                     </Border>
-                    <Border Background="White" 
+                    <Border Background="Transparent" 
                             Opacity="0.05" 
                             CornerRadius="50"
                             Grid.Row="3"
                             Grid.Column="1" 
                             Height="50" 
                             Width="300">
-                        <TextBox/>
+                        <TextBox
+                            x:Name="From_TxtBx"
+                            Foreground="Black"
+                            Opacity="1"
+                            PreviewTextInput="From_TxtBx_PreviewTextInput"
+                            TextChanged="From_TxtBx_TextChanged"/>
                     </Border>
                     <Border 
                         Grid.Row="1"
@@ -197,18 +208,28 @@
                             x:Name="ToAsset_CmbBx"
                             Background="White" 
                             Opacity="0.1"
-                            ItemsSource="{Binding names}">
+                            SelectionChanged="ToAsset_CmbBx_SelectionChanged"
+                            ItemsSource="{Binding assets}"
+                            SelectedItem="{Binding Selected}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Path=name}" Foreground="Black"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
                     </Border>
-                    <Border 
+                    <Border
                         Background="White" 
-                         Opacity="0.05" 
-                        CornerRadius="50" 
+                        Opacity="0.05" 
                         Grid.Row="3" 
                         Grid.Column="3" 
                         Height="50" 
                         Width="300">
-                        <TextBox/>
+                        <TextBox 
+                            x:Name="Result_TxtBx"
+                            Foreground="Black"
+                            Opacity="1"
+                            Text="{Binding Path=Result}"/>
                     </Border>
                 </Grid>
             </Grid>

@@ -3,6 +3,7 @@
     public class ShareModel
     {
         public int number { get; set; }
+        public string? name { get; set; }
         public string? symbol { get; set; }
         public string? identifier { get; set; }
         public double open { get; set; }
