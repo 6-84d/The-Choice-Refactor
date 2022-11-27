@@ -83,7 +83,7 @@
                     <ComboBox 
                         Name="CurrCombo"
                         Background="White" 
-                        Opacity="0.1" SelectionChanged="ComboBox_SelectionChanged">
+                        Opacity="0.1" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
                         <ComboBoxItem>USD</ComboBoxItem>
                         <ComboBoxItem>UAH</ComboBoxItem>
                     </ComboBox>

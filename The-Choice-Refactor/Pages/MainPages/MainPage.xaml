@@ -65,7 +65,7 @@
                 Foreground="White"
                 Click="LetsGo_Btn_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="../../Resources/Pictures/LetsGoButtonDark.png"/>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/Pictures/LetsGoButtonDark.png"/>
                 </Button.Background>
             </Button>
         </Grid>

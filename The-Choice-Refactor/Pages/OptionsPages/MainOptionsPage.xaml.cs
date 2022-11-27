@@ -63,6 +63,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             App.LanguageChanged += LanguageChanged;
 
             CultureInfo currLang = App.Language;
+            menuLanguage.Header = currLang.ToString();
 
             //Заполняем меню смены языка:
             menuLanguage.Items.Clear();
@@ -134,7 +135,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         private void LanguageChanged(Object sender, EventArgs e)
         {
             CultureInfo currLang = App.Language;
-
+            menuLanguage.Header = currLang.ToString();
             //Отмечаем нужный пункт смены языка как выбранный язык
             foreach (MenuItem i in menuLanguage.Items)
             {

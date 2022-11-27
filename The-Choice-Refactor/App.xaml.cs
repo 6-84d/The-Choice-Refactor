@@ -34,8 +34,9 @@ namespace The_Choice_Refactor
                 m_Languages.Clear();
                 m_Languages.Add(new CultureInfo("en-US")); //Нейтральная культура для этого проекта
                 m_Languages.Add(new CultureInfo("uk-UA"));
+                m_Languages.Add(new CultureInfo("ru-RU"));
 
-                Language = The_Choice_Refactor.Properties.Settings.Default.DefaultLanguage;
+            Language = The_Choice_Refactor.Properties.Settings.Default.DefaultLanguage;
         }
 
         //Евент для оповещения всех окон приложения
@@ -60,6 +61,9 @@ namespace The_Choice_Refactor
                 switch (value.Name)
                 {
                     case "uk-UA":
+                        dict.Source = new Uri(String.Format("Resources/Localizations/lang.{0}.xaml", value.Name), UriKind.Relative);
+                        break;
+                    case "ru-RU":
                         dict.Source = new Uri(String.Format("Resources/Localizations/lang.{0}.xaml", value.Name), UriKind.Relative);
                         break;
                     default:

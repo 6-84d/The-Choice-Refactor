@@ -38,7 +38,6 @@
     <None Remove="Resources\Pictures\LetsGoButtonDark.png" />
     <None Remove="Resources\Pictures\LinesBackgroundDark.png" />
     <None Remove="Resources\Pictures\LinesBackgroundLight.png" />
-    <None Remove="Resources\Pictures\LoadingScreen.png" />
     <None Remove="Resources\Pictures\LoadingScreenBackground.png" />
     <None Remove="Resources\Pictures\LoadingScreenLogo.png" />
     <None Remove="Resources\Pictures\Logo.png" />
@@ -144,9 +143,6 @@
     <Resource Include="Resources\Pictures\LinesBackgroundLight.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Pictures\LoadingScreen.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\Pictures\LoadingScreenLogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -179,6 +175,9 @@
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Pictures\LoadingScreen.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
