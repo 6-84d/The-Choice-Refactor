@@ -37,13 +37,13 @@ namespace The_Choice_Refactor.Classes
 
             foreach (var res in result)
             {
+                i++;
                 if (!res.Key.ToLower().Contains(searchRequest.ToLower())) continue;
                 MetalModel metal = new MetalModel();
-                metal.number = i + 1;
+                metal.number = i;
                 metal.name = res.Key;
                 metal.price = res.Value;
                 metal.isFavorite = favoritesIDs.Contains(res.Key);
-                i++;
                 if (inFavorites == true && !metal.isFavorite) continue;
                 assets.Add(metal);
             }

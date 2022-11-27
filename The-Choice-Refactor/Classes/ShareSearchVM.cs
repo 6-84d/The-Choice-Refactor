@@ -49,12 +49,12 @@ namespace The_Choice_Refactor.Classes
 
             foreach (var share in result)
             {
+                i++;
                 if (!share.identifier.ToLower().Contains(searchRequest.ToLower()) 
                     && !share.symbol.ToLower().Contains(searchRequest.ToLower())) 
                     continue;
-                share.number = i + 1;
+                share.number = i;
                 share.isFavorite = favoritesIDs.Contains(share.symbol);
-                i++;
                 if (inFavorites == true && !share.isFavorite) continue;
                 assets.Add(share);
             }

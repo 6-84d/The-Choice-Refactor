@@ -40,7 +40,7 @@ namespace The_Choice_Refactor.Classes
                 i++;
                 if (!favoritesIDs.Contains(res.Key)) continue;
                 MetalModel metal = new MetalModel();
-                metal.number = i + 1;
+                metal.number = i;
                 metal.name = res.Key;
                 metal.price = res.Value;
                 metal.isFavorite = favoritesIDs.Contains(res.Key);

@@ -46,12 +46,12 @@ namespace The_Choice_Refactor.Classes
 
             foreach (var share in result)
             {
-                share.number = i + 1;
+                i++;
+                share.number = i;
                 share.lastPrice *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
                 share.isFavorite = favoritesIDs.Contains(share.symbol);
                 share.name = share.symbol;
                 assets.Add(share);
-                i++;
             }
         }
         public event PropertyChangedEventHandler? PropertyChanged;

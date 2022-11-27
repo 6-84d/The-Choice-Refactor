@@ -46,11 +46,11 @@ namespace The_Choice_Refactor.Classes
 
             foreach (var share in result)
             {
-                share.number = i + 1;
+                i++;
+                share.number = i;
                 if (!favoritesIDs.Contains(share.symbol)) continue;
                 share.isFavorite = favoritesIDs.Contains(share.symbol);
                 assets.Add(share);
-                i++;
             }
         }
         public event PropertyChangedEventHandler? PropertyChanged;

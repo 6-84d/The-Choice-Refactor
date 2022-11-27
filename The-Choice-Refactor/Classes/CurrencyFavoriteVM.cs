@@ -38,8 +38,10 @@ namespace The_Choice_Refactor.Classes
             int i = 0;
             foreach (var res in result)
             {
+                i++;
+
                 CurrencyModel currency = new CurrencyModel();
-                currency.number = i + 1;
+                currency.number = i;
 
                 if (favoritesIDs.Contains(res.Key))
                     currency.isFavorite = true;
@@ -49,8 +51,6 @@ namespace The_Choice_Refactor.Classes
                 currency.price = res.Value;
 
                 assets.Add(currency);
-
-                i++;
             }
         }
         public event PropertyChangedEventHandler? PropertyChanged;

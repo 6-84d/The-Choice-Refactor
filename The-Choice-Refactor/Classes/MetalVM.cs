@@ -51,12 +51,12 @@ namespace The_Choice_Refactor.Classes
 
             foreach (var res in result)
             {
+                i++;
                 MetalModel metal = new MetalModel();
-                metal.number = i + 1;
+                metal.number = i;
                 metal.name = res.Key;
                 metal.price = res.Value;
                 metal.isFavorite = favoritesIDs.Contains(res.Key);
-                i++;
                 assets.Add(metal);
             }
         }
