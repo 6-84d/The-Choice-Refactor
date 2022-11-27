@@ -39,6 +39,10 @@
     <v:String x:Key="Totaltradedvol">Загальний обсяг торгів</v:String>
     <!-- SharePage -->
 
+    <!-- MistakePage -->
+    <v:String x:Key="TextError">Вибачте, сталася непередбачена помилка</v:String>
+    <!-- MistakePage -->
+
     <!-- AboutUs -->
     <v:String x:Key="isamark">це програма-агрегатор ринку для початківців і професіоналів у сфері інвестицій.</v:String>
     <v:String x:Key="Interf">Інтерфейс збирає все, матеріали, акції та валюти, що робить вибір дуже</v:String>
