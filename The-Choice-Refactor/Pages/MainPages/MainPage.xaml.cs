@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using The_Choice_Refactor.Classes;
 
 namespace The_Choice_Refactor.Pages.MainPages
 {
@@ -25,6 +26,10 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             InitializeComponent();
             this.parent = parent;
+            CryptoPanel.DataContext = new CryptoVM();
+            CurrPanel.DataContext = new CurrencyVM();
+            MatPanel.DataContext = new MetalVM();
+            SharesPanel.DataContext = new ShareVM();
         }
 
         private void LetsGo_Btn_Click(object sender, RoutedEventArgs e)
