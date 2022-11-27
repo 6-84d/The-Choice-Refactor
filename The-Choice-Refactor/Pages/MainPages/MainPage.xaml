@@ -89,8 +89,8 @@
                     <Grid x:Name="CryptoPanel" Height="250" Width="375">
                         <Label FontSize="24" Foreground="Black" Content="ID" Margin="36,20,274,198" />
                         <Label FontSize="24" Foreground="Black" Content="{DynamicResource Price}" Margin="280,20,36,198" />
-                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=name}" Margin="36,198,280,20" />
-                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=price}" Margin="280,198,36,20" />
+                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].name}" Margin="36,198,280,20" />
+                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].price}" Margin="280,198,36,20" />
                     </Grid>
                 </Button>
             </Border>
@@ -99,8 +99,8 @@
                     <Grid x:Name="CurrPanel" Height="250" Width="375">
                         <Label FontSize="24" Foreground="Black" Content="ID" Margin="36,20,274,198" />
                         <Label FontSize="24" Foreground="Black" Content="{DynamicResource Price}" Margin="280,20,36,198" />
-                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=name}" Margin="36,198,280,20" />
-                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=price}" Margin="280,198,36,20" />
+                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].name}" Margin="36,198,280,20" />
+                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].price}" Margin="280,198,36,20" />
                     </Grid>
                 </Button>
             </Border>
@@ -109,8 +109,8 @@
                     <Grid x:Name="MatPanel" Height="250" Width="375">
                         <Label FontSize="24" Foreground="Black" Content="ID" Margin="36,20,274,198" />
                         <Label FontSize="24" Foreground="Black" Content="{DynamicResource Price}" Margin="280,20,36,198" />
-                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=name}" Margin="36,198,280,20" />
-                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=price}" Margin="280,198,36,20" />
+                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].name}" Margin="36,198,280,20" />
+                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].price}" Margin="280,198,36,20" />
                     </Grid>
                 </Button>
             </Border>
@@ -119,8 +119,8 @@
                     <Grid x:Name="SharesPanel" Height="250" Width="375">
                         <Label FontSize="24" Foreground="Black" Content="ID" Margin="36,20,274,198" />
                         <Label FontSize="24" Foreground="Black" Content="{DynamicResource Price}" Margin="280,20,36,198" />
-                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=name}" Margin="36,198,280,20" />
-                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=price}" Margin="280,198,36,20" />
+                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].name}" Margin="36,198,280,20" />
+                        <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].lastPrice}" Margin="280,198,36,20" />
                     </Grid>
                 </Button>
             </Border>
