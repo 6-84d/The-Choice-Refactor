@@ -39,6 +39,10 @@
     <v:String x:Key="Totaltradedvol">Total Traded Volume</v:String>
     <!-- SharePage -->
     
+    <!-- MistakePage -->
+    <v:String x:Key="TextError">Sorry, an unexpected error occurred :(</v:String>
+    <!-- MistakePage -->
+    
     <!-- AboutUs -->
     <v:String x:Key="isamark">is a market aggregator program for beginners and investment professionals.</v:String>
     <v:String x:Key="Interf">Interface collects everything, materials, stocks and currencies, which makes the choice very</v:String>
