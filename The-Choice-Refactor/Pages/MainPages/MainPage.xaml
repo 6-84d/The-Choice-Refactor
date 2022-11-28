@@ -88,40 +88,80 @@
             </Border>
             <Button Background="Transparent">
                 <Grid x:Name="CryptoPanel" Height="250" Width="375">
-                    <Label FontSize="24" Foreground="Black" Content="ID" Margin="36,20,274,198" />
-                    <Label FontSize="24" Foreground="Black" Content="{DynamicResource Price}" Margin="280,20,36,198" />
-                    <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].name}" Margin="36,198,280,20" />
-                    <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].price}" Margin="280,198,36,20" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Label FontSize="24" Foreground="White" Content="ID" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                    <Label FontSize="24" Foreground="White" Content="{DynamicResource Price}" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Label FontSize="24" Foreground="White" Content="{Binding Path=assets[0].name}" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                    <TextBox FontSize="24" Foreground="White" Text="{Binding Path=assets[0].price,StringFormat=0.000}" Grid.Row="2" Grid.Column="2" Background="Transparent" BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Grid>
             </Button>
             <Border Grid.Row="0" Grid.Column="2" Opacity="0.1" CornerRadius="50" Background="White">
             </Border>
             <Button Background="Transparent" Grid.Row="0" Grid.Column="2">
                 <Grid x:Name="CurrPanel" Height="250" Width="375">
-                    <Label FontSize="24" Foreground="Black" Content="ID" Margin="36,20,274,198" />
-                    <Label FontSize="24" Foreground="Black" Content="{DynamicResource Price}" Margin="280,20,36,198" />
-                    <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].name}" Margin="36,198,280,20" />
-                    <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].price}" Margin="280,198,36,20" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Label FontSize="24" Foreground="White" Content="ID" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                    <Label FontSize="24" Foreground="White" Content="{DynamicResource Price}" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                    <Label FontSize="24" Foreground="White" Content="{Binding Path=assets[0].name}" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                    <TextBox FontSize="24" Foreground="White" Text="{Binding Path=assets[0].price,StringFormat=0.000}" Grid.Row="2" Grid.Column="2" Background="Transparent" BorderThickness="0" IsReadOnly="True"  MaxLength="5" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Grid>
             </Button>
             <Border Grid.Row="0" Grid.Column="4" Opacity="0.1" CornerRadius="50" Background="White">
             </Border>
             <Button Background="Transparent" Grid.Row="0" Grid.Column="4">
                 <Grid x:Name="MatPanel" Height="250" Width="375">
-                    <Label FontSize="24" Foreground="Black" Content="ID" Margin="36,20,274,198" />
-                    <Label FontSize="24" Foreground="Black" Content="{DynamicResource Price}" Margin="280,20,36,198" />
-                    <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].name}" Margin="36,198,280,20" />
-                    <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].price}" Margin="280,198,36,20" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Label FontSize="24" Foreground="White" Content="ID" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                    <Label FontSize="24" Foreground="White" Content="{DynamicResource Price}" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Label FontSize="24" Foreground="White" Content="{Binding Path=assets[0].name}"  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                    <TextBox FontSize="24" Foreground="White" Text="{Binding Path=assets[0].price,StringFormat=0.000}" Grid.Row="2" Grid.Column="2" Background="Transparent" BorderThickness="0" IsReadOnly="True"  MaxLength="5" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Grid>
             </Button>
             <Border Grid.Row="0" Grid.Column="6" Opacity="0.1" CornerRadius="50" Background="White">
             </Border>
             <Button Background="Transparent"  Grid.Row="0" Grid.Column="6">
                 <Grid x:Name="SharesPanel" Height="250" Width="375">
-                    <Label FontSize="24" Foreground="Black" Content="ID" Margin="36,20,274,198" />
-                    <Label FontSize="24" Foreground="Black" Content="{DynamicResource Price}" Margin="280,20,36,198" />
-                    <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].name}" Margin="36,198,280,20" />
-                    <Label FontSize="24" Foreground="Black" Content="{Binding Path=assets[0].lastPrice}" Margin="280,198,36,20" />
+                                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="125"/>
+                        <ColumnDefinition Width="125"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Label FontSize="24" Foreground="White" Content="ID" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                    <Label FontSize="24" Foreground="White" Content="{DynamicResource Price}" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Label FontSize="24" Foreground="White" Content="{Binding Path=assets[0].name}"  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                    <TextBox FontSize="24" Foreground="White" Text="{Binding Path=assets[0].lastPrice,StringFormat=0.000}" Grid.Row="2" Grid.Column="2" Background="Transparent" BorderThickness="0" IsReadOnly="True"  MaxLength="5" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Grid>
             </Button>
             <Button x:Name="RightArrow_Btn" BorderBrush="Transparent" BorderThickness="0" Grid.Column="6" HorizontalAlignment="Right" VerticalAlignment="Center" Width="20" Height="30" Background="Transparent">

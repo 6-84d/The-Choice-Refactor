@@ -146,92 +146,127 @@
                         Height="30"
                         Width="140" 
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Left">
-                        <ComboBox 
-                            x:Name="FromAssetType_CmbBx"
-                            Background="White" 
-                            Opacity="0.1"
-                            SelectionChanged="FromAssetType_CmbBx_SelectionChanged">
-                            <ComboBoxItem Content="{DynamicResource Crypto}"></ComboBoxItem>
-                            <ComboBoxItem Content="{DynamicResource Currency}"></ComboBoxItem>
-                            <ComboBoxItem Content="{DynamicResource Materials}"></ComboBoxItem>
-                            <ComboBoxItem Content="{DynamicResource Shares}"></ComboBoxItem>
-                        </ComboBox>
+                        HorizontalAlignment="Left"
+                        Background="White" 
+                        Opacity="0.1">
                     </Border>
-                    <Border 
+                    <ComboBox 
+                        x:Name="FromAssetType_CmbBx"
                         Grid.Row="1"
                         Grid.Column="1"
                         Height="30"
                         Width="140" 
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Right">
-                        <ComboBox 
+                        HorizontalAlignment="Left"
+                        Foreground="White"
+                        Style="{StaticResource ComboBoxBackground}"
+                            SelectionChanged="FromAssetType_CmbBx_SelectionChanged">
+                        <ComboBoxItem Content="{DynamicResource Crypto}"></ComboBoxItem>
+                        <ComboBoxItem Content="{DynamicResource Currency}"></ComboBoxItem>
+                        <ComboBoxItem Content="{DynamicResource Materials}"></ComboBoxItem>
+                        <ComboBoxItem Content="{DynamicResource Shares}"></ComboBoxItem>
+                    </ComboBox>
+                    <Border 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Height="30"
+                        Width="140" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Background="White" 
+                        Opacity="0.1">
+                    </Border>
+                    <ComboBox 
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Height="30"
+                            Width="140" 
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
                             x:Name="FromAsset_CmbBx"
-                            Background="White" 
-                            Opacity="0.1"
                             SelectionChanged="FromAsset_CmbBx_SelectionChanged"
+                            Style="{StaticResource ComboBoxBackground}"
+                            Foreground="White"
                             ItemsSource="{Binding assets}"
                             SelectedItem="{Binding Selected}">
-                            <ComboBox.ItemTemplate>
-                                <DataTemplate>
-                                    <Label Content="{Binding Path=name}" Foreground="Black"/>
-                                </DataTemplate>
-                            </ComboBox.ItemTemplate>
-                        </ComboBox>
-                    </Border>
-                    <Border Background="Transparent" 
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=name}" Foreground="White"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Border Background="White" 
                             Opacity="0.05" 
-                            CornerRadius="50"
                             Grid.Row="3"
                             Grid.Column="1" 
                             Height="50" 
                             Width="300">
-                        <TextBox
+                    </Border>
+                    <TextBox
+                         Grid.Row="3"
+                            Grid.Column="1" 
+                         Background="Transparent" 
+                            FontSize ="24"
+                            BorderThickness="0"
                             x:Name="From_TxtBx"
-                            Foreground="Black"
-                            Opacity="1"
+                            Foreground="White"
                             PreviewTextInput="From_TxtBx_PreviewTextInput"
                             TextChanged="From_TxtBx_TextChanged"/>
-                    </Border>
                     <Border 
                         Grid.Row="1"
                         Grid.Column="3"
                         Height="30"
                         Width="140" 
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Left">
-                        <ComboBox 
+                        HorizontalAlignment="Left"
+                        Background="White" 
+                        Opacity="0.1">
+                    </Border>
+                    <ComboBox 
                             x:Name="ToAssetType_CmbBx"
-                            Background="White" 
-                            Opacity="0.1"
-                            SelectionChanged="ToAssetType_CmbBx_SelectionChanged">
-                            <ComboBoxItem Content="{DynamicResource Crypto}"></ComboBoxItem>
-                            <ComboBoxItem Content="{DynamicResource Currency}"></ComboBoxItem>
-                            <ComboBoxItem Content="{DynamicResource Materials}"></ComboBoxItem>
-                            <ComboBoxItem Content="{DynamicResource Shares}"></ComboBoxItem>
-                        </ComboBox>
-                    </Border>
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            Height="30"
+                            Width="140" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Left"
+                            SelectionChanged="ToAssetType_CmbBx_SelectionChanged"
+                            Foreground="White"
+                            Style="{StaticResource ComboBoxBackground}">
+                        <ComboBoxItem Content="{DynamicResource Crypto}"></ComboBoxItem>
+                        <ComboBoxItem Content="{DynamicResource Currency}"></ComboBoxItem>
+                        <ComboBoxItem Content="{DynamicResource Materials}"></ComboBoxItem>
+                        <ComboBoxItem Content="{DynamicResource Shares}"></ComboBoxItem>
+                    </ComboBox>
                     <Border 
                         Grid.Row="1"
                         Grid.Column="3"
                         Height="30"
                         Width="140" 
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Right">
-                        <ComboBox 
+                        HorizontalAlignment="Right"
+                        Background="White" 
+                        Opacity="0.1">
+                    </Border>
+                    <ComboBox 
+                         Grid.Row="1"
+                        Grid.Column="3"
+                        Height="30"
+                        Width="140" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource ComboBoxBackground}"
+                        Foreground="White"
                             x:Name="ToAsset_CmbBx"
-                            Background="White" 
-                            Opacity="0.1"
                             SelectionChanged="ToAsset_CmbBx_SelectionChanged"
                             ItemsSource="{Binding assets}"
                             SelectedItem="{Binding Selected}">
-                            <ComboBox.ItemTemplate>
-                                <DataTemplate>
-                                    <Label Content="{Binding Path=name}" Foreground="Black"/>
-                                </DataTemplate>
-                            </ComboBox.ItemTemplate>
-                        </ComboBox>
-                    </Border>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=name}" Foreground="White"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
                     <Border
                         Background="White" 
                         Opacity="0.05" 
@@ -239,12 +274,15 @@
                         Grid.Column="3" 
                         Height="50" 
                         Width="300">
-                        <TextBox 
-                            x:Name="Result_TxtBx"
-                            Foreground="Black"
-                            Opacity="1"
-                            Text="{Binding Path=Result}"/>
                     </Border>
+                    <TextBox 
+                            Background="Transparent"
+                            x:Name="Result_TxtBx"
+                            Foreground="White"
+                            Grid.Row="3" 
+                            Grid.Column="3" 
+                            Text="{Binding Path=Result}"
+                            FontSize="24"/>
                 </Grid>
             </Grid>
         </StackPanel>
