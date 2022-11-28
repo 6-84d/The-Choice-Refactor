@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Threading;
 using The_Choice_Refactor.Classes;
 
 namespace The_Choice_Refactor.Pages.ListBoxPages
@@ -10,6 +12,8 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
     /// </summary>
     public partial class ShareListPage : Page
     {
+        private DispatcherTimer timer;
+        private int Delay = 14;
         public ShareListPage()
         {
             InitializeComponent();

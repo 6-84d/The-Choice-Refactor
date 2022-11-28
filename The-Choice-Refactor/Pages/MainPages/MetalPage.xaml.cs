@@ -1,7 +1,10 @@
 ﻿using System.Windows;
+using System.Threading;
 using System.Windows.Controls;
 using The_Choice_Refactor.Classes;
 using The_Choice_Refactor.Pages.ListBoxPages;
+using System.Windows.Threading;
+using System;
 
 namespace The_Choice_Refactor.Pages.MainPages
 {
@@ -11,6 +14,8 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class MetalPage : Page
     {
         private MetalListPage _list;
+        private DispatcherTimer timer;
+        private int Delay = 14;
         public MetalPage()
         {
             InitializeComponent();
@@ -48,8 +53,21 @@ namespace The_Choice_Refactor.Pages.MainPages
         }
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            _list.DataContext = new MetalVM();
-            ListBoxFrame_Frm.Navigate(_list);
+            timer = new DispatcherTimer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Start();
+        }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            Delay++;
+            if (Delay == 15)
+            {
+                Delay = 0;
+                _list.DataContext = new CryptoVM();
+                ListBoxFrame_Frm.Navigate(_list);
+                timer.Stop();
+            }
         }
     }
 }

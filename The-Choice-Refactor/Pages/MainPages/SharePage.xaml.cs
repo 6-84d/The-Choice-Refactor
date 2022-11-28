@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using The_Choice_Refactor.Classes;
 using The_Choice_Refactor.Pages.ListBoxPages;
+using System.Windows.Threading;
 
 namespace The_Choice_Refactor.Pages.MainPages
 {
@@ -17,6 +19,8 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class SharePage : Page
     {
         private ShareListPage _list;
+        private DispatcherTimer timer;
+        private int Delay = 14;
         public SharePage()
         {
             InitializeComponent();
@@ -55,8 +59,21 @@ namespace The_Choice_Refactor.Pages.MainPages
         }
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            _list.DataContext = new ShareVM();
-            ListBoxFrame_Frm.Navigate(_list);
+            timer = new DispatcherTimer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Start();
+        }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            Delay++;
+            if (Delay == 15)
+            {
+                Delay = 0;
+                _list.DataContext = new CryptoVM();
+                ListBoxFrame_Frm.Navigate(_list);
+                timer.Stop();
+            }
         }
     }
 }

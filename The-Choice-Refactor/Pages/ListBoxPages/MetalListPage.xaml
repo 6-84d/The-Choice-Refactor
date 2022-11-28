@@ -27,7 +27,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TabPanel Height="50">
-                        <Label
+                            <Label
                          Width="30"/>
                         <CheckBox 
                             x:Name="favorite_ChBx" 

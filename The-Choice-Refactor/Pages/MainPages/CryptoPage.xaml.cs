@@ -1,7 +1,11 @@
 ﻿using System.Windows;
+using System.Windows.Threading;
 using System.Windows.Controls;
 using The_Choice_Refactor.Pages.ListBoxPages;
 using The_Choice_Refactor.Classes;
+using System;
+using System.Threading;
+using System.Windows.Media;
 
 namespace The_Choice_Refactor.Pages.MainPages
 {
@@ -11,6 +15,8 @@ namespace The_Choice_Refactor.Pages.MainPages
     public partial class CryptoPage : Page
     {
         private CryptoListPage _list;
+        private DispatcherTimer timer;
+        private int Delay = 14;
         public CryptoPage()
         {
             InitializeComponent();
@@ -18,7 +24,6 @@ namespace The_Choice_Refactor.Pages.MainPages
             _list.DataContext = new CryptoVM();
             ListBoxFrame_Frm.Navigate(_list);
         }
-
         private void favoriteMode_ChBx_Checked(object sender, RoutedEventArgs e)
         {
             if (search_TxtBlck.Text.Length == 0)
@@ -50,8 +55,21 @@ namespace The_Choice_Refactor.Pages.MainPages
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            _list.DataContext = new CryptoVM();
-            ListBoxFrame_Frm.Navigate(_list);
+            timer = new DispatcherTimer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Start();
+        }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            Delay++;
+            if(Delay == 15)
+            {
+                Delay = 0;
+                _list.DataContext = new CryptoVM();
+                ListBoxFrame_Frm.Navigate(_list);
+                timer.Stop();
+            }
         }
     }
 }
