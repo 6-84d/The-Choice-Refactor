@@ -65,29 +65,43 @@
                     Grid.Column="2" 
                     Height="30"
                     Width="100" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Left">
-                    <Menu DockPanel.Dock="Top"
-                        Background="White" 
-                        Opacity="0.1">
-                        <MenuItem x:Name="menuLanguage" Foreground="Black" Height="29" Width="100" />
-                    </Menu>
-                </Border>
+                    HorizontalAlignment="Left"
+                    Background="White" 
+                    Opacity="0.1"/>
+                <Menu DockPanel.Dock="Top"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Background="Transparent"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left">
+                    <MenuItem x:Name="menuLanguage" Foreground="White" Height="29" Width="100" >
+                    </MenuItem>
+                </Menu>
                 <Border 
                     Grid.Row="2"
                     Grid.Column="2"
                     Height="30"
                     Width="100" 
                     VerticalAlignment="Center" 
-                    HorizontalAlignment="Left">
-                    <ComboBox 
+                    HorizontalAlignment="Left"
+                    Background="White" 
+                    Opacity="0.1"
+                    />
+                <ComboBox 
                         Name="CurrCombo"
-                        Background="White" 
-                        Opacity="0.1" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
-                        <ComboBoxItem>USD</ComboBoxItem>
-                        <ComboBoxItem>UAH</ComboBoxItem>
-                    </ComboBox>
-                </Border>
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Height="30"
+                        Width="100"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left"
+                        SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0"
+                        Foreground="White"
+                        Style="{StaticResource ComboBoxBackground}"
+                        >
+                    <ComboBoxItem>USD</ComboBoxItem>
+                    <ComboBoxItem>UAH</ComboBoxItem>
+                </ComboBox>
                 <Border 
                     CornerRadius="180"
                     Grid.Row="3"

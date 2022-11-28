@@ -16,6 +16,7 @@ namespace The_Choice_Refactor.Pages.MainPages
         private CurrencyListPage _list;
         private DispatcherTimer timer;
         private int Delay = 14;
+        private bool isUpdating = false;
         public CurrencyPage()
         {
             InitializeComponent();
@@ -52,10 +53,14 @@ namespace The_Choice_Refactor.Pages.MainPages
         }
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            timer = new DispatcherTimer();
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Start();
+            if(!isUpdating)
+            {
+                timer = new DispatcherTimer();
+                timer.Tick += new EventHandler(timer_Tick);
+                timer.Interval = new TimeSpan(0, 0, 1);
+                isUpdating = true;
+                timer.Start();
+            }
         }
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -65,6 +70,7 @@ namespace The_Choice_Refactor.Pages.MainPages
                 Delay = 0;
                 _list.DataContext = new CryptoVM();
                 ListBoxFrame_Frm.Navigate(_list);
+                isUpdating = false;
                 timer.Stop();
             }
         }

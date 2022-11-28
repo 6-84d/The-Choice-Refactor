@@ -50,42 +50,48 @@
             Grid.Column="1"
             Grid.Row="1"
             FontSize="15" 
-            HorizontalAlignment="Left">
+            HorizontalAlignment="Center"
+                VerticalAlignment="Top" Margin="0,3,0,0" Grid.RowSpan="2">
                 The Choice
             </Label>
             <Label 
             Grid.Column="2"
             Grid.Row="1" 
-            FontSize="15" 
+            FontSize="13" 
             HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
                 Content="{DynamicResource isamark}">
             </Label>
             <Label 
             Grid.Column="1"
             Grid.ColumnSpan="2"
             Grid.Row="2" 
-            FontSize="15"
+            FontSize="13"
+                VerticalAlignment="Bottom"
                 Content="{DynamicResource Interf}">
             </Label>
             <Label 
             Grid.Column="1"
             Grid.ColumnSpan="2"
             Grid.Row="3" 
-            FontSize="15"
+            FontSize="13"
+                VerticalAlignment="Bottom"
                 Content="{DynamicResource conven}">
             </Label>
             <Label 
             Grid.Column="1"
             Grid.ColumnSpan="2" 
             Grid.Row="4" 
-            FontSize="15"
+            FontSize="13"
+                VerticalAlignment="Bottom"
                 Content="{DynamicResource usedpe}">
             </Label>
             <Label 
             Grid.Column="1"
             Grid.ColumnSpan="2" 
             Grid.Row="5" 
-            FontSize="15"
+            FontSize="13"
+                VerticalAlignment="Bottom"
                 Content="{DynamicResource forthem}">
             </Label>
             <Label 
