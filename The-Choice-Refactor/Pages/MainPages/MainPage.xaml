@@ -86,7 +86,7 @@
 
             <Border Grid.Row="0" Grid.Column="0" Opacity="0.1" CornerRadius="50" Background="White">
             </Border>
-            <Button Background="Transparent">
+            <Button x:Name="CryptoTop_Btn" Background="Transparent">
                 <Grid x:Name="CryptoPanel" Height="250" Width="375">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="125"/>
@@ -106,7 +106,7 @@
             </Button>
             <Border Grid.Row="0" Grid.Column="2" Opacity="0.1" CornerRadius="50" Background="White">
             </Border>
-            <Button Background="Transparent" Grid.Row="0" Grid.Column="2">
+            <Button x:Name="CurrTop_Btn" Background="Transparent" Grid.Row="0" Grid.Column="2">
                 <Grid x:Name="CurrPanel" Height="250" Width="375">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="125"/>
@@ -126,7 +126,7 @@
             </Button>
             <Border Grid.Row="0" Grid.Column="4" Opacity="0.1" CornerRadius="50" Background="White">
             </Border>
-            <Button Background="Transparent" Grid.Row="0" Grid.Column="4">
+            <Button x:Name="MetalTop_Btn" Background="Transparent" Grid.Row="0" Grid.Column="4">
                 <Grid x:Name="MatPanel" Height="250" Width="375">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="125"/>
@@ -146,7 +146,7 @@
             </Button>
             <Border Grid.Row="0" Grid.Column="6" Opacity="0.1" CornerRadius="50" Background="White">
             </Border>
-            <Button Background="Transparent"  Grid.Row="0" Grid.Column="6">
+            <Button x:Name="ShareTop_Btn" Background="Transparent"  Grid.Row="0" Grid.Column="6">
                 <Grid x:Name="SharesPanel" Height="250" Width="375">
                                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="125"/>
