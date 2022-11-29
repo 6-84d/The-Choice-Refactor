@@ -8,11 +8,14 @@ using System.Runtime.CompilerServices;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using The_Choice_Refactor.Interfaces;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class ShareSearchVM: INotifyPropertyChanged
+    public class ShareSearchVM: INotifyPropertyChanged, IShareVM
     {
+        private string? searchRequest;
+        private bool? inFavorites;
         public ObservableCollection<ShareModel> assets { get; set; }    // found shares collection
         private ShareModel? selected;                                   // selected share
         public ShareModel? Selected
@@ -27,9 +30,10 @@ namespace The_Choice_Refactor.Classes
         public ShareSearchVM(string searchRequest, bool? inFavorites)
         {
             assets = new ObservableCollection<ShareModel>();
-            Load(searchRequest, inFavorites);
+            this.searchRequest = searchRequest;
+            this.inFavorites = inFavorites;
         }
-        public async void Load(string searchRequest, bool? inFavorites)
+        public async Task<bool> Load()
         {
             var request = new HttpRequestMessage
             {
@@ -41,7 +45,17 @@ namespace The_Choice_Refactor.Classes
                     { "X-RapidAPI-Host", "latest-stock-price.p.rapidapi.com" }
                 }
             };
-            ShareModel[] result = await ShareGet.Load(request);                                                         // get info from api
+
+            ShareModel[] result = null;
+
+            try
+            {
+                result = await ShareGet.Load(request);                                                         // get info from api
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
 
             string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteShares.txt").Split(";\r\n"); // load favorites list
 
@@ -58,6 +72,8 @@ namespace The_Choice_Refactor.Classes
                 if (inFavorites == true && !share.isFavorite) continue;
                 assets.Add(share);
             }
+
+            return true;
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

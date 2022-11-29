@@ -21,6 +21,7 @@ namespace The_Choice_Refactor.Pages.MainPages
         public MetalPage()
         {
             InitializeComponent();
+
             timer = new DispatcherTimer();
             timer.Tick += new EventHandler(timer_Tick);
             timer.Interval = new TimeSpan(0, 0, 1);

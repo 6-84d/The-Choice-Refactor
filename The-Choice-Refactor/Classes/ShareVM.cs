@@ -5,10 +5,12 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.IO;
 using System.Net.Http;
+using The_Choice_Refactor.Interfaces;
+using System.Threading.Tasks;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class ShareVM : INotifyPropertyChanged
+    public class ShareVM : INotifyPropertyChanged, IShareVM
     {
         public ObservableCollection<ShareModel> assets { get; set; }    // all shares collection
         private ShareModel? selected;                                   // selected share
@@ -24,9 +26,8 @@ namespace The_Choice_Refactor.Classes
         public ShareVM()
         {
             assets = new ObservableCollection<ShareModel>();
-            Load();
         }
-        public async void Load()
+        public async Task<bool> Load()
         {
             var request = new HttpRequestMessage
             {
@@ -38,7 +39,17 @@ namespace The_Choice_Refactor.Classes
                     { "X-RapidAPI-Host", "latest-stock-price.p.rapidapi.com" }
                 }
             };
-            ShareModel[] result = await ShareGet.Load(request);                                                         // get info from api
+
+            ShareModel[] result = null;
+
+            try
+            {
+                result = await ShareGet.Load(request);                                                         // get info from api
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
 
             string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteShares.txt").Split(";\r\n"); // load favorites list
 
@@ -53,6 +64,8 @@ namespace The_Choice_Refactor.Classes
                 share.name = share.symbol;
                 assets.Add(share);
             }
+
+            return true;
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

@@ -10,6 +10,7 @@ using System.Windows.Controls;
 using The_Choice_Refactor.Classes;
 using The_Choice_Refactor.Pages.ListBoxPages;
 using System.Windows.Threading;
+using The_Choice_Refactor.Interfaces;
 
 namespace The_Choice_Refactor.Pages.MainPages
 {
@@ -18,32 +19,49 @@ namespace The_Choice_Refactor.Pages.MainPages
     /// </summary>
     public partial class SharePage : Page
     {
-        private ShareListPage _list;
+        private Page _list;
         private DispatcherTimer timer;
         private int Delay = 14;
         private bool isUpdating = false;
         public SharePage()
         {
             InitializeComponent();
-            _list = new ShareListPage();
-            _list.DataContext = new ShareVM();
+
+            timer = new DispatcherTimer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = new TimeSpan(0, 0, 1);
+
+            LoadList(new ShareVM());
+        }
+        private async void LoadList(IShareVM viewModel)
+        {
+            try
+            {
+                bool isSucces = await viewModel.Load();
+                _list = new CurrencyListPage();
+                _list.DataContext = viewModel;
+            }
+            catch (Exception ex)
+            {
+                _list = new MistakePage();
+            }
             ListBoxFrame_Frm.Navigate(_list);
         }
 
         private void favoriteMode_ChBx_Checked(object sender, RoutedEventArgs e)
         {
             if (search_TxtBlck.Text.Length == 0)
-                _list.DataContext = new ShareFavoriteVM();
+                LoadList(new ShareFavoriteVM());
             else
-                _list.DataContext = new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked);
+                LoadList(new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
         }
 
         private void favoriteMode_ChBx_Unchecked(object sender, RoutedEventArgs e)
         {
             if (search_TxtBlck.Text.Length == 0)
-                _list.DataContext = new ShareVM();
+                LoadList(new ShareVM());
             else
-                _list.DataContext = new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked);
+                LoadList(new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
         }
 
         private void search_TxtBlck_TextChanged(object sender, TextChangedEventArgs e)
@@ -51,20 +69,17 @@ namespace The_Choice_Refactor.Pages.MainPages
             if (search_TxtBlck.Text.Length == 0)
             {
                 if (favoriteMode_ChBx.IsChecked == true)
-                    _list.DataContext = new ShareFavoriteVM();
+                    LoadList(new ShareFavoriteVM());
                 else
-                    _list.DataContext = new ShareVM();
+                    LoadList(new ShareVM());
             }
             else
-                _list.DataContext = new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked);
+                LoadList(new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
         }
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             if(!isUpdating)
-            { 
-                timer = new DispatcherTimer();
-                timer.Tick += new EventHandler(timer_Tick);
-                timer.Interval = new TimeSpan(0, 0, 1);
+            {
                 isUpdating = true;
                 timer.Start();
             }
@@ -75,8 +90,7 @@ namespace The_Choice_Refactor.Pages.MainPages
             if (Delay == 15)
             {
                 Delay = 0;
-                _list.DataContext = new CryptoVM();
-                ListBoxFrame_Frm.Navigate(_list);
+                LoadList(new ShareVM());
                 isUpdating = false;
                 timer.Stop();
             }
