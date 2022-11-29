@@ -5,10 +5,12 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.IO;
+using The_Choice_Refactor.Interfaces;
+using System.Threading.Tasks;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class MetalVM : INotifyPropertyChanged
+    public class MetalVM : INotifyPropertyChanged, IMetalVM
     {
         public ObservableCollection<MetalModel> assets { get; set; }    // all metals collection
         private MetalModel? selected;                                  // selected metal
@@ -24,12 +26,20 @@ namespace The_Choice_Refactor.Classes
         public MetalVM()
         {
             assets = new ObservableCollection<MetalModel>();
-            Load();
         }
-        public async void Load()
+        public async Task<bool> Load()
         {
             Dictionary<string, double> result = new Dictionary<string, double>();
-            result = await MetalGet.LoadSpot();                                                                            // get info from api
+
+            try
+            {
+                result = await MetalGet.LoadAllMetals();                                                                            // get info from api
+            }
+            catch(Exception ex)
+            {
+                result = null;
+                throw new Exception(ex.Message, ex);
+            }
 
             string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteMetals.txt").Split(";\r\n");   // load favorites list
 
@@ -47,18 +57,7 @@ namespace The_Choice_Refactor.Classes
                 assets.Add(metal);
             }
 
-            result = await MetalGet.LoadCommodities();
-
-            foreach (var res in result)
-            {
-                i++;
-                MetalModel metal = new MetalModel();
-                metal.number = i;
-                metal.name = res.Key;
-                metal.price = res.Value;
-                metal.isFavorite = favoritesIDs.Contains(res.Key);
-                assets.Add(metal);
-            }
+            return true;
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

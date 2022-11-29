@@ -5,11 +5,15 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.IO;
+using The_Choice_Refactor.Interfaces;
+using System.Threading.Tasks;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class MetalSearchVM: INotifyPropertyChanged
+    public class MetalSearchVM: INotifyPropertyChanged, IMetalVM
     {
+        private string? searchRequest;
+        private bool? inFavorites;
         public ObservableCollection<MetalModel> assets { get; set; }    // found metals collection
         private MetalModel? selected;                                  // selected metal
         public MetalModel? Selected
@@ -24,12 +28,22 @@ namespace The_Choice_Refactor.Classes
         public MetalSearchVM(string searchRequest, bool? inFavorites)
         {
             assets = new ObservableCollection<MetalModel>();
-            Load(searchRequest, inFavorites);
+            this.searchRequest = searchRequest;
+            this.inFavorites = inFavorites;
         }
-        public async void Load(string searchRequest, bool? inFavorites)
+        public async Task<bool> Load()
         {
             Dictionary<string, double> result = new Dictionary<string, double>();
-            result = await MetalGet.LoadSpot();                                                                            // get info from api
+
+            try
+            {
+                result = await MetalGet.LoadAllMetals();                                                                            // get info from api
+            }
+            catch(Exception ex)
+            {
+                result = null;
+                throw new Exception(searchRequest, ex);
+            }
 
             string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteMetals.txt").Split(";\r\n");   // load favorites list
 
@@ -48,20 +62,7 @@ namespace The_Choice_Refactor.Classes
                 assets.Add(metal);
             }
 
-            result = await MetalGet.LoadCommodities();
-
-            foreach (var res in result)
-            {
-                if (!res.Key.ToLower().Contains(searchRequest.ToLower())) continue;
-                MetalModel metal = new MetalModel();
-                metal.number = i + 1;
-                metal.name = res.Key;
-                metal.price = res.Value;
-                metal.isFavorite = favoritesIDs.Contains(res.Key);
-                i++;
-                if (inFavorites == true && !metal.isFavorite) continue;
-                assets.Add(metal);
-            }
+            return true;
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
