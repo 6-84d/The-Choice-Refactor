@@ -6,6 +6,7 @@ using The_Choice_Refactor.Pages.MainPages;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System;
+using System.Threading;
 
 namespace The_Choice_Refactor
 {
@@ -19,11 +20,15 @@ namespace The_Choice_Refactor
         {
             ApiHelper.InitializeClient();
 
+            LoadingWIndow loadingWIndow = new LoadingWIndow();
+            loadingWIndow.Show();
+            Thread.Sleep(2000);
+            loadingWIndow.Close();
+
             InitializeComponent();                                                                        // init http client to work with apis
 
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-
-
+            this.ResizeMode = ResizeMode.NoResize;
             currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
 

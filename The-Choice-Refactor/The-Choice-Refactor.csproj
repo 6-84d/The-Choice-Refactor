@@ -158,9 +158,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <SplashScreen Include="Resources\Pictures\LoadingScreenBackground.png">
+    <Resource Include="Resources\Pictures\LoadingScreenBackground.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </SplashScreen>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
