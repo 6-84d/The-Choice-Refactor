@@ -6,8 +6,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using The_Choice_Refactor.Classes;
 
-namespace The_Choice_Refactor.Classes
+namespace The_Choice_Refactor.Interfaces
 {
     public interface ICryptoVM
     {

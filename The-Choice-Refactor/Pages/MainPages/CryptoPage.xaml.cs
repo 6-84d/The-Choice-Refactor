@@ -4,8 +4,7 @@ using System.Windows.Controls;
 using The_Choice_Refactor.Pages.ListBoxPages;
 using The_Choice_Refactor.Classes;
 using System;
-using System.Threading;
-using System.Windows.Media;
+using The_Choice_Refactor.Interfaces;
 
 namespace The_Choice_Refactor.Pages.MainPages
 {
@@ -21,7 +20,11 @@ namespace The_Choice_Refactor.Pages.MainPages
         public CryptoPage()
         {
             InitializeComponent();
-            _list = new CryptoListPage();
+
+            timer = new DispatcherTimer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = new TimeSpan(0, 0, 1);
+            
             LoadList(new CryptoVM());
         }
         private async void LoadList(ICryptoVM viewModel)
@@ -29,6 +32,7 @@ namespace The_Choice_Refactor.Pages.MainPages
             try
             {
                 bool isSucces = await viewModel.Load();
+                _list = new CryptoListPage();
                 _list.DataContext = viewModel;
             }
             catch (Exception ex)
@@ -70,9 +74,6 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             if(!isUpdating)
             {
-                timer = new DispatcherTimer();
-                timer.Tick += new EventHandler(timer_Tick);
-                timer.Interval = new TimeSpan(0, 0, 1);
                 isUpdating = true;
                 timer.Start();
             }
