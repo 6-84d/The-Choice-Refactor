@@ -16,7 +16,7 @@ namespace The_Choice_Refactor.Pages.MainPages
     {
         private Page _list;
         private DispatcherTimer timer;
-        private int Delay = 14;
+        private int Delay = 0;
         private bool isUpdating = false;
         public MetalPage()
         {
@@ -74,6 +74,7 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             if(!isUpdating)
             {
+                LoadList(new MetalVM());
                 isUpdating = true;
                 timer.Start();
             }
@@ -81,10 +82,11 @@ namespace The_Choice_Refactor.Pages.MainPages
         private void timer_Tick(object sender, EventArgs e)
         {
             Delay++;
+            UpdateButton.Opacity = 0.1;
             if (Delay == 15)
             {
                 Delay = 0;
-                LoadList(new MetalVM());
+                UpdateButton.Opacity = 1;
                 isUpdating = false;
                 timer.Stop();
             }

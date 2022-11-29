@@ -15,16 +15,16 @@ namespace The_Choice_Refactor.Pages.MainPages
     {
         private Page _list;
         private DispatcherTimer timer;
-        private int Delay = 14;
+        private int Delay = 0;
         private bool isUpdating = false;
         public CryptoPage()
         {
             InitializeComponent();
 
             timer = new DispatcherTimer();
+
             timer.Tick += new EventHandler(timer_Tick);
             timer.Interval = new TimeSpan(0, 0, 1);
-            
             LoadList(new CryptoVM());
         }
         private async void LoadList(ICryptoVM viewModel)
@@ -72,8 +72,9 @@ namespace The_Choice_Refactor.Pages.MainPages
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            if(!isUpdating)
+            if (!isUpdating)
             {
+                LoadList(new CryptoVM());
                 isUpdating = true;
                 timer.Start();
             }
@@ -81,10 +82,11 @@ namespace The_Choice_Refactor.Pages.MainPages
         private void timer_Tick(object sender, EventArgs e)
         {
             Delay++;
-            if(Delay == 15)
+            UpdateButton.Opacity = 0.1;
+            if (Delay == 15)
             {
                 Delay = 0;
-                LoadList(new CryptoVM());
+                UpdateButton.Opacity = 1;
                 isUpdating = false;
                 timer.Stop();
             }
