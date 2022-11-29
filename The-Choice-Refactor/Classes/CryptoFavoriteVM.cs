@@ -5,31 +5,39 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class CryptoFavoriteVM: INotifyPropertyChanged
+    public class CryptoFavoriteVM : INotifyPropertyChanged, ICryptoVM
     {
         public ObservableCollection<CryptoModel> assets { get; set; } // favorite cryptoes collection
         private CryptoModel? selected;                                   // selected crypto
-        public CryptoModel? SelectedCrypto
+        public CryptoModel? Selected
         {
             get { return selected; }
             set
             {
                 selected = value;
-                OnPropertyChanged("SelectedCrypto");
+                OnPropertyChanged("Selected");
             }
         }
         public CryptoFavoriteVM()
         {
             assets = new ObservableCollection<CryptoModel>();
-            Load();
         }
-        public async void Load()
+        public async Task<bool> Load()
         {
             List<CryptoModel> result = new List<CryptoModel>();
-            result = await CryptoGet.Load();                                                                                // get info from api
+            try
+            {
+                result = await CryptoGet.Load();                                                                            // get info from api
+            }
+            catch (Exception ex)
+            {
+                result = null;
+                throw new Exception(ex.Message, ex);
+            }                                                                                // get info from api
 
             string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteCryptoes.txt").Split(";\r\n");   // load favorites list
 
@@ -61,6 +69,7 @@ namespace The_Choice_Refactor.Classes
 
                 assets.Add(result[i]);
             }
+            return true;
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

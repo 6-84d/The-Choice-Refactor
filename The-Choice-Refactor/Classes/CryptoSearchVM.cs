@@ -10,8 +10,10 @@ using System.IO;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class CryptoSearchVM: INotifyPropertyChanged
+    public class CryptoSearchVM : INotifyPropertyChanged, ICryptoVM
     {
+        private string? searchRequest;
+        private bool? inFavorites;
         public ObservableCollection<CryptoModel> assets { get; set; }
         private CryptoModel? selected;
         public CryptoModel? Selected
@@ -26,12 +28,21 @@ namespace The_Choice_Refactor.Classes
         public CryptoSearchVM(string searchRequest, bool? inFavorites)
         {
             assets = new ObservableCollection<CryptoModel>();
-            Load(searchRequest, inFavorites);
+            this.searchRequest = searchRequest;
+            this.inFavorites = inFavorites;
         }
-        public async void Load(string searchRequest, bool? inFavorites)
+        public async Task<bool> Load()
         {
             List<CryptoModel> result = new List<CryptoModel>();
-            result = await CryptoGet.Load();                                                                            // get info from api
+            try
+            {
+                result = await CryptoGet.Load();                                                                            // get info from api
+            }
+            catch (Exception ex)
+            {
+                result = null;
+                throw new Exception(ex.Message, ex);
+            }
 
             string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteCryptoes.txt").Split(";\r\n");   // load favorites list
 
@@ -76,6 +87,7 @@ namespace The_Choice_Refactor.Classes
                         assets.Add(result[i]);
                 }
             }
+            return true;
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

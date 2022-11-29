@@ -5,10 +5,11 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace The_Choice_Refactor.Classes
 {
-    public class CryptoVM : INotifyPropertyChanged
+    public class CryptoVM : INotifyPropertyChanged, ICryptoVM
     {
         public ObservableCollection<CryptoModel> assets { get; set; } // all cryptoes collection
         private CryptoModel? selected;                                   // selected crypto
@@ -24,12 +25,19 @@ namespace The_Choice_Refactor.Classes
         public CryptoVM()
         {
             assets = new ObservableCollection<CryptoModel>();
-            Load();
         }
-        public async void Load()
+        public async Task<bool> Load()
         {
             List<CryptoModel> result = new List<CryptoModel>();
-            result = await CryptoGet.Load();                                                                            // get info from api
+            try
+            {
+                result = await CryptoGet.Load();                                                                            // get info from api
+            }
+            catch (Exception ex)
+            {
+                result = null;
+                throw new Exception(ex.Message, ex);
+            }
 
             string[] favoritesIDs = File.ReadAllText(@"UserData\Favorites\FavoriteCryptoes.txt").Split(";\r\n");   // load favorites list
 
@@ -61,6 +69,7 @@ namespace The_Choice_Refactor.Classes
 
                 assets.Add(result[i]);
             }
+            return true;
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
