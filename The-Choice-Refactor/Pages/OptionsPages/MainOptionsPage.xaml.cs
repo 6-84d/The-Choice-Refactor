@@ -91,42 +91,58 @@ namespace The_Choice_Refactor.Pages.OptionsPages
 
         }
 
-        private void FromAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void FromAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             switch (FromAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
-                    FromAsset_CmbBx.DataContext = new CryptoVM();
+                    CryptoVM cryptoVM = new CryptoVM();
+                    await cryptoVM.Load();
+                    FromAsset_CmbBx.DataContext = cryptoVM;
                     break;
                 case 1:
-                    FromAsset_CmbBx.DataContext = new CurrencyVM();
+                    CurrencyVM currencyVM = new CurrencyVM();
+                    await currencyVM.Load();
+                    FromAsset_CmbBx.DataContext = currencyVM;
                     break;
                 case 2:
-                    FromAsset_CmbBx.DataContext = new MetalVM();
+                    MetalVM metalVM = new MetalVM();
+                    await metalVM.Load();
+                    FromAsset_CmbBx.DataContext = metalVM;
                     break;
                 case 3:
-                    FromAsset_CmbBx.DataContext = new ShareVM();
+                    ShareVM shareVM = new ShareVM();
+                    await shareVM.Load();
+                    FromAsset_CmbBx.DataContext = shareVM;
                     break;
                 default:
                     return;
             }
         }
 
-        private void ToAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void ToAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             switch (ToAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
-                    ToAsset_CmbBx.DataContext = new CryptoVM();
+                    CryptoVM cryptoVM = new CryptoVM();
+                    await cryptoVM.Load();
+                    ToAsset_CmbBx.DataContext = cryptoVM;
                     break;
                 case 1:
-                    ToAsset_CmbBx.DataContext = new CurrencyVM();
+                    CurrencyVM currencyVM = new CurrencyVM();
+                    await currencyVM.Load();
+                    ToAsset_CmbBx.DataContext = currencyVM;
                     break;
                 case 2:
-                    ToAsset_CmbBx.DataContext = new MetalVM();
+                    MetalVM metalVM = new MetalVM();
+                    await metalVM.Load();
+                    ToAsset_CmbBx.DataContext = metalVM;
                     break;
                 case 3:
-                    ToAsset_CmbBx.DataContext = new ShareVM();
+                    ShareVM shareVM = new ShareVM();
+                    await shareVM.Load();
+                    ToAsset_CmbBx.DataContext = shareVM;
                     break;
                 default:
                     return;
