@@ -95,27 +95,60 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         private async void FromAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FromAsset_CmbBx.SelectedIndex = -1;
+            FromAsset_CmbBx.DataContext = null;
             switch (FromAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
                     CryptoVM cryptoVM = new CryptoVM();
-                    await cryptoVM.Load();
-                    FromAsset_CmbBx.DataContext = cryptoVM;
+                    try
+                    {
+                        await cryptoVM.Load();
+                        FromAsset_CmbBx.DataContext = cryptoVM;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(FindResource("TextError") as string);
+                        ToAssetType_CmbBx.SelectedIndex = -1;
+                    }
                     break;
                 case 1:
                     CurrencyVM currencyVM = new CurrencyVM();
-                    await currencyVM.Load();
-                    FromAsset_CmbBx.DataContext = currencyVM;
+                    try
+                    {
+                        await currencyVM.Load();
+                        FromAsset_CmbBx.DataContext = currencyVM;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(FindResource("TextError") as string);
+                        ToAssetType_CmbBx.SelectedIndex = -1;
+                    }
                     break;
                 case 2:
                     MetalVM metalVM = new MetalVM();
-                    await metalVM.Load();
-                    FromAsset_CmbBx.DataContext = metalVM;
+                    try
+                    {
+                        await metalVM.Load();
+                        FromAsset_CmbBx.DataContext = metalVM;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(FindResource("TextError") as string);
+                        ToAssetType_CmbBx.SelectedIndex = -1;
+                    }
                     break;
                 case 3:
                     ShareVM shareVM = new ShareVM();
-                    await shareVM.Load();
-                    FromAsset_CmbBx.DataContext = shareVM;
+                    try
+                    {
+                        await shareVM.Load();
+                        FromAsset_CmbBx.DataContext = shareVM;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(FindResource("TextError") as string);
+                        ToAssetType_CmbBx.SelectedIndex = -1;
+                    }
                     break;
                 default:
                     return;
@@ -125,27 +158,60 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         private async void ToAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ToAsset_CmbBx.SelectedIndex = -1;
+            ToAsset_CmbBx.DataContext = null;
             switch (ToAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
                     CryptoVM cryptoVM = new CryptoVM();
-                    await cryptoVM.Load();
-                    ToAsset_CmbBx.DataContext = cryptoVM;
+                    try
+                    {
+                        await cryptoVM.Load();
+                        ToAsset_CmbBx.DataContext = cryptoVM;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(FindResource("TextError") as string);
+                        ToAssetType_CmbBx.SelectedIndex = -1;
+                    }
                     break;
                 case 1:
                     CurrencyVM currencyVM = new CurrencyVM();
-                    await currencyVM.Load();
-                    ToAsset_CmbBx.DataContext = currencyVM;
+                    try
+                    {
+                        await currencyVM.Load();
+                        ToAsset_CmbBx.DataContext = currencyVM;
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(FindResource("TextError") as string);
+                        ToAssetType_CmbBx.SelectedIndex = -1;
+                    }
                     break;
                 case 2:
                     MetalVM metalVM = new MetalVM();
-                    await metalVM.Load();
-                    ToAsset_CmbBx.DataContext = metalVM;
+                    try
+                    {
+                        await metalVM.Load();
+                        ToAsset_CmbBx.DataContext = metalVM;
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(FindResource("TextError") as string);
+                        ToAssetType_CmbBx.SelectedIndex = -1;
+                    }
                     break;
                 case 3:
                     ShareVM shareVM = new ShareVM();
-                    await shareVM.Load();
-                    ToAsset_CmbBx.DataContext = shareVM;
+                    try
+                    {
+                        await shareVM.Load();
+                        ToAsset_CmbBx.DataContext = shareVM;
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(FindResource("TextError") as string);
+                        ToAssetType_CmbBx.SelectedIndex = -1;
+                    }
                     break;
                 default:
                     return;
