@@ -99,8 +99,6 @@
                         Foreground="White"
                         Style="{StaticResource ComboBoxBackground}"
                         >
-                    <ComboBoxItem>USD</ComboBoxItem>
-                    <ComboBoxItem>UAH</ComboBoxItem>
                 </ComboBox>
                 <Border 
                     CornerRadius="180"

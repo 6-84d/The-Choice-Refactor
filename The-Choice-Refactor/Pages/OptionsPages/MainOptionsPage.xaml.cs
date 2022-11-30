@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
+using System.Windows.Markup;
 
 namespace The_Choice_Refactor.Pages.OptionsPages
 {
@@ -82,10 +83,14 @@ namespace The_Choice_Refactor.Pages.OptionsPages
                 menuLanguage.Items.Add(menuLang);
             }
 
-            if(The_Choice_Refactor.Properties.Settings.Default.CurrView == 1)
-                CurrCombo.SelectedIndex = 0;
-            else
-                CurrCombo.SelectedIndex = 1;
+            ComboBoxItem item = new ComboBoxItem();
+            item.Content = "USD";
+            CurrCombo.Items.Add(item);
+            item = new ComboBoxItem();
+            item.Content = "UAH";
+            CurrCombo.Items.Add(item);
+
+            
         }
 
         private void themeSwitch_ChBx_Checked(object sender, RoutedEventArgs e)
@@ -256,7 +261,13 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         {
             if(isFirstTime)
             {
+                if (The_Choice_Refactor.Properties.Settings.Default.CurrView == 1)
+                    CurrCombo.SelectedIndex = 0;
+                else
+                    CurrCombo.SelectedIndex = 1;
+
                 isFirstTime = false;
+
                 return;
             }
             if (CurrCombo.SelectedIndex == 0)
