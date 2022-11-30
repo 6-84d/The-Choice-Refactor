@@ -53,10 +53,12 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         }
         OptionsWindow parent;
         AssetConverter converter;
+        bool isFirstTime = true;
         public MainOptionsPage(OptionsWindow parent)
         {
             InitializeComponent();
 
+            // ban to paste text
             DataObject.AddPastingHandler(From_TxtBx, this.OnCancelCommand);
 
             converter = new AssetConverter();
@@ -79,6 +81,11 @@ namespace The_Choice_Refactor.Pages.OptionsPages
                 menuLang.Click += ChangeLanguageClick;
                 menuLanguage.Items.Add(menuLang);
             }
+
+            if(The_Choice_Refactor.Properties.Settings.Default.CurrView == 1)
+                CurrCombo.SelectedIndex = 0;
+            else
+                CurrCombo.SelectedIndex = 1;
         }
 
         private void themeSwitch_ChBx_Checked(object sender, RoutedEventArgs e)
@@ -247,6 +254,11 @@ namespace The_Choice_Refactor.Pages.OptionsPages
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if(isFirstTime)
+            {
+                isFirstTime = false;
+                return;
+            }
             if (CurrCombo.SelectedIndex == 0)
             {
                 The_Choice_Refactor.Properties.Settings.Default.CurrView = 1;
