@@ -209,6 +209,7 @@
                             BorderThickness="0"
                             x:Name="From_TxtBx"
                             Foreground="White"
+                            PreviewKeyDown="From_TxtBx_PreviewKeyDown"
                             PreviewTextInput="From_TxtBx_PreviewTextInput"
                             TextChanged="From_TxtBx_TextChanged"/>
                     <Border 

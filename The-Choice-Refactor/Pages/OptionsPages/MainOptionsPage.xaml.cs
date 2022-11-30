@@ -6,6 +6,7 @@ using System.Globalization;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+using System.Windows.Input;
 
 namespace The_Choice_Refactor.Pages.OptionsPages
 {
@@ -93,6 +94,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
 
         private async void FromAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            FromAsset_CmbBx.SelectedIndex = -1;
             switch (FromAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
@@ -122,6 +124,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
 
         private async void ToAssetType_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ToAsset_CmbBx.SelectedIndex = -1;
             switch (ToAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
@@ -206,16 +209,16 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             switch (ToAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
-                    converter.ToPrice = (ToAsset_CmbBx.SelectedItem as CryptoModel).price;
+                    converter.ToPrice = (ToAsset_CmbBx.SelectedItem as CryptoModel) is null ? null : (ToAsset_CmbBx.SelectedItem as CryptoModel).price;
                     break;
                 case 1:
-                    converter.ToPrice = (ToAsset_CmbBx.SelectedItem as CurrencyModel).price;
+                    converter.ToPrice = (ToAsset_CmbBx.SelectedItem as CurrencyModel) is null ? null : (ToAsset_CmbBx.SelectedItem as CurrencyModel).price;
                     break;
                 case 2:
-                    converter.ToPrice = (ToAsset_CmbBx.SelectedItem as MetalModel).price;
+                    converter.ToPrice = (ToAsset_CmbBx.SelectedItem as MetalModel) is null ? null : (ToAsset_CmbBx.SelectedItem as MetalModel).price;
                     break;
                 case 3:
-                    converter.ToPrice = (ToAsset_CmbBx.SelectedItem as ShareModel).lastPrice;
+                    converter.ToPrice = (ToAsset_CmbBx.SelectedItem as ShareModel) is null ? null : (ToAsset_CmbBx.SelectedItem as ShareModel).lastPrice;
                     break;
                 default:
                     return;
@@ -228,21 +231,27 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             switch (FromAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
-                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as CryptoModel).price;
+                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as CryptoModel) is null? null: (FromAsset_CmbBx.SelectedItem as CryptoModel).price;
                     break;
                 case 1:
-                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as CurrencyModel).price;
+                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as CurrencyModel) is null ? null : (FromAsset_CmbBx.SelectedItem as CurrencyModel).price;
                     break;
                 case 2:
-                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as MetalModel).price;
+                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as MetalModel) is null ? null : (FromAsset_CmbBx.SelectedItem as MetalModel).price;
                     break;
                 case 3:
-                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as ShareModel).lastPrice;
+                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as ShareModel) is null ? null : (FromAsset_CmbBx.SelectedItem as ShareModel).lastPrice;
                     break;
                 default:
                     return;
             }
             converter.Calculate();
+        }
+
+        private void From_TxtBx_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+                e.Handled = true;
         }
     }
 }
