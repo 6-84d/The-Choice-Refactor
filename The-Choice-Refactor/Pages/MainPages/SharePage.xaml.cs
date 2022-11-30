@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Threading;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using The_Choice_Refactor.Classes;
@@ -38,7 +32,7 @@ namespace The_Choice_Refactor.Pages.MainPages
             try
             {
                 bool isSucces = await viewModel.Load();
-                _list = new CurrencyListPage();
+                _list = new ShareListPage();
                 _list.DataContext = viewModel;
             }
             catch (Exception ex)

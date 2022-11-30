@@ -57,6 +57,8 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         {
             InitializeComponent();
 
+            DataObject.AddPastingHandler(From_TxtBx, this.OnCancelCommand);
+
             converter = new AssetConverter();
             Result_TxtBx.DataContext = converter;
 
@@ -262,6 +264,8 @@ namespace The_Choice_Refactor.Pages.OptionsPages
                 converter.Count = Convert.ToDouble(From_TxtBx.Text);
                 converter.Calculate();
             }
+            else
+                Result_TxtBx.Text = "";
         }
 
         private void From_TxtBx_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
@@ -318,6 +322,10 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         {
             if (e.Key == Key.Space)
                 e.Handled = true;
+        }
+        private void OnCancelCommand(object sender, DataObjectEventArgs e)
+        { 
+           e.CancelCommand();
         }
     }
 }
