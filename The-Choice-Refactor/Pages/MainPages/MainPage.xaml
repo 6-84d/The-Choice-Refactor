@@ -70,14 +70,14 @@
             </Button>
         </Grid>
 
-        <Grid Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="13" Background="Transparent">
+        <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="10" Background="Transparent" Margin="17,158,-16,96" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="385"/>
-                <ColumnDefinition Width="127"/>
+                <ColumnDefinition Width="110"/>
                 <ColumnDefinition Width="385"/>
-                <ColumnDefinition Width="127"/>
+                <ColumnDefinition Width="110"/>
                 <ColumnDefinition Width="385"/>
-                <ColumnDefinition Width="127"/>
+                <ColumnDefinition Width="110"/>
                 <ColumnDefinition Width="385"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -148,7 +148,7 @@
             </Border>
             <Button x:Name="ShareTop_Btn" Background="Transparent"  Grid.Row="0" Grid.Column="6">
                 <Grid x:Name="SharesPanel" Height="250" Width="375">
-                                    <Grid.ColumnDefinitions>
+                    <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="125"/>
                         <ColumnDefinition Width="125"/>
                         <ColumnDefinition Width="125"/>
@@ -163,12 +163,6 @@
                     <Label FontSize="24" Foreground="White" Content="{Binding Path=assets[0].name}"  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" />
                     <TextBox FontSize="24" Foreground="White" Text="{Binding Path=assets[0].lastPrice,StringFormat=0.000}" Grid.Row="2" Grid.Column="2" Background="Transparent" BorderThickness="0" IsReadOnly="True"  MaxLength="5" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Grid>
-            </Button>
-            <Button x:Name="RightArrow_Btn" BorderBrush="Transparent" BorderThickness="0" Grid.Column="6" HorizontalAlignment="Right" VerticalAlignment="Center" Width="20" Height="30" Background="Transparent">
-                <Image x:Name="RightArrow_Img" Source="..\..\Resources\Pictures\RightArrowWhite.png"/>
-            </Button>
-            <Button x:Name="LefttArrow_Btn" BorderBrush="Transparent" BorderThickness="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="20" Height="30" Background="Transparent" >
-                <Image x:Name="LeftArrow_Img" Source="..\..\Resources\Pictures\LeftArrowWhite.png"/>
             </Button>
         </Grid>
     </Grid>

@@ -137,59 +137,14 @@
                     Width="27">
                     ID
                 </Label>
-                <Label
-                    Grid.Column="3"
-                    FontSize="14" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
-                    Height="34" 
-                    Width="58"
-                    Content="{DynamicResource Name}">
-                </Label>
                 <Label 
-                    Grid.Column="4" 
+                    Grid.Column="3" 
                     FontSize="14" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
                     Width="48"
                     Content="{DynamicResource Price}">
-                </Label>
-                <Label 
-                    Grid.Column="5" 
-                    FontSize="14" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
-                    Height="34" 
-                    Width="104"
-                    Content="{DynamicResource Volume24h}">
-                </Label>
-                <Label
-                    Grid.Column="6" 
-                    FontSize="14" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
-                    Height="34" 
-                    Width="96"
-                    Content="{DynamicResource Change1h}">
-                </Label>
-                <Label
-                    Grid.Column="7"
-                    FontSize="14" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
-                    Height="34"
-                    Width="105"
-                    Content="{DynamicResource Change24h}">
-                </Label>
-                <Label 
-                    Grid.Column="8" 
-                    FontSize="14" 
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Height="34"
-                    Width="95"
-                    Content="{DynamicResource Change7d}">
                 </Label>
             </Grid>
             <Frame 

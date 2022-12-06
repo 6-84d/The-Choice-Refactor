@@ -19,16 +19,13 @@ namespace The_Choice_Refactor
         public MainWindow()
         {
             ApiHelper.InitializeClient();
-
             LoadingWIndow loadingWIndow = new LoadingWIndow();
             loadingWIndow.Show();
             Thread.Sleep(2000);
             loadingWIndow.Close();
-
             InitializeComponent();                                                                        // init http client to work with apis
-
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            this.ResizeMode = ResizeMode.NoResize;
+            this.ResizeMode = ResizeMode.CanMinimize;
             currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
 

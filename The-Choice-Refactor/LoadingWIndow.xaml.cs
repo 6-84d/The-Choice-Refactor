@@ -24,7 +24,7 @@ namespace The_Choice_Refactor
             InitializeComponent();
             this.ResizeMode = ResizeMode.NoResize;
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            Back.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LoadingScreenBackground.png")));
+            Back.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LoadingScreen.png")));
         }
     }
 }

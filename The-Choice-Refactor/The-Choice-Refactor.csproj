@@ -7,11 +7,13 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <ApplicationIcon>Resources\Pictures\black_logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\Pictures\BackgroundDark.jpg" />
     <None Remove="Resources\Pictures\BackgroundLight.png" />
+    <None Remove="Resources\Pictures\black_logo.ico" />
     <None Remove="Resources\Pictures\DarkOff.png" />
     <None Remove="Resources\Pictures\DarkOn.png" />
     <None Remove="Resources\Pictures\Icons\AboutUs.svg" />
@@ -38,7 +40,9 @@
     <None Remove="Resources\Pictures\LetsGoButtonDark.png" />
     <None Remove="Resources\Pictures\LinesBackgroundDark.png" />
     <None Remove="Resources\Pictures\LinesBackgroundLight.png" />
+    <None Remove="Resources\Pictures\LoadingScreen.png" />
     <None Remove="Resources\Pictures\LoadingScreenBackground.png" />
+    <None Remove="Resources\Pictures\LoadingScreenLogo.ico" />
     <None Remove="Resources\Pictures\LoadingScreenLogo.png" />
     <None Remove="Resources\Pictures\Logo.png" />
     <None Remove="Resources\Pictures\RightArrow.png" />
@@ -50,6 +54,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\Pictures\black_logo.ico" />
     <Content Include="UserData\Favorites\FavoriteCryptoes.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -62,6 +67,13 @@
     <Content Include="UserData\Favorites\FavoriteShares.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Pictures\black_logo.ico" />
+    <Resource Include="Resources\Pictures\LoadingScreen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -143,6 +155,7 @@
     <Resource Include="Resources\Pictures\LinesBackgroundLight.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Pictures\LoadingScreenLogo.ico" />
     <Resource Include="Resources\Pictures\LoadingScreenLogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -175,9 +188,6 @@
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\Pictures\LoadingScreen.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>

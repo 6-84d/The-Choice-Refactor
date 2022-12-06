@@ -53,24 +53,27 @@
                         Grid.Column="0" 
                         Grid.ColumnSpan="3"
                         CornerRadius="30"/>
+                    <TextBlock Foreground="White" Height="50" Width="550" HorizontalAlignment="Center" Grid.Column="1" Name="TutText" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
                     <Button 
+                        Name="Prev"
                         Grid.Column="1" 
                         Grid.Row="3" 
                         Width="15" 
                         Height="30" 
                         HorizontalAlignment="Left" 
-                        BorderThickness="0">
+                        BorderThickness="0" Click="Prev_Click">
                         <Button.Background>
                             <ImageBrush ImageSource="..\..\Resources\Pictures\LeftArrowWhite.png"/>
                         </Button.Background>
                     </Button>
                     <Button 
+                        x:Name="Next"
                         Grid.Column="1"
                         Grid.Row="3"
                         Width="15" 
                         Height="30"
                         HorizontalAlignment="Right" 
-                        BorderThickness="0">
+                        BorderThickness="0" Click="Next_Click">
                         <Button.Background>
                             <ImageBrush ImageSource="..\..\Resources\Pictures\RightArrowWhite.png"/>
                         </Button.Background>

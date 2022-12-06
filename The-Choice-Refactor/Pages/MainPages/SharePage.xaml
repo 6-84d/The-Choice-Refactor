@@ -160,7 +160,7 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
-                    Width="104"
+                    Width="150"
                     Content="{DynamicResource DayHigh}">
                 </Label>
                 <Label
@@ -169,7 +169,7 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
-                    Width="96"
+                    Width="150"
                     Content="{DynamicResource DayLow}">
                 </Label>
                 <Label
@@ -178,7 +178,7 @@
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34"
-                    Width="105"
+                    Width="180"
                     Content="{DynamicResource Totaltradedvol}">
                 </Label>
             </Grid>

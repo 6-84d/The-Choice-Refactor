@@ -22,6 +22,8 @@
     <v:String x:Key="Language">Language</v:String>
     <v:String x:Key="Currency">Currency</v:String>
     <v:String x:Key="Theme">Theme</v:String>
+    <v:String x:Key="Converter">Currency сonverter</v:String>
+
     <!-- Options -->
 
     <!-- CryptoPage -->
@@ -52,5 +54,17 @@
     <v:String x:Key="Dev">Developers: Boiarchuk Bohdan, Vova Yurkevich, Boryslav Linchevskyi</v:String>
     <v:String x:Key="Des">Designer: Chervona Anna</v:String>
     <!-- AboutUs -->
+
+    <!-- Tutorial -->
+    <v:String x:Key="Thelang">The language change button allows you to select a language from the list of available</v:String>
+    <v:String x:Key="Thetheme">The theme change button allows you to change the appearance of the program</v:String>
+    <v:String x:Key="Thecurr">The currency change button allows you to change the type of currency in which asset prices will be displayed</v:String>
+    <v:String x:Key="Thecurrconv">The currency converter will help you calculate the exchange rate of one currency relative to another</v:String>
+    <v:String x:Key="Thebutton">The button on the main screen allows you to jump to a random one of the existing asset tabs</v:String>
+    <v:String x:Key="Thereare">There are 4 types of currencies in the application Cryptocurrencies, Currencies, Materials and Promotions</v:String>
+    <v:String x:Key="Indiff">In different sections you can find out different information about each of the assets</v:String>
+    <v:String x:Key="Inthe">In the section about the authors, you can find out the composition of the development team and ways to contact us</v:String>
+    <!-- Tutorial -->
+
 
 </ResourceDictionary>

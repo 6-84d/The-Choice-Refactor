@@ -22,6 +22,8 @@
     <v:String x:Key="Language">Язык</v:String>
     <v:String x:Key="Currency">Валюты</v:String>
     <v:String x:Key="Theme">Тема</v:String>
+    <v:String x:Key="Converter">Конвертер валют</v:String>
+
     <!-- Options -->
 
     <!-- CryptoPage -->
@@ -53,4 +55,14 @@
     <v:String x:Key="Des">Дизайнер: Червона Анна</v:String>
     <!-- AboutUs -->
 
+    <!-- Tutorial -->
+    <v:String x:Key="Thelang">Кнопка смены языка позволяет выбрать язык, из списка доступных</v:String>
+    <v:String x:Key="Thetheme">Кнопка смены темы позволяет изменить, внешний вид программы</v:String>
+    <v:String x:Key="Thecurr">Кнопка смены валюты позволяет изменить тип валюты в которой будут отображаться цены активов</v:String>
+    <v:String x:Key="Thecurrconv">Конвертер валют поможет вам рассчитать курс валют одной относительно другой</v:String>
+    <v:String x:Key="Thebutton">Кнопка на главном экране позволяет вам перейти на случайную из существующих вкладок активов</v:String>
+    <v:String x:Key="Thereare">В приложении существуют 4 типа валют Криптовалюты, Валюты, Материалы и Акции</v:String>
+    <v:String x:Key="Indiff">В разных разделах вы можете узнать различную информацию о каждом из активов</v:String>
+    <v:String x:Key="Inthe">В разделе об авторах вы можете узнать состав команды разработчиков и способы связаться с нами</v:String>
+    <!-- Tutorial -->
 </ResourceDictionary>
