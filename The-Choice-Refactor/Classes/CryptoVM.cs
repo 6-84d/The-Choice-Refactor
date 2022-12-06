@@ -51,19 +51,19 @@ namespace The_Choice_Refactor.Classes
                 result[i].price *= The_Choice_Refactor.Properties.Settings.Default.CurrView;
 
                 if (result[i].change_1h > 0)
-                    result[i].color_change_1h = "#0d8012";
+                    result[i].color_change_1h = "#52CC7A";
                 else
-                    result[i].color_change_1h = "#e80505";
+                    result[i].color_change_1h = "#FF0043";
 
                 if (result[i].change_24h > 0)
-                    result[i].color_change_24h = "#0d8012";
+                    result[i].color_change_24h = "#52CC7A";
                 else
-                    result[i].color_change_24h = "#e80505";
+                    result[i].color_change_24h = "#FF0043";
 
                 if (result[i].change_7d > 0)
-                    result[i].color_change_7d = "#0d8012";
+                    result[i].color_change_7d = "#52CC7A";
                 else
-                    result[i].color_change_7d = "#e80505";
+                    result[i].color_change_7d = "#FF0043";
 
                 if (favoritesIDs.Contains(result[i].asset_id))
                     result[i].isFavorite = true;

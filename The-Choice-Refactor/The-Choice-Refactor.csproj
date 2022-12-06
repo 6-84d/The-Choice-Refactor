@@ -47,6 +47,8 @@
     <None Remove="Resources\Pictures\Logo.png" />
     <None Remove="Resources\Pictures\RightArrow.png" />
     <None Remove="Resources\Pictures\RightArrowWhite.png" />
+    <None Remove="Resources\Pictures\tutor1.svg" />
+    <None Remove="Resources\Pictures\tutorImage.png" />
     <None Remove="UserData\Favorites\FavoriteCryptoes.txt" />
     <None Remove="UserData\Favorites\FavoriteCurrencies.txt" />
     <None Remove="UserData\Favorites\FavoriteMetals.txt" />
@@ -174,6 +176,8 @@
     <Resource Include="Resources\Pictures\LoadingScreenBackground.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Pictures\tutor1.svg" />
+    <Resource Include="Resources\Pictures\tutorImage.png" />
   </ItemGroup>
 
   <ItemGroup>

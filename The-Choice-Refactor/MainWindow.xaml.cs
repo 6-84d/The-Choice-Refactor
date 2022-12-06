@@ -21,7 +21,7 @@ namespace The_Choice_Refactor
             ApiHelper.InitializeClient();
             LoadingWIndow loadingWIndow = new LoadingWIndow();
             loadingWIndow.Show();
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
             loadingWIndow.Close();
             InitializeComponent();                                                                        // init http client to work with apis
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;

@@ -22,7 +22,7 @@
     <v:String x:Key="Language">Мова</v:String>
     <v:String x:Key="Currency">Валюта</v:String>
     <v:String x:Key="Theme">Тема</v:String>
-    <v:String x:Key="Converter">Конвертер валют</v:String>
+    <v:String x:Key="Converter">Конвертер валют:</v:String>
 
     <!-- Options -->
 

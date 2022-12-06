@@ -22,7 +22,7 @@
     <v:String x:Key="Language">Language</v:String>
     <v:String x:Key="Currency">Currency</v:String>
     <v:String x:Key="Theme">Theme</v:String>
-    <v:String x:Key="Converter">Currency сonverter</v:String>
+    <v:String x:Key="Converter">Currency сonverter:</v:String>
 
     <!-- Options -->
 

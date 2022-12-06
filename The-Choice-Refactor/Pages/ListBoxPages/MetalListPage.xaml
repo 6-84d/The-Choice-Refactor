@@ -40,15 +40,15 @@
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
                             VerticalAlignment="Center" 
-                            MinWidth="210" 
+                            MinWidth="66" 
                             FontSize="14" 
                             Text="{Binding Path=number}"/>
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
                             VerticalAlignment="Center" 
-                            MinWidth="255" 
+                            MinWidth="144" 
                             FontSize="14" 
-                            Text="{Binding Path=name, StringFormat=0.00}" />
+                            Text="{Binding Path=name, StringFormat=0.00}"/>
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
                             VerticalAlignment="Center" 

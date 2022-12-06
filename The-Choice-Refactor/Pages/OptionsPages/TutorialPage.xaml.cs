@@ -31,8 +31,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             TutorialText.Add(FindResource("Thecurr").ToString());
             TutorialText.Add(FindResource("Thecurrconv").ToString());
             TutorialText.Add(FindResource("Thebutton").ToString());
-            TutorialText.Add(FindResource("Thereare").ToString());
-            TutorialText.Add(FindResource("Indiff").ToString());
+            TutorialText.Add(FindResource("Thereare").ToString() + ". " + FindResource("Indiff").ToString());
             TutorialText.Add(FindResource("Inthe").ToString());
             TutText.Text = TutorialText[index];
         }
@@ -40,7 +39,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             index++;
-            if (index > 7)
+            if (index > 6)
                 index = 0;
             TutText.Text = TutorialText[index];
         }
@@ -49,7 +48,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         {
             index--;
             if (index < 0)
-                index = 7;
+                index = 6;
             TutText.Text = TutorialText[index];
         }
     }

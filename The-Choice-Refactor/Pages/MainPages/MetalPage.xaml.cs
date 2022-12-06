@@ -33,7 +33,7 @@ namespace The_Choice_Refactor.Pages.MainPages
             try
             {
                 bool isSucces = await viewModel.Load();
-                _list = new CurrencyListPage();
+                _list = new MetalListPage();
                 _list.DataContext = viewModel;
             }
             catch (Exception ex)

@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:The_Choice_Refactor.Pages.OptionsPages"
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="700"
       Title="TutorialPage">
@@ -41,6 +42,7 @@
                     Grid.Column="1" 
                     Grid.Row="1" 
                     CornerRadius="50"/>
+                <Image Grid.Row="1" Grid.Column="1" Source="{svgc:SvgImage Source='../../../Resources/Pictures/tutor1.svg'}" Height="280"></Image>
                 <Grid Grid.Row="3" Grid.Column="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="5*"/>
@@ -53,13 +55,13 @@
                         Grid.Column="0" 
                         Grid.ColumnSpan="3"
                         CornerRadius="30"/>
-                    <TextBlock Foreground="White" Height="50" Width="550" HorizontalAlignment="Center" Grid.Column="1" Name="TutText" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Foreground="White" Width="550" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Name="TutText" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
                     <Button 
                         Name="Prev"
                         Grid.Column="1" 
                         Grid.Row="3" 
                         Width="15" 
-                        Height="30" 
+                        Height="20" 
                         HorizontalAlignment="Left" 
                         BorderThickness="0" Click="Prev_Click">
                         <Button.Background>
@@ -71,7 +73,7 @@
                         Grid.Column="1"
                         Grid.Row="3"
                         Width="15" 
-                        Height="30"
+                        Height="20"
                         HorizontalAlignment="Right" 
                         BorderThickness="0" Click="Next_Click">
                         <Button.Background>
