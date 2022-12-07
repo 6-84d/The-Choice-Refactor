@@ -57,6 +57,7 @@
                 x:Name="LetsGo_Btn" 
                 Grid.Row="2" 
                 VerticalAlignment="Center" 
+                VerticalContentAlignment="Center"
                 Content="{DynamicResource LetsGo}" 
                 Height="120" 
                 Width="250" 
