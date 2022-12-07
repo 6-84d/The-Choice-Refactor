@@ -142,10 +142,10 @@
                     Grid.Column="3"
                     FontSize="14" 
                     VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
+                    HorizontalAlignment="Left" 
                     Height="34" 
-                    Width="58"
-                    Content="{DynamicResource Name}">
+                    Width="100"
+                    Content="{DynamicResource Name}" Margin="94,0,0,0">
                 </Label>
                 <Label 
                     Grid.Column="4" 

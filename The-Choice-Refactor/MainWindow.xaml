@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:The_Choice_Refactor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920"
+        Title="The Choice" Height="1080" Width="1920"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         > 
     <Window.Resources>
