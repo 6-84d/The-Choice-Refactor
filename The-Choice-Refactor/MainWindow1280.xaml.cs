@@ -1,39 +1,45 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
-using System.IO;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using The_Choice_Refactor.Classes;
 using The_Choice_Refactor.Pages.MainPages;
-using System.Windows.Media.Imaging;
-using System.Windows.Media;
-using System;
-using System.Threading;
 
 namespace The_Choice_Refactor
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow1280.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {    // application configuration (theme, language, currency)
+    public partial class MainWindow1280 : Window
+    {
         private Page currentPage;   // page that showed in frame at the moment
-        public MainWindow()
+        public MainWindow1280()
         {
             ApiHelper.InitializeClient();
             LoadingWIndow loadingWIndow = new LoadingWIndow();
             loadingWIndow.Show();
             Thread.Sleep(1000);
             loadingWIndow.Close();
-            InitializeComponent();                                                                        // init http client to work with apis
+            InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             this.ResizeMode = ResizeMode.CanMinimize;
-            currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
+           // currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
             SetConfig();
         }
-
         private void MainPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new MainPage(this);           // create MainPage and set to current page
+            //currentPage = new MainPage(this);           // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);    // navigate frame to current page
             if (currentPage is MainPage)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
@@ -83,8 +89,8 @@ namespace The_Choice_Refactor
 
         private void Options_Btn_Click(object sender, RoutedEventArgs e)
         {
-            OptionsWindow options = new OptionsWindow(this);
-            options.ShowDialog();
+            //OptionsWindow options = new OptionsWindow(this);
+            //options.ShowDialog();
         }
         public void SetConfig()
         {

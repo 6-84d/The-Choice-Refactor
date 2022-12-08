@@ -1,0 +1,158 @@
+﻿<Page x:Class="The_Choice_Refactor.Pages.MainPages.CurrencyPage720"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:The_Choice_Refactor.Pages.MainPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+      Title="CurrencyPage720">
+
+    <Page.Resources>
+        <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="650"/>
+            <RowDefinition Height="1"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="70"/>
+        </Grid.ColumnDefinitions>
+        <Button
+            x:Name="UpdateButton"
+            Grid.Column="2"
+            HorizontalAlignment="Right"
+            Width="30"
+            Height="30"
+            VerticalAlignment="Bottom"
+            Click="UpdateButton_Click" Margin="0,0,35,0">
+            <Button.Background>
+                <ImageBrush ImageSource="{svgc:SvgImage Source='../../../Resources/Pictures/Icons/Update.svg'}"/>
+            </Button.Background>
+        </Button>
+        <Border 
+            Background="White"
+            Opacity="0.1" 
+            CornerRadius="15" 
+            Grid.Column="3" 
+            Grid.Row="0" 
+            Height="36"
+            VerticalAlignment="Top" Margin="0,29,0,0"/>
+        <TextBox 
+            x:Name="search_TxtBlck"
+            Background="Transparent"
+            FontSize="18"
+            BorderThickness="0"
+            Grid.Column="3" 
+            Grid.Row="0" 
+            MinWidth="165" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left"
+            TextChanged="search_TxtBlck_TextChanged" Height="21" Margin="14,40,0,0" Width="175"/>
+        <Image 
+            Source="..\..\Resources\Pictures\Icons\Search.png" 
+            Grid.Column="3" 
+            Grid.Row="0" 
+            HorizontalAlignment="Right"
+            Width="20" Margin="0,26,13,31" Grid.RowSpan="2"/>
+        <CheckBox 
+            x:Name="favoriteMode_ChBx" 
+            Grid.Row="0"
+            Grid.Column="5"
+            Height="35"
+            Style="{StaticResource favoriteTemplate}"
+            Checked="favoriteMode_ChBx_Checked" 
+            Unchecked="favoriteMode_ChBx_Unchecked" Grid.ColumnSpan="2" Margin="0,30,26,1"/>
+        <Border 
+            Background="White" 
+            Opacity="0.1" 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="5" 
+            Grid.RowSpan="4" 
+            CornerRadius="80"/>
+        <Grid 
+            Grid.Column="1" 
+            Grid.Row="2" 
+            Grid.ColumnSpan="5" 
+            Grid.RowSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="1730"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="750"/>
+            </Grid.RowDefinitions>
+            <Border 
+                Background="White" 
+                Opacity="0.15" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                CornerRadius="50"
+                Margin="0,0,55,0"/>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+                </Grid.ColumnDefinitions>
+                <Label 
+                    Grid.Column="1"
+                    FontSize="14" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="21">
+                    #
+                </Label>
+                <Label 
+                    Grid.Column="2"
+                    FontSize="14"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="27">
+                    ID
+                </Label>
+                <Label 
+                    Grid.Column="3" 
+                    FontSize="14" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Height="34" 
+                    Width="48"
+                    Content="{DynamicResource Price}">
+                </Label>
+            </Grid>
+            <Frame 
+                x:Name="ListBoxFrame_Frm"
+                NavigationUIVisibility="Hidden" 
+                BorderThickness="0" 
+                Grid.Column="1" 
+                Grid.Row="3"/>
+        </Grid>
+    </Grid>
+</Page>
