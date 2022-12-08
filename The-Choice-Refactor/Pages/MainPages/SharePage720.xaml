@@ -19,7 +19,7 @@
             <RowDefinition Height="10"/>
             <RowDefinition Height="15"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="650"/>
+            <RowDefinition Height="550"/>
             <RowDefinition Height="1"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -92,7 +92,7 @@
             Grid.RowSpan="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="1730"/>
+                <ColumnDefinition Width="1166"/>
                 <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -113,11 +113,11 @@
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="70"/>
                     <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="300"/>
-                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="170"/>
                 </Grid.ColumnDefinitions>
                 <Label 
                     Grid.Column="1"
@@ -144,7 +144,7 @@
                     HorizontalAlignment="Left" 
                     Height="34" 
                     Width="100"
-                    Content="{DynamicResource Name}" Margin="120,0,0,0"/>
+                    Content="{DynamicResource Name}" Margin="70,0,0,0"/>
                 <Label 
                     Grid.Column="4" 
                     FontSize="14" 
@@ -187,7 +187,7 @@
                 NavigationUIVisibility="Hidden" 
                 BorderThickness="0" 
                 Grid.Column="1" 
-                Grid.Row="3"/>
+                Grid.Row="3" Margin="0,0,55,315"/>
         </Grid>
     </Grid>
 </Page>

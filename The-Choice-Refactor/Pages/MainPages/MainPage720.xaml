@@ -51,7 +51,7 @@
         <Grid Grid.Column="8" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="10"/>
-                <RowDefinition Height="130"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <Button 
@@ -60,8 +60,8 @@
                 VerticalAlignment="Center" 
                 VerticalContentAlignment="Center"
                 Content="{DynamicResource LetsGo}" 
-                Height="120" 
-                Width="250" 
+                Height="100" 
+                Width="210" 
                 BorderThickness="0" 
                 FontSize="20" 
                 Foreground="White"
@@ -72,24 +72,24 @@
             </Button>
         </Grid>
 
-        <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="10" Background="Transparent" Margin="17,158,-16,96" Grid.RowSpan="2">
+        <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="10" Background="Transparent" Margin="0,44,1,145" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="270"/>
-                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="270"/>
-                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="270"/>
-                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="270"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="260"/>
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="0" Grid.Column="0" Opacity="0.1" CornerRadius="50" Background="White">
+            <Border Grid.Row="0" Grid.Column="0" Opacity="0.1" CornerRadius="50" Background="White" Margin="0,0,0,61">
             </Border>
-            <Button x:Name="CryptoTop_Btn" Background="Transparent">
-                <Grid x:Name="CryptoPanel" Height="252" Width="375">
+            <Button x:Name="CryptoTop_Btn" Background="Transparent" Margin="0,0,0,61">
+                <Grid x:Name="CryptoPanel" Height="150" Width="275">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="25"/>
                         <ColumnDefinition Width="100"/>
@@ -108,10 +108,10 @@
                     <TextBlock FontSize="24" Foreground="White" Text="{Binding Path=assets[0].price,StringFormat=0.000}" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" />
                 </Grid>
             </Button>
-            <Border Grid.Row="0" Grid.Column="2" Opacity="0.1" CornerRadius="50" Background="White">
+            <Border Grid.Row="0" Grid.Column="2" Opacity="0.1" CornerRadius="50" Background="White" Margin="0,0,0,61">
             </Border>
-            <Button x:Name="CurrTop_Btn" Background="Transparent" Grid.Row="0" Grid.Column="2">
-                <Grid x:Name="CurrPanel" Height="250" Width="375">
+            <Button x:Name="CurrTop_Btn" Background="Transparent" Grid.Row="0" Grid.Column="2" Margin="0,0,0,76">
+                <Grid x:Name="CurrPanel" Height="150" Width="275">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="25"/>
                         <ColumnDefinition Width="100"/>
@@ -130,10 +130,10 @@
                     <TextBlock FontSize="24" Foreground="White" Text="{Binding Path=assets[0].price,StringFormat=0.000}" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" />
                 </Grid>
             </Button>
-            <Border Grid.Row="0" Grid.Column="4" Opacity="0.1" CornerRadius="50" Background="White">
+            <Border Grid.Row="0" Grid.Column="4" Opacity="0.1" CornerRadius="50" Background="White" Margin="0,0,0,61">
             </Border>
-            <Button x:Name="MetalTop_Btn" Background="Transparent" Grid.Row="0" Grid.Column="4">
-                <Grid x:Name="MatPanel" Height="250" Width="375">
+            <Button x:Name="MetalTop_Btn" Background="Transparent" Grid.Row="0" Grid.Column="4" Margin="0,0,0,76">
+                <Grid x:Name="MatPanel" Height="150" Width="275">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="25"/>
                         <ColumnDefinition Width="100"/>
@@ -152,10 +152,10 @@
                     <TextBlock FontSize="24" Foreground="White" Text="{Binding Path=assets[0].price,StringFormat=0.000}" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" />
                 </Grid>
             </Button>
-            <Border Grid.Row="0" Grid.Column="6" Opacity="0.1" CornerRadius="50" Background="White">
+            <Border Grid.Row="0" Grid.Column="6" Opacity="0.1" CornerRadius="50" Background="White" Margin="0,0,0,61">
             </Border>
-            <Button x:Name="ShareTop_Btn" Background="Transparent"  Grid.Row="0" Grid.Column="6">
-                <Grid x:Name="SharesPanel" Height="250" Width="375">
+            <Button x:Name="ShareTop_Btn" Background="Transparent"  Grid.Row="0" Grid.Column="6" Margin="0,0,0,61">
+                <Grid x:Name="SharesPanel" Height="150" Width="275">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="25"/>
                         <ColumnDefinition Width="100"/>

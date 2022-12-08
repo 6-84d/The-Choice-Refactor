@@ -21,11 +21,12 @@ namespace The_Choice_Refactor.Pages.MainPages
     /// </summary>
     public partial class MainPage768 : Page
     {
-        public MainPage768()
+        private MainWindow1366 parent;
+        public MainPage768(MainWindow1366 parent)
         {
             InitializeComponent();
-            //this.parent = parent;
-            //LoadDataContext(new CryptoVM(), new CurrencyVM(), new MetalVM(), new ShareVM());
+            this.parent = parent;
+            LoadDataContext(new CryptoVM(), new CurrencyVM(), new MetalVM(), new ShareVM());
         }
         private async void LoadDataContext(CryptoVM crypto, CurrencyVM currency, MetalVM metal, ShareVM share)
         {
@@ -79,7 +80,7 @@ namespace The_Choice_Refactor.Pages.MainPages
         }
         private void LetsGo_Btn_Click(object sender, RoutedEventArgs e)
         {
-            //parent.LetsGo_Btn_Click();
+            parent.LetsGo_Btn_Click();
         }
     }
 }

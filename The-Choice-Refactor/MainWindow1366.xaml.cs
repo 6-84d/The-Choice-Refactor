@@ -1,46 +1,48 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
-using System.IO;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using The_Choice_Refactor.Classes;
 using The_Choice_Refactor.Pages.MainPages;
-using System.Windows.Media.Imaging;
-using System.Windows.Media;
-using System;
-using System.Threading;
 
 namespace The_Choice_Refactor
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow1366.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {    // application configuration (theme, language, currency)
+    public partial class MainWindow1366 : Window
+    {
         private Page currentPage;   // page that showed in frame at the moment
-        public MainWindow()
+        public MainWindow1366()
         {
+            InitializeComponent();
             ApiHelper.InitializeClient();
             LoadingWIndow loadingWIndow = new LoadingWIndow();
             loadingWIndow.Show();
             Thread.Sleep(1000);
             loadingWIndow.Close();
-            InitializeComponent();                                                                        // init http client to work with apis
+            InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             this.ResizeMode = ResizeMode.CanMinimize;
-            currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
+            currentPage = new MainPage768(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
             SetConfig();
-            MainWindow1280 mainWindow1280 = new MainWindow1280();
-            mainWindow1280.Show();
-            //MainWindow1366 mainWindow1366 = new MainWindow1366();
-            //mainWindow1366.Show();
-            this.Close();
         }
-
         private void MainPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            currentPage = new MainPage(this);           // create MainPage and set to current page
+            currentPage = new MainPage768(this);           // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);    // navigate frame to current page
-            if (currentPage is MainPage)
+            if (currentPage is MainPage768)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
             else
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
@@ -48,9 +50,9 @@ namespace The_Choice_Refactor
 
         private void CryptoPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (!(currentPage is CryptoPage))
+            if (!(currentPage is CryptoPage768))
             {
-                currentPage = new CryptoPage();
+                currentPage = new CryptoPage768();
                 PageFrame_Frm.Navigate(currentPage);
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
@@ -58,9 +60,9 @@ namespace The_Choice_Refactor
 
         private void CurrencyPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (!(currentPage is CurrencyPage))
+            if (!(currentPage is CurrencyPage768))
             {
-                currentPage = new CurrencyPage();
+                currentPage = new CurrencyPage768();
                 PageFrame_Frm.Navigate(currentPage);
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
@@ -68,9 +70,9 @@ namespace The_Choice_Refactor
 
         private void MetalPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (!(currentPage is MetalPage))
+            if (!(currentPage is MetalPage768))
             {
-                currentPage = new MetalPage();
+                currentPage = new MetalPage768();
                 PageFrame_Frm.Navigate(currentPage);
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
@@ -78,7 +80,7 @@ namespace The_Choice_Refactor
 
         private void SharePage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (!(currentPage is SharePage))
+            if (!(currentPage is SharePage768))
             {
                 currentPage = new SharePage();
                 PageFrame_Frm.Navigate(currentPage);
@@ -128,7 +130,7 @@ namespace The_Choice_Refactor
                 default:
                     return;
             }
-            if (currentPage is MainPage)
+            if (currentPage is MainPage720)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
             else
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);

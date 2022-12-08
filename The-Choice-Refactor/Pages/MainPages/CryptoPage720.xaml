@@ -19,11 +19,11 @@
             <RowDefinition Height="10"/>
             <RowDefinition Height="15"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="650"/>
+            <RowDefinition Height="550"/>
             <RowDefinition Height="1"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="40"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="800"/>
             <ColumnDefinition Width="200"/>
@@ -92,14 +92,14 @@
             Grid.RowSpan="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="1160"/>
+                <ColumnDefinition Width="1166"/>
                 <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="540"/>
+                <RowDefinition Height="500"/>
             </Grid.RowDefinitions>
             <Border 
                 Background="White" 
@@ -113,16 +113,16 @@
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="70"/>
                     <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
                 <Label 
                     Grid.Column="1"
-                    FontSize="14" 
+                    FontSize="12" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
@@ -131,25 +131,25 @@
                 </Label>
                 <Label 
                     Grid.Column="2"
-                    FontSize="14"
+                    FontSize="12"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center" 
                     Height="34" 
-                    Width="27">
+                    Width="70">
                     ID
                 </Label>
                 <Label
                     Grid.Column="3"
-                    FontSize="14" 
+                    FontSize="12" 
                     VerticalAlignment="Center" 
-                    HorizontalAlignment="Left" 
+                    HorizontalAlignment="Center" 
                     Height="34" 
-                    Width="100"
-                    Content="{DynamicResource Name}" Margin="94,0,0,0">
+                    Width="55"
+                    Content="{DynamicResource Name}" Margin="0,0,0,0">
                 </Label>
                 <Label 
                     Grid.Column="4" 
-                    FontSize="14" 
+                    FontSize="12" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
@@ -158,7 +158,7 @@
                 </Label>
                 <Label 
                     Grid.Column="5" 
-                    FontSize="14" 
+                    FontSize="12" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
@@ -167,7 +167,7 @@
                 </Label>
                 <Label
                     Grid.Column="6" 
-                    FontSize="14" 
+                    FontSize="12" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34" 
@@ -176,7 +176,7 @@
                 </Label>
                 <Label
                     Grid.Column="7"
-                    FontSize="14" 
+                    FontSize="12" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Height="34"
@@ -185,7 +185,7 @@
                 </Label>
                 <Label 
                     Grid.Column="8" 
-                    FontSize="14" 
+                    FontSize="12" 
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     Height="34"
@@ -198,7 +198,7 @@
                 NavigationUIVisibility="Hidden" 
                 BorderThickness="0" 
                 Grid.Column="1" 
-                Grid.Row="3"/>
+                Grid.Row="3" Margin="0,0,55,94"/>
         </Grid>
     </Grid>
 </Page>

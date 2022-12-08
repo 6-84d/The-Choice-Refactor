@@ -19,11 +19,11 @@
             <RowDefinition Height="10"/>
             <RowDefinition Height="15"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="650"/>
+            <RowDefinition Height="550"/>
             <RowDefinition Height="1"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="35"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="800"/>
             <ColumnDefinition Width="200"/>
@@ -82,7 +82,7 @@
             Grid.Row="2" 
             Grid.Column="1" 
             Grid.ColumnSpan="5" 
-            Grid.RowSpan="4" 
+            Grid.RowSpan="5" 
             CornerRadius="80"/>
         <Grid 
             Grid.Column="1" 
@@ -91,7 +91,7 @@
             Grid.RowSpan="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="1730"/>
+                <ColumnDefinition Width="1166"/>
                 <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -152,7 +152,7 @@
                 NavigationUIVisibility="Hidden" 
                 BorderThickness="0" 
                 Grid.Column="1" 
-                Grid.Row="3"/>
+                Grid.Row="3" Margin="0,0,590,333"/>
         </Grid>
     </Grid>
 </Page>

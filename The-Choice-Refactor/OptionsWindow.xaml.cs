@@ -23,12 +23,34 @@ namespace The_Choice_Refactor
     public partial class OptionsWindow : Window
     {
         private MainWindow parent;  // application configuration (theme, language, currency)
+        private MainWindow1280 parent1280;  // application configuration (theme, language, currency)
+        private MainWindow1366 parent1366;  // application configuration (theme, language, currency)
         private Page currentPage;   // page that showed in frame at the moment
         public OptionsWindow(MainWindow parent)
         {
             InitializeComponent();
             ResizeMode = ResizeMode.NoResize;      // ban resizing 
             this.parent = parent;
+            currentPage = new MainOptionsPage(this);
+            OptionsFrame_Frm.Navigate(currentPage);
+            this.SetConfig();
+            // navigate frame to current page
+        }
+        public OptionsWindow(MainWindow1280 parent)
+        {
+            InitializeComponent();
+            ResizeMode = ResizeMode.NoResize;      // ban resizing 
+            this.parent1280 = parent;
+            currentPage = new MainOptionsPage(this);
+            OptionsFrame_Frm.Navigate(currentPage);
+            this.SetConfig();
+            // navigate frame to current page
+        }
+        public OptionsWindow(MainWindow1366 parent)
+        {
+            InitializeComponent();
+            ResizeMode = ResizeMode.NoResize;      // ban resizing 
+            this.parent1366 = parent;
             currentPage = new MainOptionsPage(this);
             OptionsFrame_Frm.Navigate(currentPage);
             this.SetConfig();
@@ -63,7 +85,9 @@ namespace The_Choice_Refactor
                 this.Cursor = new System.Windows.Input.Cursor(App.GetResourceStream(new Uri(@"pack://application:,,,/Resources/Pictures/Icons/DarkCursor.cur")).Stream);
                 Background = new SolidColorBrush(Color.FromRgb(Convert.ToByte(101), Convert.ToByte(84), Convert.ToByte(133)));
             }
-            parent.SetConfig();
+            if (parent != null) parent.SetConfig();
+            else if (parent1280 != null) parent1280.SetConfig();
+            else parent1366.SetConfig();
         }
     }
 }

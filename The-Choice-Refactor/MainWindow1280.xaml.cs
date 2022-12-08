@@ -33,15 +33,15 @@ namespace The_Choice_Refactor
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             this.ResizeMode = ResizeMode.CanMinimize;
-           // currentPage = new MainPage(this);                                                                               // create MainPage and set to current page
+            currentPage = new MainPage720(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
             SetConfig();
         }
         private void MainPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            //currentPage = new MainPage(this);           // create MainPage and set to current page
+            currentPage = new MainPage720(this);           // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);    // navigate frame to current page
-            if (currentPage is MainPage)
+            if (currentPage is MainPage720)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
             else
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
@@ -49,9 +49,9 @@ namespace The_Choice_Refactor
 
         private void CryptoPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (!(currentPage is CryptoPage))
+            if (!(currentPage is CryptoPage720))
             {
-                currentPage = new CryptoPage();
+                currentPage = new CryptoPage720();
                 PageFrame_Frm.Navigate(currentPage);
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
@@ -59,9 +59,9 @@ namespace The_Choice_Refactor
 
         private void CurrencyPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (!(currentPage is CurrencyPage))
+            if (!(currentPage is CurrencyPage720))
             {
-                currentPage = new CurrencyPage();
+                currentPage = new CurrencyPage720();
                 PageFrame_Frm.Navigate(currentPage);
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
@@ -69,9 +69,9 @@ namespace The_Choice_Refactor
 
         private void MetalPage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (!(currentPage is MetalPage))
+            if (!(currentPage is MetalPage720))
             {
-                currentPage = new MetalPage();
+                currentPage = new MetalPage720();
                 PageFrame_Frm.Navigate(currentPage);
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
@@ -79,9 +79,9 @@ namespace The_Choice_Refactor
 
         private void SharePage_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (!(currentPage is SharePage))
+            if (!(currentPage is SharePage720))
             {
-                currentPage = new SharePage();
+                currentPage = new SharePage720();
                 PageFrame_Frm.Navigate(currentPage);
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
@@ -89,8 +89,8 @@ namespace The_Choice_Refactor
 
         private void Options_Btn_Click(object sender, RoutedEventArgs e)
         {
-            //OptionsWindow options = new OptionsWindow(this);
-            //options.ShowDialog();
+            OptionsWindow options = new OptionsWindow(this);
+            options.ShowDialog();
         }
         public void SetConfig()
         {
@@ -104,7 +104,7 @@ namespace The_Choice_Refactor
                 this.Cursor = new System.Windows.Input.Cursor(App.GetResourceStream(new Uri(@"pack://application:,,,/Resources/Pictures/Icons/DarkCursor.cur")).Stream);
                 Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/BackgroundLight.png")));
             }
-            if (currentPage is MainPage)
+            if (currentPage is MainPage720)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
             else
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
@@ -115,21 +115,21 @@ namespace The_Choice_Refactor
             switch (r.Next(0, 4))
             {
                 case 0:
-                    currentPage = new CryptoPage();
+                    currentPage = new CryptoPage720();
                     break;
                 case 1:
-                    currentPage = new CurrencyPage();
+                    currentPage = new CurrencyPage720();
                     break;
                 case 2:
-                    currentPage = new MetalPage();
+                    currentPage = new MetalPage720();
                     break;
                 case 3:
-                    currentPage = new SharePage();
+                    currentPage = new SharePage720();
                     break;
                 default:
                     return;
             }
-            if (currentPage is MainPage)
+            if (currentPage is MainPage720)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
             else
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);

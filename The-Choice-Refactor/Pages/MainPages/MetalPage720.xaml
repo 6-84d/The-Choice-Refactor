@@ -19,7 +19,7 @@
             <RowDefinition Height="10"/>
             <RowDefinition Height="15"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="650"/>
+            <RowDefinition Height="550"/>
             <RowDefinition Height="1"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -153,7 +153,7 @@
                 NavigationUIVisibility="Hidden" 
                 BorderThickness="0" 
                 Grid.Column="1" 
-                Grid.Row="3"/>
+                Grid.Row="3" Margin="0,0,0,99"/>
         </Grid>
     </Grid>
 </Page>

@@ -32,7 +32,7 @@ namespace The_Choice_Refactor.Pages.MainPages
             try
             {
                 bool isSucces = await viewModel.Load();
-                _list = new CryptoListPage();
+                _list = new CryptoListPage720();
                 _list.DataContext = viewModel;
             }
             catch (Exception ex)
