@@ -293,8 +293,42 @@ namespace The_Choice_Refactor.Pages.OptionsPages
 
         private void From_TxtBx_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9,]+");
-            e.Handled = regex.IsMatch(e.Text);
+            // [^0-9,]+
+            // [0-9]+,\d\d
+            // [0-9]+,\d
+            // [0-9]
+
+            if(Regex.IsMatch(e.Text, @"[\d\,]+"))
+            {
+                if(Regex.IsMatch(e.Text, @"\,"))
+                {
+                    if (Regex.IsMatch((sender as TextBox).Text + e.Text, @"^[0-9]+\,{1}$"))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else if(Regex.IsMatch(e.Text, "[0-9]"))
+                {
+                    if (Regex.IsMatch((sender as TextBox).Text + e.Text, @"^[0-9]+[,]{1}\d{0,2}$") ||
+                        Regex.IsMatch((sender as TextBox).Text, @"^[0-9]*$")
+                        )
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
         private void ToAsset_CmbBx_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -62,6 +62,7 @@
             MinWidth="165" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Left"
+            MaxLength="25"
             TextChanged="search_TxtBlck_TextChanged" Height="30" Margin="7,35,0,0" Width="165"/>
         <Image 
             Source="..\..\Resources\Pictures\Icons\Search.png" 
