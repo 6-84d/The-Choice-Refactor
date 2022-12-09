@@ -23,6 +23,7 @@ namespace The_Choice_Refactor
     public partial class MainWindow1366 : Window
     {
         private Page currentPage;   // page that showed in frame at the moment
+        public bool isOpen = false;
         public MainWindow1366()
         {
             InitializeComponent();
@@ -114,8 +115,11 @@ namespace The_Choice_Refactor
 
         private void Options_Btn_Click(object sender, RoutedEventArgs e)
         {
-            OptionsWindow options = new OptionsWindow(this);
-            options.ShowDialog();
+            if(!isOpen)
+            {
+                OptionsWindow options = new OptionsWindow(this);
+                options.ShowDialog();
+            }
         }
         public void SetConfig()
         {

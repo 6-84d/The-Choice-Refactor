@@ -24,6 +24,7 @@ namespace The_Choice_Refactor
     {
         private Page currentPage;   // page that showed in frame at the moment
         private bool[] isPressed = new bool[4] { false, false, false, false };
+        public bool isOpen = false;
         public MainWindow1280()
         {
             ApiHelper.InitializeClient();
@@ -37,6 +38,7 @@ namespace The_Choice_Refactor
             currentPage = new MainPage720(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
             SetConfig();
+            The_Choice_Refactor.Properties.Settings.Default.Size = 2;
         }
         private void MainPage_Btn_Click(object sender, RoutedEventArgs e)
         {
@@ -113,8 +115,11 @@ namespace The_Choice_Refactor
 
         private void Options_Btn_Click(object sender, RoutedEventArgs e)
         {
-            OptionsWindow options = new OptionsWindow(this);
-            options.ShowDialog();
+            if(!isOpen)
+            {
+                OptionsWindow options = new OptionsWindow(this);
+                options.ShowDialog();
+            }
         }
         public void SetConfig()
         {

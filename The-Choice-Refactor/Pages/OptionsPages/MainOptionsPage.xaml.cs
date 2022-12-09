@@ -99,7 +99,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             item = new ComboBoxItem();
             item.Content = "Small";
             SizeCombo.Items.Add(item);
-
+            SizeCombo.SelectedIndex = The_Choice_Refactor.Properties.Settings.Default.Size;
             themeSwitch_ChBx.DataContext = The_Choice_Refactor.Properties.Settings.Default;
         }
 
@@ -205,7 +205,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
                         await currencyVM.Load();
                         ToAsset_CmbBx.DataContext = currencyVM;
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         MessageBox.Show(FindResource("TextError") as string);
                         ToAssetType_CmbBx.SelectedIndex = -1;
@@ -218,7 +218,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
                         await metalVM.Load();
                         ToAsset_CmbBx.DataContext = metalVM;
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         MessageBox.Show(FindResource("TextError") as string);
                         ToAssetType_CmbBx.SelectedIndex = -1;
@@ -231,7 +231,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
                         await shareVM.Load();
                         ToAsset_CmbBx.DataContext = shareVM;
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         MessageBox.Show(FindResource("TextError") as string);
                         ToAssetType_CmbBx.SelectedIndex = -1;
@@ -269,7 +269,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(isFirstTimeCurr)
+            if (isFirstTimeCurr)
             {
                 if (The_Choice_Refactor.Properties.Settings.Default.CurrView == 1)
                     CurrCombo.SelectedIndex = 0;
@@ -308,9 +308,9 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             // [0-9]+,\d
             // [0-9]
 
-            if(Regex.IsMatch(e.Text, @"[\d\,]+"))
+            if (Regex.IsMatch(e.Text, @"[\d\,]+"))
             {
-                if(Regex.IsMatch(e.Text, @"\,"))
+                if (Regex.IsMatch(e.Text, @"\,"))
                 {
                     if (Regex.IsMatch((sender as TextBox).Text + e.Text, @"^[0-9]+\,{1}$"))
                     {
@@ -321,7 +321,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
                         e.Handled = true;
                     }
                 }
-                else if(Regex.IsMatch(e.Text, "[0-9]"))
+                else if (Regex.IsMatch(e.Text, "[0-9]"))
                 {
                     if (Regex.IsMatch((sender as TextBox).Text + e.Text, @"^[0-9]+[,]{1}\d{0,2}$") ||
                         Regex.IsMatch((sender as TextBox).Text, @"^[0-9]*$")
@@ -368,7 +368,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             switch (FromAssetType_CmbBx.SelectedIndex)
             {
                 case 0:
-                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as CryptoModel) is null? null: (FromAsset_CmbBx.SelectedItem as CryptoModel).price;
+                    converter.FromPrice = (FromAsset_CmbBx.SelectedItem as CryptoModel) is null ? null : (FromAsset_CmbBx.SelectedItem as CryptoModel).price;
                     break;
                 case 1:
                     converter.FromPrice = (FromAsset_CmbBx.SelectedItem as CurrencyModel) is null ? null : (FromAsset_CmbBx.SelectedItem as CurrencyModel).price;
@@ -391,16 +391,66 @@ namespace The_Choice_Refactor.Pages.OptionsPages
                 e.Handled = true;
         }
         private void OnCancelCommand(object sender, DataObjectEventArgs e)
-        { 
-           e.CancelCommand();
+        {
+            e.CancelCommand();
         }
 
         private void SizeCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if(SizeCombo.SelectedIndex == 0 && SizeCombo.SelectedIndex != The_Choice_Refactor.Properties.Settings.Default.Size)
-            //{
-            //    The_Choice_Refactor.Properties.Settings.Default.Size = 0;
-            //}
+            if (SizeCombo.SelectedIndex == 0 && this.parent.parent1920 == null)
+            {
+                if (this.parent.parent1280 != null)
+                {
+                    this.parent.parent1280.Close();
+                    this.parent.parent1280 = null;
+                }
+                else if (this.parent.parent1366 != null)
+                {
+                    this.parent.parent1366.Close();
+                    this.parent.parent1366 = null;
+                }
+                this.parent.parent1920 = new MainWindow();
+                this.parent.parent1920.isOpen = true;
+                this.parent.parent1920.Show();
+                The_Choice_Refactor.Properties.Settings.Default.Size = 0;
+                this.parent.Close();
+            }
+            else if (SizeCombo.SelectedIndex == 1 && this.parent.parent1366 == null)
+            {
+                if (this.parent.parent1280 != null)
+                {
+                    this.parent.parent1280.Close();
+                    this.parent.parent1280 = null;
+                }
+                else if (this.parent.parent1920 != null)
+                {
+                    this.parent.parent1920.Close();
+                    this.parent.parent1920 = null;
+                }
+                this.parent.parent1366 = new MainWindow1366();
+                this.parent.parent1366.isOpen = true;
+                this.parent.parent1366.Show();
+                The_Choice_Refactor.Properties.Settings.Default.Size = 1;
+                this.parent.Close();
+            }
+            else if (SizeCombo.SelectedIndex == 2 && this.parent.parent1280 == null)
+            {
+                if (this.parent.parent1366 != null)
+                {
+                    this.parent.parent1366.Close();
+                    this.parent.parent1366 = null;
+                }
+                else if (this.parent.parent1920 != null)
+                {
+                    this.parent.parent1920.Close();
+                    this.parent.parent1920 = null;
+                }
+                this.parent.parent1280 = new MainWindow1280();
+                this.parent.parent1280.isOpen = true;
+                this.parent.parent1280.Show();
+                The_Choice_Refactor.Properties.Settings.Default.Size = 2;
+                this.parent.Close();
+            }
         }
     }
 }

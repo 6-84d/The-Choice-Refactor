@@ -16,6 +16,7 @@ namespace The_Choice_Refactor
     public partial class MainWindow : Window
     {    // application configuration (theme, language, currency)
         private Page currentPage;   // page that showed in frame at the moment
+        public bool isOpen = false;
         public MainWindow()
         {
             ApiHelper.InitializeClient();
@@ -107,8 +108,11 @@ namespace The_Choice_Refactor
 
         private void Options_Btn_Click(object sender, RoutedEventArgs e)
         {
-            OptionsWindow options = new OptionsWindow(this);
-            options.ShowDialog();
+            if(!isOpen)
+            {
+                OptionsWindow options = new OptionsWindow(this);
+                options.ShowDialog();
+            }
         }
         public void SetConfig()
         {
@@ -168,6 +172,11 @@ namespace The_Choice_Refactor
             else
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             PageFrame_Frm.Navigate(currentPage);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }

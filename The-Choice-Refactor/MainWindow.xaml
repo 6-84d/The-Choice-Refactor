@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="The Choice" Height="1080" Width="1920"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+        Closing="Window_Closing"
         > 
     <Window.Resources>
         <ResourceDictionary Source="Resources\Styles\Styles.xaml"></ResourceDictionary>

@@ -41,13 +41,13 @@
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="120"/>
             </Grid.RowDefinitions>
-            <Label Content="{DynamicResource Relinfo}" Grid.Row="0" VerticalAlignment="Top" FontSize="90" Grid.RowSpan="2" Foreground="White" FontWeight="Bold" Margin="27,0,-27,0"/>
-            <Label Content="{DynamicResource inoneplace}" Grid.Row="1" VerticalAlignment="Top" FontSize="90" Foreground="White" FontWeight="Bold" Margin="27,0,-27,0"/>
+            <Label Content="{DynamicResource Relinfo}" Grid.Row="0" VerticalAlignment="Top" FontSize="65" Foreground="White" FontWeight="Bold" Margin="34,6,-34,0"/>
+            <Label Content="{DynamicResource inoneplace}" VerticalAlignment="Top" FontSize="65" Foreground="White" FontWeight="Bold" Margin="34,66,-34,0" Grid.RowSpan="2"/>
         </Grid>
-        <Label Content="{DynamicResource AnAgr}" FontSize="18" Grid.ColumnSpan="7" Grid.Row="4" Grid.Column="0" Foreground="LightGray" Grid.RowSpan="2" Margin="32,0,78,0"/>
-        <Label Content="{DynamicResource cryptocurren}" FontSize="18" Grid.ColumnSpan="7" Grid.Row="5" Grid.Column="0" Foreground="LightGray" Grid.RowSpan="2" Margin="32,0,78,0"/>
-        <Label Content="{DynamicResource curren}" FontSize="18" Grid.ColumnSpan="7" Grid.Row="6" Grid.Column="0" Foreground="LightGray" Grid.RowSpan="2" Margin="32,0,78,0"/>
-        <Label Content="{DynamicResource comfort}" FontSize="18" Grid.ColumnSpan="6" Grid.Row="7" Grid.Column="0" Foreground="LightGray" Grid.RowSpan="2" Margin="32,0,48,0"/>
+        <Label Content="{DynamicResource AnAgr}" FontSize="18" Grid.ColumnSpan="7" Grid.Row="2" Grid.Column="0" Foreground="LightGray" Grid.RowSpan="2" Margin="36,90,74,0"/>
+        <Label Content="{DynamicResource cryptocurren}" FontSize="18" Grid.ColumnSpan="7" Grid.Row="3" Grid.Column="0" Foreground="LightGray" Grid.RowSpan="2" Margin="36,0,74,0"/>
+        <Label Content="{DynamicResource curren}" FontSize="18" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="0" Foreground="LightGray" Grid.RowSpan="3" Margin="36,0,74,0"/>
+        <Label Content="{DynamicResource comfort}" FontSize="18" Grid.ColumnSpan="6" Grid.Row="5" Grid.Column="0" Foreground="LightGray" Grid.RowSpan="4" Margin="36,0,44,40"/>
         <Grid Grid.Column="8" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="10"/>
