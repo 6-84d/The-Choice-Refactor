@@ -54,7 +54,8 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         }
         OptionsWindow parent;
         AssetConverter converter;
-        bool isFirstTime = true;
+        bool isFirstTimeCurr = true;
+        bool isFirstTimeTheme = true;
         public MainOptionsPage(OptionsWindow parent)
         {
             InitializeComponent();
@@ -98,6 +99,8 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             item = new ComboBoxItem();
             item.Content = "Small";
             SizeCombo.Items.Add(item);
+
+            themeSwitch_ChBx.DataContext = The_Choice_Refactor.Properties.Settings.Default;
         }
 
         private void themeSwitch_ChBx_Checked(object sender, RoutedEventArgs e)
@@ -266,14 +269,14 @@ namespace The_Choice_Refactor.Pages.OptionsPages
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(isFirstTime)
+            if(isFirstTimeCurr)
             {
                 if (The_Choice_Refactor.Properties.Settings.Default.CurrView == 1)
                     CurrCombo.SelectedIndex = 0;
                 else
                     CurrCombo.SelectedIndex = 1;
 
-                isFirstTime = false;
+                isFirstTimeCurr = false;
 
                 return;
             }
