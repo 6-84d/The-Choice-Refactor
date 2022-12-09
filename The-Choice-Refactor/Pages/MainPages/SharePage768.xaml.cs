@@ -32,7 +32,7 @@ namespace The_Choice_Refactor.Pages.MainPages
             try
             {
                 bool isSucces = await viewModel.Load();
-                _list = new ShareListPage();
+                _list = new ShareListPage768();
                 _list.DataContext = viewModel;
             }
             catch (Exception ex)

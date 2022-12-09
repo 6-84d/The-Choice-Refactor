@@ -102,7 +102,7 @@ namespace The_Choice_Refactor
         {
             if (!(currentPage is SharePage768))
             {
-                currentPage = new SharePage();
+                currentPage = new SharePage768();
                 PageFrame_Frm.Navigate(currentPage);
                 CryptoPageButton.FontWeight = FontWeights.Light;
                 CurrenciesPageButton.FontWeight = FontWeights.Light;
@@ -129,7 +129,7 @@ namespace The_Choice_Refactor
                 this.Cursor = new System.Windows.Input.Cursor(App.GetResourceStream(new Uri(@"pack://application:,,,/Resources/Pictures/Icons/DarkCursor.cur")).Stream);
                 Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/BackgroundLight.png")));
             }
-            if (currentPage is MainPage)
+            if (currentPage is MainPage768)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
             else
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
@@ -140,28 +140,28 @@ namespace The_Choice_Refactor
             switch (r.Next(0, 4))
             {
                 case 0:
-                    currentPage = new CryptoPage();
+                    currentPage = new CryptoPage768();
                     CryptoPageButton.FontWeight = FontWeights.Normal;
                     CurrenciesPageButton.FontWeight = FontWeights.Light;
                     MaterialsPageButton.FontWeight = FontWeights.Light;
                     SharesPageButton.FontWeight = FontWeights.Light;
                     break;
                 case 1:
-                    currentPage = new CurrencyPage();
+                    currentPage = new CurrencyPage768();
                     CryptoPageButton.FontWeight = FontWeights.Light;
                     CurrenciesPageButton.FontWeight = FontWeights.Normal;
                     MaterialsPageButton.FontWeight = FontWeights.Light;
                     SharesPageButton.FontWeight = FontWeights.Light;
                     break;
                 case 2:
-                    currentPage = new MetalPage();
+                    currentPage = new MetalPage768();
                     CryptoPageButton.FontWeight = FontWeights.Light;
                     CurrenciesPageButton.FontWeight = FontWeights.Light;
                     MaterialsPageButton.FontWeight = FontWeights.Normal;
                     SharesPageButton.FontWeight = FontWeights.Light;
                     break;
                 case 3:
-                    currentPage = new SharePage();
+                    currentPage = new SharePage768();
                     CryptoPageButton.FontWeight = FontWeights.Light;
                     CurrenciesPageButton.FontWeight = FontWeights.Light;
                     MaterialsPageButton.FontWeight = FontWeights.Light;
@@ -170,7 +170,7 @@ namespace The_Choice_Refactor
                 default:
                     return;
             }
-            if (currentPage is MainPage720)
+            if (currentPage is MainPage768)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
             else
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);

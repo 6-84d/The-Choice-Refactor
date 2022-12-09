@@ -5,38 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:The_Choice_Refactor"
         mc:Ignorable="d"
-        Title="MainWindow1366" Height="768" Width="1366"
+        Title="The Choice" Height="768" Width="1366"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/">
     <Window.Resources>
         <ResourceDictionary Source="Resources\Styles\Styles.xaml"></ResourceDictionary>
     </Window.Resources>
     <Grid x:Name="MainGrid_Grd">
         <Grid.RowDefinitions>
-            <RowDefinition Height="53"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="165"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="140"/>
-            <RowDefinition Height="140"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="160"/>
             <RowDefinition Height="55"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="25"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="35"/>
+            <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="380"/>
-            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="290"/>
+            <ColumnDefinition Width="340"/>
+            <ColumnDefinition Width="75"/>
         </Grid.ColumnDefinitions>
         <Grid x:Name="SecondGrid"
             Grid.Row="0" 
