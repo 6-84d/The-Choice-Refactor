@@ -58,5 +58,17 @@ namespace The_Choice_Refactor.Properties {
                 this["Dark"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Size {
+            get {
+                return ((int)(this["Size"]));
+            }
+            set {
+                this["Size"] = value;
+            }
+        }
     }
 }

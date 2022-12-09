@@ -89,8 +89,15 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             item = new ComboBoxItem();
             item.Content = "UAH";
             CurrCombo.Items.Add(item);
-
-            
+            item = new ComboBoxItem();
+            item.Content = "Big";
+            SizeCombo.Items.Add(item);
+            item = new ComboBoxItem();
+            item.Content = "Medium";
+            SizeCombo.Items.Add(item);
+            item = new ComboBoxItem();
+            item.Content = "Small";
+            SizeCombo.Items.Add(item);
         }
 
         private void themeSwitch_ChBx_Checked(object sender, RoutedEventArgs e)
@@ -383,6 +390,14 @@ namespace The_Choice_Refactor.Pages.OptionsPages
         private void OnCancelCommand(object sender, DataObjectEventArgs e)
         { 
            e.CancelCommand();
+        }
+
+        private void SizeCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //if(SizeCombo.SelectedIndex == 0 && SizeCombo.SelectedIndex != The_Choice_Refactor.Properties.Settings.Default.Size)
+            //{
+            //    The_Choice_Refactor.Properties.Settings.Default.Size = 0;
+            //}
         }
     }
 }
