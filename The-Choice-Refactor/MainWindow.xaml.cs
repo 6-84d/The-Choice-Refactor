@@ -31,8 +31,8 @@ namespace The_Choice_Refactor
             SetConfig();
             MainWindow1280 mainWindow1280 = new MainWindow1280();
             mainWindow1280.Show();
-            //MainWindow1366 mainWindow1366 = new MainWindow1366();
-            //mainWindow1366.Show();
+            MainWindow1366 mainWindow1366 = new MainWindow1366();
+            mainWindow1366.Show();
             this.Close();
         }
 
