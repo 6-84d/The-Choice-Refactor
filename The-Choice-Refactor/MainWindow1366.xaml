@@ -61,7 +61,7 @@
             Grid.Row="0" 
             Opacity="1" 
             VerticalAlignment="Bottom">
-            <Button x:Name="CryptoPageButton" Content="{DynamicResource Crypto}" Foreground="LightGray" FontWeight="Light" FontSize="18" Click="CryptoPage_Btn_Click">
+            <Button x:Name="CryptoPageButton" Content="{DynamicResource Crypto}" Foreground="LightGray" FontSize="18" Click="CryptoPage_Btn_Click">
             </Button>
         </Border>
         <Button x:Name="CurrenciesPageButton" Content="{DynamicResource Currency}" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" Foreground="LightGray" FontSize="18" FontWeight="Light" Click="CurrencyPage_Btn_Click"/>

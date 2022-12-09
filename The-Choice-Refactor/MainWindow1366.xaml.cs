@@ -36,12 +36,20 @@ namespace The_Choice_Refactor
             this.ResizeMode = ResizeMode.CanMinimize;
             currentPage = new MainPage768(this);                                                                               // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);   // navigate frame to current page
+            CryptoPageButton.FontWeight = FontWeights.Light;
+            CurrenciesPageButton.FontWeight = FontWeights.Light;
+            MaterialsPageButton.FontWeight = FontWeights.Light;
+            SharesPageButton.FontWeight = FontWeights.Light;
             SetConfig();
         }
         private void MainPage_Btn_Click(object sender, RoutedEventArgs e)
         {
             currentPage = new MainPage768(this);           // create MainPage and set to current page
             PageFrame_Frm.Navigate(currentPage);    // navigate frame to current page
+            CryptoPageButton.FontWeight = FontWeights.Light;
+            CurrenciesPageButton.FontWeight = FontWeights.Light;
+            MaterialsPageButton.FontWeight = FontWeights.Light;
+            SharesPageButton.FontWeight = FontWeights.Light;
             if (currentPage is MainPage768)
                 MainGrid_Grd.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/Resources/Pictures/LinesBackgroundLight.png")));
             else
@@ -54,6 +62,10 @@ namespace The_Choice_Refactor
             {
                 currentPage = new CryptoPage768();
                 PageFrame_Frm.Navigate(currentPage);
+                CryptoPageButton.FontWeight = FontWeights.Normal;
+                CurrenciesPageButton.FontWeight = FontWeights.Light;
+                MaterialsPageButton.FontWeight = FontWeights.Light;
+                SharesPageButton.FontWeight = FontWeights.Light;
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
         }
@@ -64,6 +76,10 @@ namespace The_Choice_Refactor
             {
                 currentPage = new CurrencyPage768();
                 PageFrame_Frm.Navigate(currentPage);
+                CryptoPageButton.FontWeight = FontWeights.Light;
+                CurrenciesPageButton.FontWeight = FontWeights.Normal;
+                MaterialsPageButton.FontWeight = FontWeights.Light;
+                SharesPageButton.FontWeight = FontWeights.Light;
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
         }
@@ -74,6 +90,10 @@ namespace The_Choice_Refactor
             {
                 currentPage = new MetalPage768();
                 PageFrame_Frm.Navigate(currentPage);
+                CryptoPageButton.FontWeight = FontWeights.Light;
+                CurrenciesPageButton.FontWeight = FontWeights.Light;
+                MaterialsPageButton.FontWeight = FontWeights.Normal;
+                SharesPageButton.FontWeight = FontWeights.Light;
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
         }
@@ -84,6 +104,10 @@ namespace The_Choice_Refactor
             {
                 currentPage = new SharePage();
                 PageFrame_Frm.Navigate(currentPage);
+                CryptoPageButton.FontWeight = FontWeights.Light;
+                CurrenciesPageButton.FontWeight = FontWeights.Light;
+                MaterialsPageButton.FontWeight = FontWeights.Light;
+                SharesPageButton.FontWeight = FontWeights.Normal;
                 MainGrid_Grd.Background = new SolidColorBrush(Colors.Transparent);
             }
         }
@@ -117,15 +141,31 @@ namespace The_Choice_Refactor
             {
                 case 0:
                     currentPage = new CryptoPage();
+                    CryptoPageButton.FontWeight = FontWeights.Normal;
+                    CurrenciesPageButton.FontWeight = FontWeights.Light;
+                    MaterialsPageButton.FontWeight = FontWeights.Light;
+                    SharesPageButton.FontWeight = FontWeights.Light;
                     break;
                 case 1:
                     currentPage = new CurrencyPage();
+                    CryptoPageButton.FontWeight = FontWeights.Light;
+                    CurrenciesPageButton.FontWeight = FontWeights.Normal;
+                    MaterialsPageButton.FontWeight = FontWeights.Light;
+                    SharesPageButton.FontWeight = FontWeights.Light;
                     break;
                 case 2:
                     currentPage = new MetalPage();
+                    CryptoPageButton.FontWeight = FontWeights.Light;
+                    CurrenciesPageButton.FontWeight = FontWeights.Light;
+                    MaterialsPageButton.FontWeight = FontWeights.Normal;
+                    SharesPageButton.FontWeight = FontWeights.Light;
                     break;
                 case 3:
                     currentPage = new SharePage();
+                    CryptoPageButton.FontWeight = FontWeights.Light;
+                    CurrenciesPageButton.FontWeight = FontWeights.Light;
+                    MaterialsPageButton.FontWeight = FontWeights.Light;
+                    SharesPageButton.FontWeight = FontWeights.Normal;
                     break;
                 default:
                     return;
