@@ -1,4 +1,4 @@
-﻿<Page x:Class="The_Choice_Refactor.Pages.ListBoxPages.CryptoListPage720"
+﻿<Page x:Class="The_Choice_Refactor.Pages.ListBoxPages.ShareListPage720"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:The_Choice_Refactor.Pages.ListBoxPages"
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="1280"
-      Title="CryptoListPage720">
+      Title="ShareListPage720">
 
     <Page.Resources>
         <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
@@ -16,7 +16,7 @@
             <ColumnDefinition Width="1280"/>
         </Grid.ColumnDefinitions>
         <ListBox
-            x:Name="Crypto_LstBx" 
+            x:Name="Share_LstBx" 
             ScrollViewer.VerticalScrollBarVisibility="Hidden"
             ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
             BorderThickness="0" 
@@ -24,12 +24,12 @@
             ItemsSource="{Binding assets}" 
             SelectedItem="{Binding Selected}" 
             Background="Transparent" 
-            SelectionChanged="Crypto_LstBx_SelectionChanged">
+            SelectionChanged="Share_LstBx_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TabPanel Height="50">
                         <Label
-                            Width="30"/>
+                         Width="30"/>
                         <CheckBox 
                             x:Name="favorite_ChBx" 
                             Height="20"
@@ -41,54 +41,45 @@
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
                             VerticalAlignment="Center" 
-                            MinWidth="45" 
+                            MinWidth="65" 
                             FontSize="12" 
                             Text="{Binding Path=number}"/>
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
                             VerticalAlignment="Center" 
-                            MinWidth="115" 
+                            MinWidth="120" 
                             FontSize="12" 
-                            Text="{Binding Path=asset_id, StringFormat=0.00}"/>
+                            Text="{Binding Path=symbol, StringFormat=0.00}"/>
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
                             VerticalAlignment="Center" 
-                            MinWidth="150" 
+                            MinWidth="160" 
                             FontSize="12" 
-                            Text="{Binding Path=name, StringFormat=0.00}" />
+                            Text="{Binding Path=identifier, StringFormat=0.00}" />
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
                             VerticalAlignment="Center" 
-                            MinWidth="120"
+                            MinWidth="115"
                             FontSize="12" 
-                            Text="{Binding Path=price, StringFormat=0.########}" />
+                            Text="{Binding Path=lastPrice, StringFormat=0.########}" />
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
                             VerticalAlignment="Center" 
-                            MinWidth="165" 
+                            MinWidth="175" 
                             FontSize="12" 
-                            Text="{Binding Path=volume_24h, StringFormat=### ### ### ###.}" />
+                            Text="{Binding Path=dayHigh, StringFormat=### ### ### ###.}" />
                         <TextBlock 
                             Style="{StaticResource TextBlock_Style}"
-                            Foreground="{Binding Path=color_change_1h}" 
                             VerticalAlignment="Center" 
-                            MinWidth="145" 
+                            MinWidth="160" 
                             FontSize="12" 
-                            Text="{Binding Path=change_1h, StringFormat=0.00}" />
+                            Text="{Binding Path=dayLow, StringFormat=0.00}" />
                         <TextBlock
                             Style="{StaticResource TextBlock_Style}"
-                            Foreground="{Binding Path=color_change_24h}" 
                             VerticalAlignment="Center" 
-                            MinWidth="155" 
+                            MinWidth="200" 
                             FontSize="12" 
-                            Text="{Binding Path=change_24h, StringFormat=0.00}" />
-                        <TextBlock
-                            Style="{StaticResource TextBlock_Style}"
-                            Foreground="{Binding Path=color_change_7d}" 
-                            VerticalAlignment="Center"
-                            MinWidth="150" 
-                            FontSize="12"
-                            Text="{Binding Path=change_7d, StringFormat=0.00}" />
+                            Text="{Binding Path=totalTradedVolume, StringFormat=0.00}" />
                     </TabPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

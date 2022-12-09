@@ -1,22 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Threading;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 using The_Choice_Refactor.Classes;
 
 namespace The_Choice_Refactor.Pages.ListBoxPages
 {
     /// <summary>
-    /// Interaction logic for ShareListPage.xaml
+    /// Interaction logic for ShareListPage720.xaml
     /// </summary>
-    public partial class ShareListPage : Page
+    public partial class ShareListPage720 : Page
     {
-        public ShareListPage()
+        public ShareListPage720()
         {
             InitializeComponent();
         }
-
         private void Share_LstBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
