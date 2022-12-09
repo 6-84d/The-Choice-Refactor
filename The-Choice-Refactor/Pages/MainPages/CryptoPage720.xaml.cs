@@ -74,7 +74,21 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             if (!isUpdating)
             {
-                LoadList(new CryptoVM());
+                if (favoriteMode_ChBx.IsChecked == true)
+                {
+                    if (search_TxtBlck.Text.Length == 0)
+                        LoadList(new CryptoFavoriteVM());
+                    else
+                        LoadList(new CryptoSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
+                    LoadList(new CryptoVM());
+                }
+                else
+                {
+                    if (search_TxtBlck.Text.Length == 0)
+                        LoadList(new CryptoVM());
+                    else
+                        LoadList(new CryptoSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
+                }
                 isUpdating = true;
                 timer.Start();
             }

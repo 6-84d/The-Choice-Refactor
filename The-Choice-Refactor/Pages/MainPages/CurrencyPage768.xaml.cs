@@ -73,7 +73,21 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             if (!isUpdating)
             {
-                LoadList(new CurrencyVM());
+                if (favoriteMode_ChBx.IsChecked == true)
+                {
+                    if (search_TxtBlck.Text.Length == 0)
+                        LoadList(new CurrencyFavoriteVM());
+                    else
+                        LoadList(new CurrencySearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
+                    LoadList(new CurrencyVM());
+                }
+                else
+                {
+                    if (search_TxtBlck.Text.Length == 0)
+                        LoadList(new CurrencyVM());
+                    else
+                        LoadList(new CurrencySearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
+                }
                 isUpdating = true;
                 timer.Start();
             }

@@ -74,7 +74,21 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             if(!isUpdating)
             {
-                LoadList(new ShareVM());
+                if (favoriteMode_ChBx.IsChecked == true)
+                {
+                    if (search_TxtBlck.Text.Length == 0)
+                        LoadList(new ShareFavoriteVM());
+                    else
+                        LoadList(new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
+                    LoadList(new ShareVM());
+                }
+                else
+                {
+                    if (search_TxtBlck.Text.Length == 0)
+                        LoadList(new ShareVM());
+                    else
+                        LoadList(new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
+                }
                 isUpdating = true;
                 timer.Start();
             }

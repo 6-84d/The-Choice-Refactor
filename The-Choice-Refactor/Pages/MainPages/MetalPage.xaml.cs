@@ -74,7 +74,21 @@ namespace The_Choice_Refactor.Pages.MainPages
         {
             if(!isUpdating)
             {
-                LoadList(new MetalVM());
+                if (favoriteMode_ChBx.IsChecked == true)
+                {
+                    if (search_TxtBlck.Text.Length == 0)
+                        LoadList(new MetalFavoriteVM());
+                    else
+                        LoadList(new MetalSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
+                    LoadList(new MetalVM());
+                }
+                else
+                {
+                    if (search_TxtBlck.Text.Length == 0)
+                        LoadList(new MetalVM());
+                    else
+                        LoadList(new MetalSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
+                }
                 isUpdating = true;
                 timer.Start();
             }
