@@ -19,6 +19,7 @@ namespace The_Choice_Refactor
         public bool isOpen = false;
         public MainWindow()
         {
+            The_Choice_Refactor.Properties.Settings.Default.Dark = true;
             ApiHelper.InitializeClient();
             LoadingWIndow loadingWIndow = new LoadingWIndow();
             loadingWIndow.Show();

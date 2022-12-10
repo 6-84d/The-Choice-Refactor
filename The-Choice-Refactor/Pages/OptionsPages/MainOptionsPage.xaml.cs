@@ -90,15 +90,6 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             item = new ComboBoxItem();
             item.Content = "UAH";
             CurrCombo.Items.Add(item);
-            item = new ComboBoxItem();
-            item.Content = "Big";
-            SizeCombo.Items.Add(item);
-            item = new ComboBoxItem();
-            item.Content = "Medium";
-            SizeCombo.Items.Add(item);
-            item = new ComboBoxItem();
-            item.Content = "Small";
-            SizeCombo.Items.Add(item);
             SizeCombo.SelectedIndex = The_Choice_Refactor.Properties.Settings.Default.Size;
             themeSwitch_ChBx.DataContext = The_Choice_Refactor.Properties.Settings.Default;
         }

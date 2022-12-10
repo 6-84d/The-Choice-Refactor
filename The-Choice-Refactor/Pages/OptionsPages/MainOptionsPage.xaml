@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:The_Choice_Refactor.Pages.OptionsPages"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="700"
-      Title="MainSettingsPage">
+      Title="MainSettingsPage" >
     <Page.Resources>
         <ResourceDictionary Source="..\..\Resources\Styles\Styles.xaml"></ResourceDictionary>
     </Page.Resources>
@@ -62,7 +62,7 @@
                     FontWeight="Light" 
                     VerticalAlignment="Center"/>
                 <Label
-                    Content="Size"
+                    Content="{DynamicResource Size}"
                     Grid.Row="4"
                     Grid.Column="1"
                     FontSize="15"
@@ -82,7 +82,7 @@
                         Background="Transparent"
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left">
-                    <MenuItem x:Name="menuLanguage" Foreground="White" Height="29" Width="100" >
+                    <MenuItem x:Name="menuLanguage" Foreground="White" Height="24" Width="100">
                     </MenuItem>
                 </Menu>
                 <Label Grid.Row="5" FontSize="15" Content="{DynamicResource Converter}" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center"/>
@@ -109,9 +109,10 @@
                     />
                 <ComboBox 
                         Name="CurrCombo"
+                        VerticalContentAlignment="Center"
                         Grid.Column="2"
                         Grid.Row="2"
-                        Height="30"
+                        Height="24"
                         Width="100"
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left"
@@ -124,7 +125,7 @@
                         Name="SizeCombo"
                         Grid.Column="2"
                         Grid.Row="4"
-                        Height="30"
+                        Height="24"
                         Width="100"
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left"
@@ -132,6 +133,9 @@
                         Foreground="White"
                         Style="{StaticResource ComboBoxBackground}"
                         >
+                    <ComboBoxItem Content="{DynamicResource  Big}"></ComboBoxItem>
+                    <ComboBoxItem Content="{DynamicResource  Medium}"></ComboBoxItem>
+                    <ComboBoxItem Content="{DynamicResource  Small}"></ComboBoxItem>
                 </ComboBox>
                 <Border 
                     CornerRadius="180"
@@ -186,7 +190,7 @@
                         x:Name="FromAssetType_CmbBx"
                         Grid.Row="1"
                         Grid.Column="1"
-                        Height="30"
+                        Height="24"
                         Width="140" 
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left"
@@ -259,7 +263,7 @@
                             x:Name="ToAssetType_CmbBx"
                             Grid.Row="1"
                             Grid.Column="3"
-                            Height="30"
+                            Height="24"
                             Width="140" 
                             VerticalAlignment="Center" 
                             HorizontalAlignment="Left"

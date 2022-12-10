@@ -11,9 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Pictures\about_us.png" />
     <None Remove="Resources\Pictures\BackgroundDark.jpg" />
     <None Remove="Resources\Pictures\BackgroundLight.png" />
     <None Remove="Resources\Pictures\black_logo.ico" />
+    <None Remove="Resources\Pictures\conv_change.png" />
+    <None Remove="Resources\Pictures\conv_change_dark.png" />
+    <None Remove="Resources\Pictures\curr_change.png" />
+    <None Remove="Resources\Pictures\curr_change_dark.png" />
     <None Remove="Resources\Pictures\DarkOff.png" />
     <None Remove="Resources\Pictures\DarkOn.png" />
     <None Remove="Resources\Pictures\Icons\AboutUs.svg" />
@@ -35,8 +40,11 @@
     <None Remove="Resources\Pictures\Icons\Unfavorite.png" />
     <None Remove="Resources\Pictures\Icons\Update.svg" />
     <None Remove="Resources\Pictures\Icons\WhiteCursor.cur" />
+    <None Remove="Resources\Pictures\lang_change.png" />
+    <None Remove="Resources\Pictures\lang_change_dark.png" />
     <None Remove="Resources\Pictures\LeftArrow.png" />
     <None Remove="Resources\Pictures\LeftArrowWhite.png" />
+    <None Remove="Resources\Pictures\letsgo.png" />
     <None Remove="Resources\Pictures\LetsGoButtonDark.png" />
     <None Remove="Resources\Pictures\LinesBackgroundDark.png" />
     <None Remove="Resources\Pictures\LinesBackgroundLight.png" />
@@ -45,8 +53,11 @@
     <None Remove="Resources\Pictures\LoadingScreenLogo.ico" />
     <None Remove="Resources\Pictures\LoadingScreenLogo.png" />
     <None Remove="Resources\Pictures\Logo.png" />
+    <None Remove="Resources\Pictures\pages.png" />
     <None Remove="Resources\Pictures\RightArrow.png" />
     <None Remove="Resources\Pictures\RightArrowWhite.png" />
+    <None Remove="Resources\Pictures\theme_change.png" />
+    <None Remove="Resources\Pictures\theme_change_dark.png" />
     <None Remove="Resources\Pictures\tutor1.svg" />
     <None Remove="Resources\Pictures\tutorImage.png" />
     <None Remove="UserData\Favorites\FavoriteCryptoes.txt" />
@@ -72,7 +83,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Pictures\about_us.png" />
     <Resource Include="Resources\Pictures\black_logo.ico" />
+    <Resource Include="Resources\Pictures\conv_change.png" />
+    <Resource Include="Resources\Pictures\conv_change_dark.png" />
+    <Resource Include="Resources\Pictures\curr_change.png" />
+    <Resource Include="Resources\Pictures\curr_change_dark.png" />
+    <Resource Include="Resources\Pictures\lang_change.png" />
+    <Resource Include="Resources\Pictures\lang_change_dark.png" />
+    <Resource Include="Resources\Pictures\letsgo.png" />
     <Resource Include="Resources\Pictures\LoadingScreen.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -164,6 +183,7 @@
     <Resource Include="Resources\Pictures\Logo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Pictures\pages.png" />
     <Resource Include="Resources\Pictures\RightArrowWhite.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -176,6 +196,8 @@
     <Resource Include="Resources\Pictures\LoadingScreenBackground.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Pictures\theme_change.png" />
+    <Resource Include="Resources\Pictures\theme_change_dark.png" />
     <Resource Include="Resources\Pictures\tutor1.svg" />
     <Resource Include="Resources\Pictures\tutorImage.png" />
   </ItemGroup>

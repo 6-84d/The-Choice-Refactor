@@ -23,6 +23,11 @@
     <v:String x:Key="Currency">Валюта</v:String>
     <v:String x:Key="Theme">Тема</v:String>
     <v:String x:Key="Converter">Конвертер валют:</v:String>
+    <v:String x:Key="Size">Розмір</v:String>
+    <v:String x:Key="Small">Маленький</v:String>
+    <v:String x:Key="Medium">Середній</v:String>
+    <v:String x:Key="Big">Великий</v:String>
+
 
     <!-- Options -->
 

@@ -42,7 +42,7 @@
                     Grid.Column="1" 
                     Grid.Row="1" 
                     CornerRadius="50"/>
-                <Image Grid.Row="1" Grid.Column="1" Source="{svgc:SvgImage Source='../../../Resources/Pictures/tutor1.svg'}" Height="280"></Image>
+                <Image x:Name="tut_image" Grid.Row="1" Grid.Column="1" Height="320" Width="600"></Image>
                 <Grid Grid.Row="3" Grid.Column="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="5*"/>

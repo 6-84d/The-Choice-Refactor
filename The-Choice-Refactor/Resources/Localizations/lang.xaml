@@ -23,6 +23,10 @@
     <v:String x:Key="Currency">Currency</v:String>
     <v:String x:Key="Theme">Theme</v:String>
     <v:String x:Key="Converter">Currency сonverter:</v:String>
+    <v:String x:Key="Size">Size</v:String>
+    <v:String x:Key="Small"> Small</v:String>
+    <v:String x:Key="Medium"> Medium</v:String>
+    <v:String x:Key="Big"> Big</v:String>
 
     <!-- Options -->
 
@@ -59,6 +63,8 @@
     <v:String x:Key="Thelang">The language change button allows you to select a language from the list of available</v:String>
     <v:String x:Key="Thetheme">The theme change button allows you to change the appearance of the program</v:String>
     <v:String x:Key="Thecurr">The currency change button allows you to change the type of currency in which asset prices will be displayed</v:String>
+    <v:String x:Key="Thesize">The currency change button allows you to change the type of currency in which asset prices will be displayed</v:String>
+
     <v:String x:Key="Thecurrconv">The currency converter will help you calculate the exchange rate of one currency relative to another</v:String>
     <v:String x:Key="Thebutton">The button on the main screen allows you to jump to a random one of the existing asset tabs</v:String>
     <v:String x:Key="Thereare">There are 4 types of currencies in the application Cryptocurrencies, Currencies, Materials and Promotions</v:String>

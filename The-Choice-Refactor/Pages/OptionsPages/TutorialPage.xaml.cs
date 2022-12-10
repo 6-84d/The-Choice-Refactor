@@ -22,6 +22,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
     public partial class TutorialPage : Page
     {
         List<String> TutorialText = new List<string>();
+        List<Uri> Images = new List<Uri>();
         int index = 0;
         public TutorialPage()
         {
@@ -33,7 +34,26 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             TutorialText.Add(FindResource("Thebutton").ToString());
             TutorialText.Add(FindResource("Thereare").ToString() + ". " + FindResource("Indiff").ToString());
             TutorialText.Add(FindResource("Inthe").ToString());
+            if (The_Choice_Refactor.Properties.Settings.Default.Dark == false)
+            {
+                Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/lang_change.png"));
+                Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/theme_change.png"));
+                Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/curr_change.png"));
+                Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/conv_change.png"));
+            }
+            else
+            {
+                Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/lang_change_dark.png"));
+                Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/theme_change_dark.png"));
+                Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/curr_change_dark.png"));
+                Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/conv_change_dark.png"));
+
+            }
+            Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/letsgo.png"));
+            Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/pages.png"));
+            Images.Add(new Uri(@"pack://application:,,,/Resources/Pictures/about_us.png"));
             TutText.Text = TutorialText[index];
+            tut_image.Source = new BitmapImage(Images[index]);
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
@@ -41,6 +61,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             index++;
             if (index > 6)
                 index = 0;
+            tut_image.Source = new BitmapImage(Images[index]);
             TutText.Text = TutorialText[index];
         }
 
@@ -49,6 +70,7 @@ namespace The_Choice_Refactor.Pages.OptionsPages
             index--;
             if (index < 0)
                 index = 6;
+            tut_image.Source = new BitmapImage(Images[index]);
             TutText.Text = TutorialText[index];
         }
     }
