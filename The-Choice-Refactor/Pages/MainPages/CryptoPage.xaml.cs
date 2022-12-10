@@ -80,7 +80,6 @@ namespace The_Choice_Refactor.Pages.MainPages
                         LoadList(new CryptoFavoriteVM());
                     else
                         LoadList(new CryptoSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
-                    LoadList(new CryptoVM());
                 }
                 else
                 {

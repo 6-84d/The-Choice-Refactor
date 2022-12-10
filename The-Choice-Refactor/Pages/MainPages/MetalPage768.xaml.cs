@@ -81,7 +81,6 @@ namespace The_Choice_Refactor.Pages.MainPages
                         LoadList(new MetalFavoriteVM());
                     else
                         LoadList(new MetalSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
-                    LoadList(new MetalVM());
                 }
                 else
                 {

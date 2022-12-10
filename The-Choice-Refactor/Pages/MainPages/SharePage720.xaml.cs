@@ -79,7 +79,6 @@ namespace The_Choice_Refactor.Pages.MainPages
                         LoadList(new ShareFavoriteVM());
                     else
                         LoadList(new ShareSearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
-                    LoadList(new ShareVM());
                 }
                 else
                 {

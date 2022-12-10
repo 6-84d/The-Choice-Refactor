@@ -79,7 +79,6 @@ namespace The_Choice_Refactor.Pages.MainPages
                         LoadList(new CurrencyFavoriteVM());
                     else
                         LoadList(new CurrencySearchVM(search_TxtBlck.Text, favoriteMode_ChBx.IsChecked));
-                    LoadList(new CurrencyVM());
                 }
                 else
                 {
