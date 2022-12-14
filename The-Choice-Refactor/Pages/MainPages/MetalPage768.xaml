@@ -54,17 +54,16 @@
             Height="36"
             VerticalAlignment="Top" Margin="46,8,54,0"/>
         <TextBox 
-           x:Name="search_TxtBlck"
+            x:Name="search_TxtBlck"
             Background="Transparent"
             FontSize="18"
             BorderThickness="0"
             Grid.Column="3" 
-            Grid.Row="0" 
             MinWidth="165" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Left"
             MaxLength="25"
-            TextChanged="search_TxtBlck_TextChanged" Height="22" Margin="60,18,0,0" Width="175" Grid.ColumnSpan="3"/>
+            TextChanged="search_TxtBlck_TextChanged" Height="30" Margin="58,13,0,0" Width="165" Grid.ColumnSpan="2"/>
         <Image 
             Source="..\..\Resources\Pictures\Icons\Search.png" 
             Grid.Column="4" 

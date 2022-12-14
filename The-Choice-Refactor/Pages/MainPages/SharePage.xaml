@@ -60,9 +60,9 @@
             Grid.Row="0" 
             MinWidth="165" 
             VerticalAlignment="Top" 
-            HorizontalAlignment="Center"
+            HorizontalAlignment="Left"
             MaxLength="25"
-            TextChanged="search_TxtBlck_TextChanged" Height="21" Margin="0,39,0,0" Width="166"/>
+            TextChanged="search_TxtBlck_TextChanged" Height="30" Margin="7,35,0,0" Width="165"/>
         <Image 
             Source="..\..\Resources\Pictures\Icons\Search.png" 
             Grid.Column="3" 
