@@ -14,7 +14,7 @@ namespace The_Choice_Refactor.Classes
         }
         public static async Task<Dictionary<string, double>> Load()
         {
-            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync("https://openexchangerates.org/api/latest.json?app_id=b43edbb38ba14eea9766294e65657b5a"))
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync("https://api.exchangerate.host/latest?base=USD"))
             {
                 if (response.IsSuccessStatusCode)
                 {

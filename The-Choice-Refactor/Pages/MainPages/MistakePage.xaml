@@ -15,6 +15,6 @@
             Content="{DynamicResource TextError}" 
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            FontSize="80"></Label>
+            FontSize="50"></Label>
     </Grid>
 </Page>
