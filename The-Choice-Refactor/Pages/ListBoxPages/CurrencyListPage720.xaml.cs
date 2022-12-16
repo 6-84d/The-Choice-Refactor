@@ -28,7 +28,9 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
         }
         private void Currency_LstBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            CurrencyModel? selected = (sender as ListBox).SelectedItem as CurrencyModel;
+            if (selected != null)
+                Clipboard.SetText(selected.ToString());
         }
 
         private void favorite_ChBx_Checked(object sender, RoutedEventArgs e)

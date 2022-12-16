@@ -17,7 +17,9 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
 
         private void Crypto_LstBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            CryptoModel? selected = (sender as ListBox).SelectedItem as CryptoModel;
+            if (selected != null)
+                Clipboard.SetText(selected.ToString());
         }
 
         private void favorite_ChBx_Checked(object sender, RoutedEventArgs e)

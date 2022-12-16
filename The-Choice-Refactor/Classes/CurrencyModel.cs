@@ -6,5 +6,9 @@
         public string? name { get; set; }
         public double price { get; set; }
         public bool isFavorite { get; set; }
+        public override string ToString()
+        {
+            return $"{name} {price}";
+        }
     }
 }

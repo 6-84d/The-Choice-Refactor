@@ -1,4 +1,6 @@
-﻿namespace The_Choice_Refactor.Classes
+﻿using System;
+
+namespace The_Choice_Refactor.Classes
 {
     public class CryptoModel
     {
@@ -14,5 +16,9 @@
         public double change_7d { get; set; }
         public string? color_change_7d { get; set; }
         public bool isFavorite { get; set; } = false; // describe is asset in favorites
+        public override string ToString()
+        {
+            return $"{asset_id} {name} {Math.Round(price, 2)}";
+        }
     }
 }

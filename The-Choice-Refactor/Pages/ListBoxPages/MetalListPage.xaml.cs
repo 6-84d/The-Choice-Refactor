@@ -17,7 +17,9 @@ namespace The_Choice_Refactor.Pages.ListBoxPages
 
         private void Metal_LstBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            MetalModel? selected = (sender as ListBox).SelectedItem as MetalModel;
+            if (selected != null)
+                Clipboard.SetText(selected.ToString());
         }
         private void favorite_ChBx_Checked(object sender, RoutedEventArgs e)
         {
