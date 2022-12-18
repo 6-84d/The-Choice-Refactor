@@ -58,11 +58,11 @@
             BorderThickness="0"
             Grid.Column="2" 
             Grid.Row="0" 
-            MinWidth="165" 
+            MinWidth="130" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Left"
             MaxLength="25"
-            TextChanged="search_TxtBlck_TextChanged" Height="22" Margin="775,16,0,0" Width="175" Grid.ColumnSpan="2"/>
+            TextChanged="search_TxtBlck_TextChanged" Height="22" Margin="775,16,0,0" Width="157" Grid.ColumnSpan="2"/>
         <Image 
             Source="..\..\Resources\Pictures\Icons\Search.png" 
             Grid.Column="3" 
