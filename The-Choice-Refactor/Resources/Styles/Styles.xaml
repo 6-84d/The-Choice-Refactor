@@ -66,6 +66,12 @@
     </Style>
     <Style TargetType="ListBoxItem">
         <Setter Property="Template" Value="{DynamicResource ListBoxItemTemplate}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#0DFFFFFF"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
     <Style TargetType="{x:Type CheckBox}" x:Key="switchThemeTemplate">
         <Setter Property="Template">
