@@ -18,7 +18,7 @@
         public double totalTradedVolume { get; set; }
         public double totalTradedValue { get; set; }
         public string? lastUpdateTime { get; set; }
-        public double perChange365d { get; set; }
+        public string perChange365d { get; set; }
         public double perChange30d { get; set; }
         public bool isFavorite { get; set; } = false;
         public override string ToString()
