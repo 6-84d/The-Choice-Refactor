@@ -199,7 +199,7 @@
                     <Border Name="SubmenuBorder" SnapsToDevicePixels="True">
                         <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
                         <Border.Background>
-                            <SolidColorBrush Color="Black" Opacity="1"/>
+                            <SolidColorBrush Color="#171A29" Opacity="0.3"/>
                         </Border.Background>
                     </Border>
                 </Popup>

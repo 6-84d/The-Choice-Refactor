@@ -47,9 +47,10 @@
         <Button 
             x:Name="MainPage"
             Grid.ColumnSpan="2"
-            Height="40" 
-            Width="200" 
+            Height="35" 
+            Width="180" 
             Click="MainPage_Btn_Click"
+            Margin="0,0,0,2"
             VerticalAlignment="Bottom">
             <Image 
                 x:Name="Logo"
