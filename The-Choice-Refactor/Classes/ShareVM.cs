@@ -34,10 +34,10 @@ namespace The_Choice_Refactor.Classes
                 Method = HttpMethod.Get,
                 RequestUri = new Uri("https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%2050"),
                 Headers =
-                {
-                    { "X-RapidAPI-Key", "2c575eb23bmshe6c992138d16f61p159201jsn8d0f3485fdce" },
-                    { "X-RapidAPI-Host", "latest-stock-price.p.rapidapi.com" }
-                }
+                    {
+                        { "X-RapidAPI-Key", "2c575eb23bmshe6c992138d16f61p159201jsn8d0f3485fdce" },
+                        { "X-RapidAPI-Host", "latest-stock-price.p.rapidapi.com" },
+                    },
             };
 
             ShareModel[] result = null;
